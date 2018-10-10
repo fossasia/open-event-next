@@ -1,8 +1,8 @@
-# Zooracle
+# MVISC
 
-Computer Vision Based Individual Animal Recognition. Identify and classify animals, live!
+Mobile Visual Classification (MVISC) is a project to identify and classify animals. The goal is to provide: Computer Vision Based Individual Animal Recognition.
 
-[![Join the chat at https://gitter.im/fossasia/zooracle](https://badges.gitter.im/fossasia/zooracle.svg)](https://gitter.im/fossasia/zooracle?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Join the chat at https://gitter.im/fossasia/mvisc](https://badges.gitter.im/fossasia/mvisc.svg)](https://gitter.im/fossasia/mvisc?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 Zooracle is a software that lets you take photos of animals and analyze their unique visual patterns. Within minutes, the software is able to tell you, whether an animal of a certain species, has already been found, or if it is a new individual. Thanks to state-of-the-art computer vision algorithms, these assertions come with a very high accuracy, namely around 90-100%!
 
@@ -12,9 +12,7 @@ Visual recognition is highly efficient, that means no more invasive marking meth
 
 ## COMMUNICATIONS
 
-Our website is at http://zooracle.com
-
-Please join the Zooracle chat channel at https://gitter.im/fossasia/zooracle
+Please join chat channel at https://gitter.im/fossasia/mvisc
 
 ## ROADMAP
 
@@ -36,13 +34,4 @@ figure: feature cross-correlation within a test data set of yellow-bellied toads
 
 ## LICENSE
 
-Zooracle is licensed under GNU General Public License v3.0.
-
-## CONTACTS
-Falk Eckhardt, M.Sc., Biology 
-
-Willi Döring, M.Sc., Software Development Lead 
-
-Maria Goltsova, M.Sc., Software Development
-
-Mario Behling, M.A., Project Management
+The project is based on the former Zooracle project and licensed under GNU General Public License v3.0.
