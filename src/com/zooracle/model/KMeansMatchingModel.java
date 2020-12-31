@@ -163,7 +163,4 @@ public class KMeansMatchingModel implements MatchingModel
 	{
 		this.nBestMatches = nBestMatches;
 	}
-
-	
-
 }

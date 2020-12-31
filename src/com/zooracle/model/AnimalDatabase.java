@@ -103,8 +103,4 @@ public abstract class AnimalDatabase
 	{
 		this.imagePath = imagePath;
 	}
-	
-	
-	
-
 }

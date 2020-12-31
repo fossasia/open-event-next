@@ -7,8 +7,6 @@ import com.zooracle.model.ColorRange;
 
 public class SQLiteStructure
 {
-//	public static SQLColumn columnTitle = new SQLColumn("title", String.class, "");
-
 	public static String tableAgeClass = "ageclass";
 	public static String tableColorSelection = "colorselection";
 	public static String tableDbInformation = "dbinformation";

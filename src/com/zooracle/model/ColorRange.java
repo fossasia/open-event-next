@@ -5,9 +5,6 @@ import java.util.List;
 
 public class ColorRange
 {
-
-	// private int id = 0;
-
 	private int mode;
 	private double hl;
 	private double sl;

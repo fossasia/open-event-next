@@ -28,7 +28,4 @@ public class Range {
 	{
 		return to - from;
 	}
-	
-	
-
 }

@@ -10,8 +10,4 @@ public class ToadDatabase extends AnimalDatabase
 	{
 		super(dbLocation, title, imagePath, comment);
 	}
-
-	
-	
-
 }

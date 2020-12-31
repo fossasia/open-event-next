@@ -26,10 +26,8 @@ public class ImageSettings
 	private boolean blur;
 	private int blurSize;
 	
-//	public ImageSettings(File fileName, ColorRangePreset colorRangePreset)
 	public ImageSettings(ColorRangePreset colorRangePreset)
 	{
-//		this.imageFile = fileName;
 		this.id = ++currentID;
 		this.colorRanges = new ArrayList<ColorRange>();
 		this.colorRanges.addAll(colorRangePreset.getColorRanges());
@@ -231,12 +229,5 @@ public class ImageSettings
 	{
 		this.blurSize = blurSize;
 	}
-	
-	
-	
-	
-	
-	
-
 }
 

@@ -112,12 +112,4 @@ public class ToadData extends MetaData {
 				+ id + ", validFrom=" + validFrom + ", validUntil=" + validUntil + ", fileName=" + fileName + ", zooName=" + zooName + ", name=" + name + ", comment=" + comment + ", gpsLat=" + gpsLat + ", gpsLon=" + gpsLon + ", view="
 				+ view + ", imageSettings=" + imageSettings + ", individualId=" + individualId + ", thumbnail=" + thumbnail + "]";
 	}
-
-	
-	
-	
-	
-	
-	
-
 }

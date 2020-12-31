@@ -110,14 +110,9 @@ public class ToadDataPanel extends MetaDataPanel
 		dataPanel.add(toadDataPanel);
 		
 	}
-	
-	
-	
+
 	@Override
 	public void setData(MetaData data) {
 		super.setData(data);
 	}
-	
-	
-
 }

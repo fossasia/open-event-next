@@ -10,8 +10,7 @@ public class FilterSettings
 	public Date rangeFrom;
 	public Date rangeUntil;
 	public String nameFilter;
-//	TODO: sortby
-	
+
 	public static FilterSettings importSettings = new FilterSettings();
 	
 	public FilterSettings()
