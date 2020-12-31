@@ -33,9 +33,7 @@ public class Launcher {
 			}
 		}
 		
-		String basePath = Settings.imgPath;
-//		String basePath = "/media/horus/gammaray/zimg/";
-		
+		String basePath = Settings.imgPath;	
 		HashMap<Integer, ToadData> toads = ImageEditorIO.loadToadDataFile(Settings.imgPath+"pumilio_rio_gloria_small_list.xml");
 		for (ToadData toadData : toads.values())
 		{
@@ -44,37 +42,14 @@ public class Launcher {
 			toadData.setZooName(null);
 		}
 ////		TODO INSERT BEFORE IMPORT OR WHEN SAVING
-//		for (ToadData toadData : toads.values())
-//		{
-//			toadData.setId(-1);
-//			toadData.setIndividualId(-1);
-//			toadData.setImageSettings(null);
-//			System.out.println(toadData);
-////			toadData.setZooName(null);
-//			int newId = AnimalDatabaseManager.insertToadData(toadData);
-//			System.out.println("new id: " + newId);
-////			if (1==1)
-////				System.exit(1);
-//		}
-		
+	
 		Controller.currentDB = animalDB;
 		MainWindow mainWindow = new MainWindow();
 		
-//		//compare
-//		DatabaseManagerView dbManagerView = new DatabaseManagerView(mainWindow);
-//		mainWindow.setContent(dbManagerView);
-//		dbManagerView.setFilter(FilterSettings.importSettings);
-		
-//		import
 		ImportView importView = new ImportView(mainWindow);
 		importView.setPhotoMap(toads);
 		mainWindow.setContent(importView);
 		
-//		ImportSettings importSettings = new ImportSettings(mainWindow);
-//		mainWindow.setContent(importSettings);
-//		StartScreen startScreen = new StartScreen(mainWindow);
-//		mainWindow.setContent(startScreen);
-//		startScreen.setDatabase(null);
 		
 		Launcher l = new Launcher();
 	}

@@ -1,17 +1,8 @@
 package com.zooracle.main.cv;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
-import org.opencv.core.Core;
-import org.opencv.core.CvType;
-import org.opencv.core.Mat;
-import org.opencv.core.MatOfDMatch;
-import org.opencv.core.MatOfKeyPoint;
-import org.opencv.core.Size;
-import org.opencv.core.TermCriteria;
+import org.opencv.core.*;
 import org.opencv.features2d.DMatch;
 import org.opencv.features2d.DescriptorExtractor;
 import org.opencv.features2d.DescriptorMatcher;
@@ -73,7 +64,6 @@ public class KMeansMatcher
 		Mat currentImg = null;
 		for (int a = 0; a < numPhotos; a++)
 		{
-			// System.out.println("now:" + animalFiles.get(a));
 			currentImg = Highgui.imread(photos.get(a).getZooName().toString(), 0);
 			Imgproc.resize(currentImg, currentImg, new Size(150, 250));
 			Imgproc.equalizeHist(currentImg, currentImg);

@@ -1,18 +1,8 @@
 package com.zooracle.main;
 
 import java.io.File;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Map.Entry;
+import java.sql.*;
+import java.util.*;
 
 import com.zooracle.model.AnimalDatabase;
 import com.zooracle.model.ColorRange;
@@ -21,14 +11,7 @@ import com.zooracle.model.Individual;
 import com.zooracle.model.MetaData;
 import com.zooracle.model.ToadData;
 import com.zooracle.model.ToadDatabase;
-import com.zooracle.model.sql.SQLArrayListContainer;
-import com.zooracle.model.sql.SQLContainer;
-import com.zooracle.model.sql.SQLCountContainer;
-import com.zooracle.model.sql.SQLHashArrayContainer;
-import com.zooracle.model.sql.SQLHashMapContainer;
-import com.zooracle.model.sql.SQLIndividualContainer;
-import com.zooracle.model.sql.SQLiteAnimalDBQueries;
-import com.zooracle.model.sql.SQLiteStructure;
+import com.zooracle.model.sql.*;
 import com.zooracle.view.swing.Locale;
 
 public class AnimalDatabaseManager
@@ -47,14 +30,12 @@ public class AnimalDatabaseManager
 		if (!file.exists())
 			return null;
 		
-//		System.out.println("found file, connecting");
-
 		if (SQLiteInterface.getInstance().testConnection(fileName))
 		{
 
 			AnimalDatabase database = null;
 
-			// SQLArrayListContainer container = new SQLArrayListContainer();
+			
 			SQLHashArrayContainer container = new SQLHashArrayContainer();
 			sqliteInterface.select(SQLiteAnimalDBQueries.getDBSettings, container);
 
@@ -108,17 +89,7 @@ public class AnimalDatabaseManager
 				System.out.println(" ");
 				for (HashMap<String, Object> map : colorSelectionContainer.getHashArray())
 					System.out.println("colorSelectionContainer key:" + map.get("imagesettingsId"));
-					// for (String key : map.keySet())
-
-				// SQLHashMapContainer imageSettingsContainer = new
-				// SQLHashMapContainer(SQLiteStructure.columnMetadataId);
-				// sqliteInterface.select(SQLiteAnimalDBQueries.getImageSettings,
-				// imageSettingsContainer);
-				// SQLHashMapContainer colorSelectionContainer = new
-				// SQLHashMapContainer(SQLiteStructure.columnImagesettingsId);
-				// sqliteInterface.select(SQLiteAnimalDBQueries.getColorSelection,
-				// colorSelectionContainer);
-
+					
 				System.err.println("- - - - - - - - -");
 				System.err.println("- - - - - - - - -");
 				System.err.println("- - - - - - - - -");
@@ -156,8 +127,6 @@ public class AnimalDatabaseManager
 					
 					System.out.println(toadData);
 
-					// System.out.println("w:" +
-					// row.get(SQLiteStructure.columnId));
 					for (String key : imageSettingsContainer.getHashArray().keySet())
 						System.out.println("key:" + key);
 					
@@ -230,18 +199,7 @@ public class AnimalDatabaseManager
 
 					// imageeditor io -> insert on xml load
 
-					// ToadData toadData = new ToadData((Integer)
-					// row.get(SQLiteStructure.columnId));
-
-//					System.out.println(toadData + "");
-
-					// if (!new File(imagePath + column).exists())
-					// {
-					// System.err.println(Locale.messageImageFileNotFound + "("
-					// + imagePath + column + ")");
-					// return null;
-					// }
-					System.out.println("td id:" + toadData.getId()); 
+										System.out.println("td id:" + toadData.getId()); 
 					
 					metaDataEntries.put(toadData.getId(), toadData);
 				}
@@ -383,10 +341,8 @@ public class AnimalDatabaseManager
 		HashMap<String,String> cv = new HashMap<String, String>();
 		if (metaData.getId() > -1)
 			cv.put(SQLiteStructure.columnId, metaData.getId()+"");
-//		cv.put(SQLiteStructure.columnMetadataId, metaData.getMetaDataId()+"");
 		
 		boolean sqlInsert = insert(SQLiteStructure.tableToadData, cv);
-//		return getLastInsertedId();
 		return -1;
 	}
 
@@ -443,28 +399,6 @@ public class AnimalDatabaseManager
 	}
 	
 	
-	
-	
-	
-	/*public static boolean insertModel(Model model)
-	{
-		return false;
-	}
-	
-	public static boolean insertRelKMeta(RelKMeta relKMeta)
-	{
-		return false;
-	}
-	
-	public static boolean insertColorSelection(ColorSelection colorSelection)
-	{
-		return false;
-	}
-	*/
-	
-	
-	
-	
 	public static boolean updateIndividual(Individual individual)
 	{
 		return false;
@@ -488,26 +422,5 @@ public class AnimalDatabaseManager
 	public static boolean updateColorRange(ColorRange colorRange)
 	{
 		return false;
-	}
-	
-	/*public static boolean updateColorSelection(ColorSelection colorSelection)
-	{
-		return false;
-	}
-	
-	public static boolean updateModel(Model model)
-	{
-		return false;
-	}
-	
-	public static boolean updateRelKMeta(RelKMeta relKMeta)
-	{
-		return false;
-	}*/
-	
-	
-	
-
-	
-
+	}	
 }
