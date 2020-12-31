@@ -123,7 +123,6 @@ public class PhotoEditorPanel extends JPanel
 	public PhotoEditorPanel(ZooracleContentPanel zooracleContentPanel)
 	{
 		keyListener = new ImageEditorKeyListener();
-//		this.addKeyListener(keyListener);
 		this.setLayout(new BorderLayout());
 
 		this.setBackground(bgcolor.darker());
@@ -451,8 +450,6 @@ public class PhotoEditorPanel extends JPanel
 			copyMade = false;
 			if (e.getKeyCode() == KeyEvent.VK_SPACE)
 			{
-//				System.out.println("k:"+selected);
-
 				selected = !selected;
 				System.out.println("hit space" + selected);
 				unsavedChange = true;
@@ -519,11 +516,8 @@ public class PhotoEditorPanel extends JPanel
 				this.zooFile = new File(metaData.getZooName());
 			}
 			this.currentFile = metaData.getFileName();
-//			this.colorParameterWindow.set
 			colorParameterWindow.setColorSettings(this.currentMetaData.getImageSettings().getColorRanges(), contrast = this.currentMetaData.getImageSettings().getContrast());
 			setCurrentImage(currentMetaData.getFileName());
 			updateColorRange();
 	}
-	
-
 }

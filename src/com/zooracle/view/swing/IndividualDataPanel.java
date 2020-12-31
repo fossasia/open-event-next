@@ -51,7 +51,6 @@ public class IndividualDataPanel extends JPanel
 		textAreaComment.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		
 		comboBoxGender = new JComboBox(); 
-//		comboBoxGender.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		for (Object item : Locale.dropDownGenders)
 			comboBoxGender.addItem(item);
 		

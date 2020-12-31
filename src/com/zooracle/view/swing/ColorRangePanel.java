@@ -260,7 +260,6 @@ public class ColorRangePanel extends JPanel
 		this.rangeV.add(sliderRangeVT);
 
 		this.topPanel = new JPanel(new GridLayout(1, 4));
-		// this.topPanel.add(colorPanel);
 		this.topPanel.add(buttonAdd);
 		this.topPanel.add(buttonSubtract);
 		this.topPanel.add(buttonDisable);
@@ -268,7 +267,6 @@ public class ColorRangePanel extends JPanel
 		this.topSubPanel = new JPanel(new BorderLayout());
 		JLabel titleLabel = new JLabel("");
 		this.topTopPanel = new JPanel(new GridLayout(1, 1));
-		// this.topTopPanel.setBackground(new Color(130,150,150));
 		this.topTopPanel.add(titleLabel);
 		this.topSubPanel.add(topTopPanel, BorderLayout.NORTH);
 		this.topSubPanel.add(topPanel, BorderLayout.CENTER);

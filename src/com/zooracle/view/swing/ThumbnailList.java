@@ -17,8 +17,7 @@ public class ThumbnailList extends JScrollPane implements ThumbnailCaller
 	private ArrayList<MetaData> metaDataEntries;
 	
 	private JPanel content;
-//	private JScrollPane thumbnailScrollPane;
-	
+
 	public ThumbnailList()
 	{
 		metaDataEntries = new ArrayList<MetaData>();
@@ -27,7 +26,6 @@ public class ThumbnailList extends JScrollPane implements ThumbnailCaller
 		content = new JPanel();
 		content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
 		
-//		thumbnailScrollPane = new JScrollPane(content);
 		content.setBackground(new Color(133,133,133));
 		this.setViewportView(content);
 		this.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);

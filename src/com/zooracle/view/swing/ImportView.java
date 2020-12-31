@@ -36,7 +36,6 @@ public class ImportView extends ZooracleContentPanel
 {
 
 	private IndividualDataPanel individualDataPanel;
-	// private MetaDataPanel metaDataPanel;
 	private ToadDataPanel metaDataPanel;
 	private TitledBorder metadataTitledBorder;
 	private Individual currentIndividual;
@@ -69,31 +68,14 @@ public class ImportView extends ZooracleContentPanel
 		individualTitledBorder = BorderFactory.createTitledBorder(new LineBorder(Color.GRAY));
 		individualTitledBorder.setTitle("individual n");
 
-//		dataPanel.setBorder(individualTitledBorder);
-		// dataPanel.setBackground(Color.YELLOW);
-
 		metaDataPanel.setBorder(metadataTitledBorder);
 		dataPanel.add(metaDataPanel);
-		// dataPanel.add(individualDataPanel);
 		dataPanel.setMaximumSize(new Dimension(840, 300));
 		dataAssignPanel = new JPanel();
 		dataAssignPanel.setLayout(new BoxLayout(dataAssignPanel, BoxLayout.Y_AXIS));
 
 		AssignPanel assignPanel = new AssignPanel(this);
-		// dataPanel.add(assignPanel);
-
-		// JPanel filterPanel = new JPanel();
-		// filterPanel.setBackground(Color.BLACK);
-		// filterPanel.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.BLACK,
-		// 1), Locale.labelFilter));
-		// filterPanel.setPreferredSize(preferredSize);
-
-		// jPanel.setLayout(new BoxLayout(jPanel, BoxLayout.X_AXIS));
-		// jPanel.setMinimumSize(new Dimension(600, 220));
-		
-
 		buttonPanel = new JPanel();
-		// buttonPanel.setBackground(Color.GREEN);
 		buttonPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 		buttonNext = new JButton("next");
 		buttonNext.addActionListener(new ActionListener() {
@@ -117,12 +99,7 @@ public class ImportView extends ZooracleContentPanel
 							currentSelectedIndex++;
 							photoList.getSelectionModel().clearSelection();
 							photoList.getSelectionModel().setSelectionInterval(currentSelectedIndex, currentSelectedIndex);
-//							metaDataPanel.setData(photoMap.get(currentSelectedIndex));
-	//						photoList.getS
-//							photoEditorPanel.setVisible(true);
-//							dataPanel.setVisible(false);
 						}
-//						if
 					}
 					
 				}
@@ -148,57 +125,21 @@ public class ImportView extends ZooracleContentPanel
 		listPanel.setLayout(new BoxLayout(listPanel, BoxLayout.X_AXIS));
 		listPanel.setMaximumSize(new Dimension(200, 560));
 		listPanel.setPreferredSize(new Dimension(200, 560));
-		// listPanel.setBackground(Color.GREEN);
-
+		
 		JPanel oi = new JPanel();
 		oi.setBackground(Color.RED);
 		oi.setSize(200, 200);
-		// listPanel.add(oi);
+		
 
 		photoList = new PhotoList(this);
 		listPanel.add(photoList);
 
-		// this.setLayout(new FlowLayout(FlowLayout.LEFT));
 		this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 
 		this.add(listPanel);
 		this.add(dataAssignPanel);
 
 		dataAssignPanel.setVisible(false);
-		// photoList.maximize(true);
-
-		// this.setMinimumSize(new Dimension(1200,700));
-
-		// photoList.setData(new Object[][]{ { "12", "234", "67" }, { "-123",
-		// "43", "853" }, { "93", "89.2", "109" }, { "279", "9033", "3092" } });
-
-		// this.add(new
-		// JScrollPane(dataPanel,JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS));
-
-		// this.addComponentListener(new ComponentListener() {
-		//
-		// public void componentShown(ComponentEvent e) {
-		// // TODO Auto-generated method stub
-		//
-		// }
-		//
-		// public void componentResized(ComponentEvent e) {
-		// photoEditorPanel.updateImageBuffer(dataAssignPanel.getWidth(),
-		// dataAssignPanel.getHeight());
-		//
-		// }
-		//
-		// public void componentMoved(ComponentEvent e) {
-		// // TODO Auto-generated method stub
-		//
-		// }
-		//
-		// public void componentHidden(ComponentEvent e) {
-		// // TODO Auto-generated method stub
-		//
-		// }
-		// });
-
 	}
 
 	public void setPhotoMap(HashMap<Integer, ToadData> photoMap) {
@@ -221,15 +162,6 @@ public class ImportView extends ZooracleContentPanel
 			i++;
 		}
 
-		// tableMap.add(pair.getKey());
-
-		// Iterator it = photoMap.entrySet().iterator();
-		// while (it.hasNext()) {
-		// Map.Entry<Integer, ToadData> pair = (Map.Entry<Integer,
-		// ToadData>)it.next();
-		//// pair.getKey()
-		// System.out.println(pair.getKey() + " = " + pair.getValue());
-		// }
 		photoList.setData(data);
 		this.revalidate();
 
@@ -247,8 +179,6 @@ public class ImportView extends ZooracleContentPanel
 			if (!dataAssignPanel.isVisible())
 				dataAssignPanel.setVisible(true);
 			
-//			photoEditorPanel
-//			if ()
 			System.out.println("has zoo:" + photoMap.get(index).getZooName());
 			
 			photoEditorPanel.setPhoto(photoMap.get(index));

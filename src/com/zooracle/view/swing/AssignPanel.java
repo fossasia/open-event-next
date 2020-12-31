@@ -17,12 +17,7 @@ public class AssignPanel extends JPanel{
 		this.setBackground(GUISettings.windowColor);
 		this.setForeground(GUISettings.windowColor);
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
-		
-//		this.setBorder(BorderFactory.createEtchedBorder());
-		
 		this.setPreferredSize(new Dimension(300, 500));
 		this.setMinimumSize(new Dimension(300, 500));
 	}
-	
-
 }

@@ -69,20 +69,13 @@ public class MainWindow extends JFrame
 	
 	
 	
-	protected Locale locale = new Locale();
-//	public static AnimalDatabase animalDB;
-//	public static AnimalDatabase getAnimalDB() {
-//		return animalDB;
-//	}
-	
-	
+	protected Locale locale = new Locale();	
 	
 	public MainWindow()
 	{
 		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 		
 		this.setBackground(GUISettings.windowColor);
-//		System.loadLibrary(System.getProperty("java.library.path") + "\\" + Core.NATIVE_LIBRARY_NAME);
 		
 		this.setTitle(currentTitle);
 		this.menu = new JMenuBar();
@@ -106,37 +99,23 @@ public class MainWindow extends JFrame
 		this.infoPanel = new JLabel(locale.ZooracleFooterNotice);
 		this.infoPanel.setBorder(BorderFactory.createLoweredSoftBevelBorder());
 		this.infoPanel.setBackground(new Color(170,170,170));
-		
 		this.setSize(width, height);
-//		this.setLocationRelativeTo(null);
-//		this.setLocation(0,0);
-//		this.setLocation(this.getLocation().x-250, this.getLocation().y);
-		
 		this.setLayout(new BorderLayout());
-		
 		this.setJMenuBar(this.menu);
-		
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
 		this.content = new ZooracleContentPanel(this);
-//		this.content.setBackground(new Color(150,150,160));
-		
 		this.add(this.content,BorderLayout.CENTER);
 		this.add(this.infoPanel, BorderLayout.SOUTH);
 		
-//		this.setResizable(false);
 		this.setVisible(true);
-		
-//		this.setLocation(1400, 0);
 	}
 
-	private void initBatchMenu() {
-		
+	private void initBatchMenu() 
+	{
 		this.menuBatchLoadList = new JMenuItem(locale.menuBatchLoadList);
 		this.menuBatchSaveList = new JMenuItem(locale.menuBatchSaveList);
 		this.menuBatchScan = new JMenuItem(locale.menuBatchScan);
 		this.menuGenerate = new JMenuItem(locale.menuGenerate);
-		
 	}
 	
 	public void setCurrentInfo(String currentInfo)
@@ -158,9 +137,5 @@ public class MainWindow extends JFrame
 	{
 		this.currentTitle = defaultTitle + " " + moduleTitle;
 		this.setTitle(currentTitle);		
-	}
-	
-	
-	
-	
+	}	
 }

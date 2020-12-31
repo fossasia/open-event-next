@@ -47,6 +47,4 @@ public class ZooracleContentPanel extends JPanel
 	public void setUnsavedChange(boolean unsavedChange) {
 		this.unsavedChange = unsavedChange;
 	}
-	
-
 }

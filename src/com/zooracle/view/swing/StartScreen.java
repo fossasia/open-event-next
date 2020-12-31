@@ -46,7 +46,6 @@ public class StartScreen extends ZooracleContentPanel
 		
 		JPanel databasePanel = new JPanel();
 		databasePanel.setBorder(BorderFactory.createTitledBorder(Locale.database));
-//		databasePanel.setLayout(new FlowLayout(FlowLayout.LEADING));
 		databasePanel.setLayout(new BoxLayout(databasePanel, BoxLayout.Y_AXIS));
 		databasePanel.setBackground(this.getBackground().brighter());
 		
@@ -98,10 +97,6 @@ public class StartScreen extends ZooracleContentPanel
 			if (c instanceof JPanel)
 				c.setBackground(databasePanel.getBackground());			
 		}
-		
-//		this.setMinimumSize(new Dimension(this.mainWindow.getWidth()-80, this.mainWindow.getHeight()-80));
-//		this.setPreferredSize(new Dimension(this.mainWindow.getWidth()-80, this.mainWindow.getHeight()-80));
-		
 		
 		resizeComponents();
 		

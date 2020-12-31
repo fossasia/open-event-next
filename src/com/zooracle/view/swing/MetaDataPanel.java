@@ -41,9 +41,6 @@ import tools.ImgUtils;
 public class MetaDataPanel extends JPanel
 {
 	
-//	protected MetaData metaData;
-//	protected MetaData originalMetaData;
-	
 	protected boolean dataChanged = false;
 	
 	protected JLabel labelName;
@@ -60,13 +57,10 @@ public class MetaDataPanel extends JPanel
 	protected JTextField textFieldLat;
 	protected JTextField textFieldLon;
 	protected JComboBox comboBoxView;
-//	protected JList metaList;
 	
 	protected JButton buttonEdit;
 	protected JButton buttonDelete;
-	
-//	protected ZooracleContentPanel zooracleContentPanel;
-	
+		
 	protected int lw = GUISettings.defaultLabelWidth;
 	protected int lh = GUISettings.defaultLabelHeight;
 	protected int a = SwingConstants.RIGHT;
@@ -97,12 +91,6 @@ public class MetaDataPanel extends JPanel
 
 	private boolean imgHoverEnabled;
 
-//	public MetaDataPanel(ZooracleContentPanel zooracleContentPanel)
-//	{
-////		if (display)
-////		this.currentDisplayMode = displayMode; 
-//		this(zooracleContentPanel, DisplayMode.horizontal);
-//	}
 	public MetaDataPanel(DisplayMode displayMode)
 	{
 		
@@ -133,7 +121,6 @@ public class MetaDataPanel extends JPanel
 			resizedImage = img.getScaledInstance(150, 250, Image.SCALE_SMOOTH);
 			img = ImageIO.read(new File("C:/temp/zimg/2014_by_falk/14Ba_0006.zoo.png"));
 			resizedImageHover = img.getScaledInstance(150, 250, Image.SCALE_SMOOTH);
-//			img.getGraphics().drawImage(resizedImage, 0,0,null);
 		}
 		catch (IOException e)
 		{
@@ -173,9 +160,7 @@ public class MetaDataPanel extends JPanel
         imgLabel.setPreferredSize(new Dimension(iw, 268));
         imgLabel.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         zooPanel.add(imgLabel);
-		
-//		this.zooracleContentPanel = zooracleContentPanel;
-		
+				
 		labelValidFromDate = GUISettings.getDefaultLabel(Locale.labelValidFromDate, lw, lh, a, va);  
 		labelName     =      GUISettings.getDefaultLabel(Locale.labelName, lw, lh, a, va);  
 		labelView     =      GUISettings.getDefaultLabel(Locale.labelView, lw, lh, a, va);  
@@ -285,16 +270,6 @@ public class MetaDataPanel extends JPanel
 		dataPanel.setMinimumSize(new Dimension(250, 100));
 		dataPanel.setMaximumSize(new Dimension(310, 100));
 		
-//		for (Component c : inputComponents)
-//			c.setEnabled(false);
-		
-//		if (currentDisplayMode.equals(DisplayMode.horizontal))
-////			this.setMinimumSize(new Dimension(dpw, dph));
-//		else
-//		{
-////			this.setMinimumSize(new Dimension(100, 500));
-////			this.setMaximumSize(new Dimension(100, 500));
-//		}
 		
 		this.add(zooPanel);
 		this.add(dataPanel);
@@ -402,8 +377,5 @@ public class MetaDataPanel extends JPanel
 		}
 		this.revalidate();
 		this.repaint();
-//		this.zooPanel.setMinimumSize(new Dimension(dpw, dph));
-//		this.zooPanel.setPreferredSize(new Dimension(dpw, dph));
 	}
-
 }

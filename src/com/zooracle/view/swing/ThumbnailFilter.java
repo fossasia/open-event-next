@@ -50,19 +50,8 @@ public class ThumbnailFilter extends JPanel
 		if (currentFilterSettings.unassigned)
 		{
 			HashMap<Integer, MetaData> metaDataEntries = db.getMetaDataEntries();
-//			
-//			metaDataList = new ArrayList<MetaData>(metaDataEntries.entrySet()
-//					.stream()
-//					.filter(p -> p.getValue().getIndividualId() != 9679679)
-//				    .map(Map.Entry::getValue)
-//				    .collect(Collectors.toList()));
-//			System.out.println(metaDataList.size());
 		}
 		
 		this.list.updateThumbnails(metaDataList);
-		
-		
-		
 	}
-
 }
