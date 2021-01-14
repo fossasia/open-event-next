@@ -46,15 +46,12 @@ public class AnimalDatabaseManager
 
 		if (!file.exists())
 			return null;
-		
-//		System.out.println("found file, connecting");
 
 		if (SQLiteInterface.getInstance().testConnection(fileName))
 		{
 
 			AnimalDatabase database = null;
-
-			// SQLArrayListContainer container = new SQLArrayListContainer();
+			
 			SQLHashArrayContainer container = new SQLHashArrayContainer();
 			sqliteInterface.select(SQLiteAnimalDBQueries.getDBSettings, container);
 
@@ -108,16 +105,6 @@ public class AnimalDatabaseManager
 				System.out.println(" ");
 				for (HashMap<String, Object> map : colorSelectionContainer.getHashArray())
 					System.out.println("colorSelectionContainer key:" + map.get("imagesettingsId"));
-					// for (String key : map.keySet())
-
-				// SQLHashMapContainer imageSettingsContainer = new
-				// SQLHashMapContainer(SQLiteStructure.columnMetadataId);
-				// sqliteInterface.select(SQLiteAnimalDBQueries.getImageSettings,
-				// imageSettingsContainer);
-				// SQLHashMapContainer colorSelectionContainer = new
-				// SQLHashMapContainer(SQLiteStructure.columnImagesettingsId);
-				// sqliteInterface.select(SQLiteAnimalDBQueries.getColorSelection,
-				// colorSelectionContainer);
 
 				System.err.println("- - - - - - - - -");
 				System.err.println("- - - - - - - - -");
@@ -147,8 +134,6 @@ public class AnimalDatabaseManager
 					
 					toadData.setPopulation(""+(Integer) check(row.get(SQLiteStructure.columnPopulationId), null));
 					
-//					System.out.println(toadData.getName());
-					
 					if (toadData.getFileName()!=null)
 						toadData.setFileName(imagePath + toadData.getFileName());
 					if (toadData.getZooName()!=null)
@@ -156,8 +141,6 @@ public class AnimalDatabaseManager
 					
 					System.out.println(toadData);
 
-					// System.out.println("w:" +
-					// row.get(SQLiteStructure.columnId));
 					for (String key : imageSettingsContainer.getHashArray().keySet())
 						System.out.println("key:" + key);
 					
@@ -205,7 +188,6 @@ public class AnimalDatabaseManager
 
 							imageSettings.getColorRanges().add(colorRange);
 							System.out.println("" + colorRange);
-							// colorSelectionContainer.getHashArray().remove(colorSelectionHashMap);
 							elementsToRemove.addFirst(new Integer(i));
 						}
 						i++;
@@ -229,18 +211,6 @@ public class AnimalDatabaseManager
 					// remove *
 
 					// imageeditor io -> insert on xml load
-
-					// ToadData toadData = new ToadData((Integer)
-					// row.get(SQLiteStructure.columnId));
-
-//					System.out.println(toadData + "");
-
-					// if (!new File(imagePath + column).exists())
-					// {
-					// System.err.println(Locale.messageImageFileNotFound + "("
-					// + imagePath + column + ")");
-					// return null;
-					// }
 					System.out.println("td id:" + toadData.getId()); 
 					
 					metaDataEntries.put(toadData.getId(), toadData);
@@ -383,10 +353,8 @@ public class AnimalDatabaseManager
 		HashMap<String,String> cv = new HashMap<String, String>();
 		if (metaData.getId() > -1)
 			cv.put(SQLiteStructure.columnId, metaData.getId()+"");
-//		cv.put(SQLiteStructure.columnMetadataId, metaData.getMetaDataId()+"");
 		
 		boolean sqlInsert = insert(SQLiteStructure.tableToadData, cv);
-//		return getLastInsertedId();
 		return -1;
 	}
 
@@ -440,30 +408,7 @@ public class AnimalDatabaseManager
 		}
 		
 		return -1;
-	}
-	
-	
-	
-	
-	
-	/*public static boolean insertModel(Model model)
-	{
-		return false;
-	}
-	
-	public static boolean insertRelKMeta(RelKMeta relKMeta)
-	{
-		return false;
-	}
-	
-	public static boolean insertColorSelection(ColorSelection colorSelection)
-	{
-		return false;
-	}
-	*/
-	
-	
-	
+	}	
 	
 	public static boolean updateIndividual(Individual individual)
 	{
@@ -488,26 +433,6 @@ public class AnimalDatabaseManager
 	public static boolean updateColorRange(ColorRange colorRange)
 	{
 		return false;
-	}
-	
-	/*public static boolean updateColorSelection(ColorSelection colorSelection)
-	{
-		return false;
-	}
-	
-	public static boolean updateModel(Model model)
-	{
-		return false;
-	}
-	
-	public static boolean updateRelKMeta(RelKMeta relKMeta)
-	{
-		return false;
-	}*/
-	
-	
-	
-
-	
+	}	
 
 }
