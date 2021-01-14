@@ -33,8 +33,6 @@ public class PhotoEditorToolPanel extends JPanel
 	{
 		this.editor = editor;
 
-//		this.setResizable(false);
-
 		this.setPreferredSize(new Dimension(300,600));
 		this.setVisible(true);
 
