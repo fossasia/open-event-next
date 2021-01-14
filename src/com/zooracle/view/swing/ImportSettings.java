@@ -62,17 +62,12 @@ public class ImportSettings extends ZooracleContentPanel
 		comboBoxDatabase.addItemListener(new ItemListener() {
 
 			public void itemStateChanged(ItemEvent e) {
-				// System.out.println("sel item: " +
-				// comboBoxDatabase.getSelectedItem()+ " trigger " +
-				// e.getItem().toString());
 
 				if (!comboBoxDatabase.getSelectedItem().equals(e.getItem()))
 					return;
 
 				if (e.getItem().toString().equals(Locale.labelNew)) {
-					// dbNameLabel.setEnabled(true);
 					dbNameTextField.setText("");
-					// System.out.println("new selected");
 
 				} else {
 					dbNameTextField.setText(e.getItem().toString());
@@ -81,7 +76,6 @@ public class ImportSettings extends ZooracleContentPanel
 			}
 		});
 
-		// this.setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 		JPanel panel = new JPanel();
 		panel.setBorder(BorderFactory.createEmptyBorder(100, 100, 100, 100));
 		panel.setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -100,7 +94,6 @@ public class ImportSettings extends ZooracleContentPanel
 		importPanel.setPreferredSize(new Dimension(400, 50));
 		importPanel.add(importButton);
 
-		// importPanel.add(new JLabel(Locale.label))
 		panel.add(dbNamePanel);
 		panel.add(importPanel);
 		this.add(panel);
