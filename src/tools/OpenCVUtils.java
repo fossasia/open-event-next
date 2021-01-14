@@ -107,7 +107,6 @@ public class OpenCVUtils {
 
         String dataString = JsonObject.get("data").getAsString();       
         byte[] data = DatatypeConverter.parseBase64Binary(dataString);
-//        byte[] data = Base64.decode(dataString.getBytes(), Base64.DEFAULT); 
 
         Mat mat = new Mat(rows, cols, type);
         mat.put(0, 0, data);
@@ -310,8 +309,6 @@ public class OpenCVUtils {
           int w = in.getWidth();
           int h = in.getHeight();
 
-//          if(in.getType() == BufferedImage.TYPE_INT_BGR)
-//          if(in.getType() == BufferedImage.TYPE_INT_RGB)
     	  if(in.getType() == BufferedImage.TYPE_INT_ARGB)
           {
               out = new Mat(h, w, CvType.CV_8UC3);
@@ -323,13 +320,6 @@ public class OpenCVUtils {
                   data[i*3 + 1] = (byte) ((dataBuff[i] >> 8) & 0xFF);
                   data[i*3 + 2] = (byte) ((dataBuff[i] >> 0) & 0xFF);
                   
-//                  data[i*3] = (byte) ((dataBuff[i] >> 24) & 0xFF);
-//                  data[i*3 + 1] = (byte) ((dataBuff[i] >> 16) & 0xFF);
-//                  data[i*3 + 2] = (byte) ((dataBuff[i] >> 8) & 0xFF);
-                  
-//                  data[i*3] = (byte) ((dataBuff[i] >> 16) & 0xFF);
-//                  data[i*3 + 1] = (byte) ((dataBuff[i] >> 8) & 0xFF);
-//                  data[i*3 + 2] = (byte) ((dataBuff[i] >> 0) & 0xFF);
               }
           }
           else
@@ -343,9 +333,7 @@ public class OpenCVUtils {
             	  r = (byte) ((dataBuff[i] >> 24) & 0xFF);
             	  g = (byte) ((dataBuff[i] >> 16) & 0xFF);
             	  b = (byte) ((dataBuff[i] >> 8) & 0xFF);
-//                r = (byte) ((dataBuff[i] >> 16) & 0xFF);
-//                g = (byte) ((dataBuff[i] >> 8) & 0xFF);
-//                b = (byte) ((dataBuff[i] >> 0) & 0xFF);
+		      
                 data[i] = (byte)((0.21 * r) + (0.71 * g) + (0.07 * b)); //luminosity
               }
            }
