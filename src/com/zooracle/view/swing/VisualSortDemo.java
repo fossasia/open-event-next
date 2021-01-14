@@ -101,7 +101,6 @@ public class VisualSortDemo
 		});
 		
 		frame.add(createModelButton);
-//		frame.add(compareButton);
 		
 		frame.setLocationRelativeTo(null);
 		frame.setVisible(true);
@@ -123,8 +122,6 @@ public class VisualSortDemo
 		{
 			e.printStackTrace();
 		}
-		
-//		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 
 		List<MatOfKeyPoint> keypoints = new ArrayList<MatOfKeyPoint>();
 		long timebefore = System.nanoTime();
@@ -147,14 +144,12 @@ public class VisualSortDemo
 		
 		HashMap<Integer,Range> descImg = new HashMap<Integer, Range>();
 		ArrayList<Integer> labels = new ArrayList<Integer>();
-//		HashMap<Integer,Integer> descImg = new HashMap<Integer, Range>();
 		
 		int currentNumRows = 0;
 
 		// read images
 		for (int a = 0; a < numAnimals; a++)
 		{
-//			logger.info("now:" + animalFiles.get(a));
 			aImg[a] = Highgui.imread(animalFiles.get(a).toString(), 0); 
 			Imgproc.resize(aImg[a], aImg[a], new Size(150, 250));
 			Imgproc.equalizeHist(aImg[a], aImg[a]);
@@ -186,14 +181,10 @@ public class VisualSortDemo
 	    TermCriteria criteria = new TermCriteria(TermCriteria.EPS + TermCriteria.MAX_ITER,100,0.1);
 	    long before= System.currentTimeMillis();
 	    
-//	    if ((createCodebook) && (!vocabularyFile.exists()))
-	    {
 		    System.out.print("creating kmeans cluster...");
 		    Core.kmeans(allDescriptors, k, clusterLabels, criteria, 10, Core.KMEANS_PP_CENTERS, centers);
 		    logger.info("done.");
-	    }
-//	    else
-//	    	centers = OpenCVUtils.loadMatFromFile(vocabularyFile);
+	    
 	    
 	    long after = System.currentTimeMillis() - before;
 	    logger.info("done in " + (after) + " ms");
@@ -233,32 +224,23 @@ public class VisualSortDemo
 	    	
 	    	
 	    	matcher.knnMatch(aDescriptors[a], centers, matches, (int)maxKn);
-//	    	logger.info("matches size: " + matches.size());
-	    	
-	    	
 	    	
 	    	for (MatOfDMatch mdm : matches)
 	    	{
 	    		double kn = 1;
 	    		for (DMatch dm : mdm.toList())
 	    		{
-//	    			codebook[k*a + dm.trainIdx] += (maxKn-kn+1d)/maxKn;
 	    			codebook[a][dm.trainIdx] += ((maxKn-kn+1d)/maxKn)*((maxKn-kn+1d)/maxKn);
 	    			
 	    			int detectedKIndex = dm.trainIdx;
 //	    			dm.
 	    			for (int photoIndex : clusterImageMap.get(detectedKIndex))
 	    			{
-//	    				if (a==photoIndex)
-//	    					continue;
 	    				matchMatrix[a][photoIndex]++;
 	    			}
 	    			
-//	    			codebook[a][dm.trainIdx] += ((maxKn-kn+1d)/maxKn)*((maxKn-kn+1d)/maxKn);
-//	    			codebook[a][dm.trainIdx] += ((maxKn-kn+1d)/maxKn)*((maxKn-kn+1d)/maxKn);
 					kn++;
 	    		}
-//	    		logger.info("kn:" + kn);
 	    	}
 	    	
 	    	int currentBestMatchCount = -1;
@@ -268,12 +250,9 @@ public class VisualSortDemo
 	    	
 	    	for (int i = 0; i < numAnimals; i++)
 	    	{
-//	    		if (matchMatrix[a][i] > currentBestMatchCount)
-//	    		{
 	    			currentBestMatchCount = (int)matchMatrix[a][i];
 	    			currentBestMatchIndex = i;
 	    			bestMatchArray.add(new int[]{currentBestMatchIndex,currentBestMatchCount});
-//	    		}
 	    	}
 	    	Collections.sort(bestMatchArray, new Comparator<int[]>()
 			{
@@ -349,10 +328,9 @@ public class VisualSortDemo
 	    	{
 	    		maxValMM = Math.max(maxValMM,matchMatrix[i][j]);
 	    		minValMM = Math.min(minValMM,matchMatrix[i][j]);
-//	    		matchMatrix1D[i*numAnimals + j] = distances2D[a][a2] * 40d;
 	    	}
 	    }
-//	    logger.info("min: " + minValMM + "\t max: " + maxValMM);
+		
 	    for (int i = 0; i < numAnimals; i++)
 	    {	 
 	    	for (int j = 0; j < numAnimals; j++)
@@ -376,14 +354,12 @@ public class VisualSortDemo
 			for (int n = 0; n < m; n++)
 			{
 				matches = new ArrayList<MatOfDMatch>();
-//				List<MatOfDMatch> matches = new ArrayList<MatOfDMatch>();
 				matcher.knnMatch(aDescriptors[m], aDescriptors[n], matches, maxKn2);
 				
 				numMatches[m][n] = matches.size();
-//				logger.info("matches: " + matches.size());
 				
 				Mat outImg = new Mat();
-				// logger.info(matchesList.toString());
+			
 				double min_dist = Double.MAX_VALUE;
 				double max_dist = Double.MIN_VALUE;
 				
@@ -434,7 +410,6 @@ public class VisualSortDemo
 	    Mat cdMat2 = new Mat(numAnimals, numAnimals, CvType.CV_8U);
 		cdMat2.put(0, 0, numGoodMatches1D);
 		Imgproc.resize(cdMat2, cdMat2, new Size(numAnimals * 15, numAnimals * 15), 2d, 2d, Imgproc.INTER_NEAREST);
-//		OpenCVUtils.imshow("response direct comparison", cdMat2);
 		Highgui.imwrite(osBaseDir+method+"_directcmp_"+distLimit+"_km_" + maxKn2 + ".png", cdMat2);
 
 		
