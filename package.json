@@ -9,16 +9,17 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext js,jsx,ts,tsx",
     "test": "jest",
-    "test-all": "yarn lint && yarn type-check && yarn test"
+    "test-all": "npm run lint && npm run type-check && npm run test",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "yarn run type-check"
+      "pre-push": "npm run type-check"
     }
   },
   "lint-staged": {
-    "*.@(ts|tsx)": [
+    "*.@(js|jsx|ts|tsx)": [
       "yarn lint",
       "yarn format"
     ]
