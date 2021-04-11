@@ -1,4 +1,14 @@
 import Head from 'next/head'
+import {
+  Button,
+  Checkbox,
+  FormControl,
+  FormControlLabel,
+  FormHelperText,
+  FormLabel,
+  Radio,
+  RadioGroup,
+} from '@material-ui/core'
 import styles from '../styles/Home.module.css'
 
 export default function Home(): JSX.Element {
@@ -26,6 +36,35 @@ export default function Home(): JSX.Element {
         >
           Test Button
         </button>
+        <div>
+          <Button color="primary" variant="contained">
+            Testing Material UI Button
+          </Button>
+          <Checkbox
+            value="checkedA"
+            inputProps={{ 'aria-label': 'Checkbox A' }}
+          />
+        </div>
+
+        <form
+          onSubmit={() => {
+            window.alert('Yay! MUI seems working fine.')
+          }}
+        >
+          <FormControl component="fieldset">
+            <FormLabel component="legend">
+              Pop quiz: Can you see Button and checkbox above
+            </FormLabel>
+            <RadioGroup aria-label="quiz" name="quiz">
+              <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+              <FormControlLabel value="No" control={<Radio />} label="No" />
+            </RadioGroup>
+            <FormHelperText>Choose Wisely</FormHelperText>
+            <Button type="submit" variant="outlined" color="primary">
+              Check Answer
+            </Button>
+          </FormControl>
+        </form>
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
