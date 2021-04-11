@@ -3,6 +3,7 @@ import { AppProps } from 'next/app'
 import { StylesProvider, ThemeProvider } from '@material-ui/core/styles'
 import '../styles/globals.css'
 import theme from '../src/theme'
+import { CssBaseline } from '@material-ui/core'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   React.useEffect(() => {
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   return (
     <ThemeProvider theme={theme}>
       <StylesProvider injectFirst>
+        <CssBaseline />
         <Component {...pageProps} />
       </StylesProvider>
     </ThemeProvider>
