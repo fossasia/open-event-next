@@ -1,7 +1,8 @@
 import React from 'react'
 import { AppProps } from 'next/app'
-import { StylesProvider } from '@material-ui/core/styles'
+import { StylesProvider, ThemeProvider } from '@material-ui/core/styles'
 import '../styles/globals.css'
+import theme from '../src/theme'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   React.useEffect(() => {
@@ -12,9 +13,11 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     }
   }, [])
   return (
-    <StylesProvider injectFirst>
-      <Component {...pageProps} />
-    </StylesProvider>
+    <ThemeProvider theme={theme}>
+      <StylesProvider injectFirst>
+        <Component {...pageProps} />
+      </StylesProvider>
+    </ThemeProvider>
   )
 }
 
