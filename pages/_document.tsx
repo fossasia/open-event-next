@@ -15,19 +15,13 @@ export default class MyDocument extends Document {
           {/* PWA primary color */}
           <link
             rel="preload"
-            href="/fonts/roboto-v27-latin-100.woff2"
-            as="font"
-            crossOrigin=""
-          />
-          <link
-            rel="preload"
             href="/fonts/roboto-v27-latin-300.woff2"
             as="font"
             crossOrigin=""
           />
           <link
             rel="preload"
-            href="/fonts/roboto-v27-latin-400.woff2"
+            href="/fonts/roboto-v27-latin-regular.woff2"
             as="font"
             crossOrigin=""
           />
