@@ -14,8 +14,34 @@ export default class MyDocument extends Document {
         <Head>
           {/* PWA primary color */}
           <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="preload"
+            href="/fonts/roboto-v27-latin-100.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/roboto-v27-latin-300.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/roboto-v27-latin-400.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/roboto-v27-latin-500.woff2"
+            as="font"
+            crossOrigin=""
+          />
+          <link
+            rel="preload"
+            href="/fonts/roboto-v27-latin-700.woff2"
+            as="font"
+            crossOrigin=""
           />
         </Head>
         <body>
