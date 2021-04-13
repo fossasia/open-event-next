@@ -36,9 +36,6 @@ export default function Home(): JSX.Element {
         >
           Test Button
         </button>
-        <a href="/sentry">
-          <button>Sentry</button>
-        </a>
         <div>
           <Button color="primary" variant="contained">
             Testing Material UI Button
