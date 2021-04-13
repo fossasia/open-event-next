@@ -4,6 +4,9 @@ import { StylesProvider, ThemeProvider } from '@material-ui/core/styles'
 import '../styles/globals.css'
 import theme from '../src/theme'
 import { CssBaseline } from '@material-ui/core'
+import { init } from '../utils/sentry'
+
+init()
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
   React.useEffect(() => {
