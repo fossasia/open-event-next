@@ -4,8 +4,15 @@ import { StylesProvider, ThemeProvider } from '@material-ui/core/styles'
 import '../styles/globals.css'
 import theme from '../src/theme'
 import { CssBaseline } from '@material-ui/core'
+import { init } from '../utils/sentry'
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+init()
+
+function MyApp({
+  Component,
+  pageProps,
+  err,
+}: AppProps & { err: any }): JSX.Element {
   React.useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
@@ -17,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     <ThemeProvider theme={theme}>
       <StylesProvider injectFirst>
         <CssBaseline />
-        <Component {...pageProps} />
+        <Component {...pageProps} err={err} />
       </StylesProvider>
     </ThemeProvider>
   )
