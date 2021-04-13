@@ -50,7 +50,6 @@ function MyApp({
           <a></a>
         </Link>
       </nav>
-      <Component {...pageProps} />
     </div>
   )
 }
