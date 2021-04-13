@@ -30,12 +30,6 @@ function MyApp({
   }, [])
   return (
     <div>
-      <ThemeProvider theme={theme}>
-        <StylesProvider injectFirst>
-          <CssBaseline />
-          <Component {...pageProps} err={err} />
-        </StylesProvider>
-      </ThemeProvider>
       <Head>
         {/* Import CSS for nprogress */}
         <link rel="stylesheet" type="text/css" href="/nprogress.css" />
@@ -50,6 +44,12 @@ function MyApp({
           <a></a>
         </Link>
       </nav>
+      <ThemeProvider theme={theme}>
+        <StylesProvider injectFirst>
+          <CssBaseline />
+          <Component {...pageProps} err={err} />
+        </StylesProvider>
+      </ThemeProvider>
     </div>
   )
 }
