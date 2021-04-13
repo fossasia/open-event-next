@@ -14,6 +14,23 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "test/testUtils.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "test/testUtils.js",
+    "pages/ssr/test4.js",
+    "pages/ssr/test3.js",
+    "pages/ssr/test1.js",
+    "pages/ssr/test2.js",
+    "pages/client/test5.js",
+    "pages/client/test4.js",
+    "pages/sentry.js",
+    "pages/sentry.js",
+    "pages/api/test4.js",
+    "pages/client/test1.js",
+    "pages/client/test2.js",
+    "pages/client/test3.js"
+  ],
   "exclude": ["node_modules"]
 }
