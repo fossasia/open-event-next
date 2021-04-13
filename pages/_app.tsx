@@ -8,7 +8,11 @@ import { init } from '../utils/sentry'
 
 init()
 
-function MyApp({ Component, pageProps }: AppProps): JSX.Element {
+function MyApp({
+  Component,
+  pageProps,
+  err,
+}: AppProps & { err: any }): JSX.Element {
   React.useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
@@ -20,7 +24,7 @@ function MyApp({ Component, pageProps }: AppProps): JSX.Element {
     <ThemeProvider theme={theme}>
       <StylesProvider injectFirst>
         <CssBaseline />
-        <Component {...pageProps} />
+        <Component {...pageProps} err={err} />
       </StylesProvider>
     </ThemeProvider>
   )
