@@ -32,9 +32,6 @@ function MyApp({
   }, [])
   return (
     <ThemeProvider theme={theme}>
-      <Head>
-        <link rel="stylesheet" type="text/css" href="/nprogress.css" />
-      </Head>
       <nav>
         <style jsx>{`
           a {
@@ -49,6 +46,9 @@ function MyApp({
         </Link>
       </nav>
       <StylesProvider injectFirst>
+        <Head>
+          <link rel="stylesheet" type="text/css" href="/nprogress.css" />
+        </Head>
         <CssBaseline />
         <Component {...pageProps} err={err} />
       </StylesProvider>
