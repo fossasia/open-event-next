@@ -5,8 +5,16 @@ import '../styles/globals.css'
 import theme from '../src/theme'
 import { CssBaseline } from '@material-ui/core'
 import { init } from '../utils/sentry'
+import Router from 'next/router'
+import NProgress from 'nprogress'
 
 init()
+
+Router.events.on('routeChangeStart', () => {
+  NProgress.start()
+})
+Router.events.on('routeChangeComplete', () => NProgress.done())
+Router.events.on('routeChangeError', () => NProgress.done())
 
 function MyApp({
   Component,

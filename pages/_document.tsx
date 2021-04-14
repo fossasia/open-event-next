@@ -37,6 +37,7 @@ export default class MyDocument extends Document {
             as="font"
             crossOrigin=""
           />
+          <link rel="stylesheet" type="text/css" href="/nprogress.css" />
         </Head>
         <body>
           <Main />
