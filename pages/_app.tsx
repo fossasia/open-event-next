@@ -6,8 +6,6 @@ import theme from '../src/theme'
 import { CssBaseline } from '@material-ui/core'
 import { init } from '../utils/sentry'
 import Router from 'next/router'
-import Link from 'next/link'
-import Head from 'next/head'
 import NProgress from 'nprogress'
 
 init()
@@ -32,23 +30,7 @@ function MyApp({
   }, [])
   return (
     <ThemeProvider theme={theme}>
-      <nav>
-        <style jsx>{`
-          a {
-            margin: 0 10px 0 0;
-          }
-        `}</style>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-        <Link href="/loading">
-          <a>Loading Bar Demo Page</a>
-        </Link>
-      </nav>
       <StylesProvider injectFirst>
-        <Head>
-          <link rel="stylesheet" type="text/css" href="/nprogress.css" />
-        </Head>
         <CssBaseline />
         <Component {...pageProps} err={err} />
       </StylesProvider>
