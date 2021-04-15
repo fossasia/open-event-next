@@ -7,6 +7,10 @@ import { CssBaseline } from '@material-ui/core'
 import { init } from '../utils/sentry'
 import Router from 'next/router'
 import NProgress from 'nprogress'
+import { I18nProvider } from '@lingui/react'
+import { i18n } from '@lingui/core'
+
+import { activate } from '../lingui-example/i18n'
 
 init()
 
@@ -27,12 +31,16 @@ function MyApp({
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles)
     }
+    // Activate the default locale on page load
+    activate('en')
   }, [])
   return (
     <ThemeProvider theme={theme}>
       <StylesProvider injectFirst>
         <CssBaseline />
-        <Component {...pageProps} err={err} />
+        <I18nProvider i18n={i18n}>
+          <Component {...pageProps} err={err} />
+        </I18nProvider>
       </StylesProvider>
     </ThemeProvider>
   )

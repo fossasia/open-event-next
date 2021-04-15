@@ -10,6 +10,9 @@ import {
   RadioGroup,
 } from '@material-ui/core'
 import styles from '../styles/Home.module.css'
+import { Trans } from '@lingui/macro'
+
+import { activate } from '../lingui-example/i18n'
 
 export default function Home(): JSX.Element {
   return (
@@ -21,11 +24,13 @@ export default function Home(): JSX.Element {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <Trans>
+            Welcome to <a href="https://nextjs.org">Next.js!</a>
+          </Trans>
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          <Trans>Get started by editing </Trans>
           <code className={styles.code}>pages/index.js</code>
         </p>
 
@@ -106,6 +111,9 @@ export default function Home(): JSX.Element {
           Powered by{' '}
           <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
         </a>
+        <Button onClick={() => activate('en')}>English</Button>
+        {' | '}
+        <Button onClick={() => activate('cs')}>Česky</Button>
       </footer>
     </div>
   )

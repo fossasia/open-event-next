@@ -10,7 +10,9 @@
     "lint": "eslint . --ext js,jsx,ts,tsx",
     "test": "jest",
     "test-all": "npm run lint && npm run type-check && npm run test",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "extract": "NODE_ENV=development lingui extract ",
+    "compile": "lingui compile"
   },
   "husky": {
     "hooks": {
@@ -25,6 +27,8 @@
     ]
   },
   "dependencies": {
+    "@lingui/core": "^3.8.9",
+    "@lingui/react": "^3.8.9",
     "@material-ui/core": "^4.11.3",
     "@material-ui/styles": "^4.11.3",
     "@sentry/browser": "^6.2.5",
@@ -37,6 +41,9 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
+    "@lingui/cli": "^3.8.9",
+    "@lingui/loader": "^3.8.9",
+    "@lingui/macro": "^3.8.9",
     "@testing-library/react": "^11.2.5",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.39",
