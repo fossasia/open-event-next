@@ -9,7 +9,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ### Dependencies
 * **[Git](https://git-scm.com/)**
-* **[Node.js 14.x LTS](https://nodejs.org/)**
+* **[Node.js ](https://nodejs.org/)**
 * **[npm install]**
 ## Running / Development
 First, run the development server:
