@@ -1,8 +1,8 @@
 import { i18n } from '@lingui/core'
-import { en, cs } from 'make-plural/plurals'
+import { en, hi } from 'make-plural/plurals'
 
 i18n.loadLocaleData('en', { plurals: en })
-i18n.loadLocaleData('hi', { plurals: cs })
+i18n.loadLocaleData('hi', { plurals: hi })
 
 /**
  * Load messages for requested locale and activate it.
