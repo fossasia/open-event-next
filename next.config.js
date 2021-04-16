@@ -72,11 +72,6 @@ module.exports = {
         })
       )
     }
-    // if (!options.isServer) {
-    //   config.node = {
-    //     fs: 'empty'
-    //   }
-    // }
     return config
   },
   basePath,
