@@ -5,5 +5,6 @@
     Examples: 'Examples',
     Learn: 'Learn',
     'Welcome to': 'Welcome to',
+    name: 'name',
   },
 }
