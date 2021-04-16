@@ -13,6 +13,26 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: pages/index.tsx:71
+msgid "Deploy"
+msgstr "Deploy"
+
+#: pages/index.tsx:56
+msgid "Documentation"
+msgstr "Documentation"
+
+#: pages/index.tsx:66
+msgid "Examples"
+msgstr "Examples"
+
+#: pages/index.tsx:61
+msgid "Learn"
+msgstr "Learn"
+
 #: pages/index.tsx:17
 msgid "This is line to test translation."
 msgstr "This is line to test translation."
+
+#: pages/index.tsx:15
+msgid "Welcome to <0>Next.js!</0>"
+msgstr "Welcome to <0>Next.js!</0>"

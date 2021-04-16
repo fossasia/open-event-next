@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect } from 'react'
 import { AppProps } from 'next/app'
 import { StylesProvider, ThemeProvider } from '@material-ui/core/styles'
 import '../styles/globals.css'
@@ -24,14 +24,16 @@ function MyApp({
   pageProps,
   err,
 }: AppProps & { err: any }): JSX.Element {
-  React.useEffect(() => {
+  useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles)
     }
+    // Activate translation
     activate('en')
   }, [])
+
   return (
     <ThemeProvider theme={theme}>
       <StylesProvider injectFirst>

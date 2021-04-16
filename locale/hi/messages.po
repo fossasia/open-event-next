@@ -13,6 +13,26 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: pages/index.tsx:71
+msgid "Deploy"
+msgstr "तैनाती"
+
+#: pages/index.tsx:56
+msgid "Documentation"
+msgstr "प्रलेखन"
+
+#: pages/index.tsx:66
+msgid "Examples"
+msgstr "उदाहरण"
+
+#: pages/index.tsx:61
+msgid "Learn"
+msgstr "सीखना"
+
 #: pages/index.tsx:17
 msgid "This is line to test translation."
 msgstr "यह अनुवाद का परीक्षण करने के लिए लाइन है।"
+
+#: pages/index.tsx:15
+msgid "Welcome to <0>Next.js!</0>"
+msgstr ""
