@@ -4,6 +4,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ### Steps
 * `git clone <repository-url>` this repository
 * `cd open-event-next`
+<br/>
 **Note :** If you want to contribute, first fork the original repository and clone the forked repository into your local machine followed by ```cd``` into the directory.
 
 ### Dependencies
