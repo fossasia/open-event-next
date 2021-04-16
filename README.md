@@ -1,7 +1,16 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Follow these steps to set up the project locally.
+ 
+### Steps
+* `git clone <repository-url>` this repository
+* `cd open-event-next`
+**Note :** If you want to contribute, first fork the original repository and clone the forked repository into your local machine followed by ```cd``` into the directory.
 
-## Getting Started
-
+### Dependencies
+* **[Git](https://git-scm.com/)**
+* **[Node.js 14.x LTS](https://nodejs.org/)**
+* **[npm install]**
+## Running / Development
 First, run the development server:
 
 ```bash
