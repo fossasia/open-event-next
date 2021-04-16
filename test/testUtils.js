@@ -1,17 +1,25 @@
 import { render } from '@testing-library/react'
 // import { ThemeProvider } from "my-ui-lib"
-// import { TranslationProvider } from "my-i18n-lib"
-// import defaultStrings from "i18n/en-x-default"
+import { i18n } from '@lingui/core'
+import { I18nProvider } from '@lingui/react'
+import { en, hi } from 'make-plural/plurals'
+
+import { messages } from '../locale/en/messages'
+
+i18n.load({
+  en: messages,
+})
+i18n.loadLocaleData({
+  en: { plurals: en },
+  hi: { plurals: hi },
+})
 
 const Providers = ({ children }) => {
-  return children
-  // return (
-  //   <ThemeProvider theme="light">
-  //     <TranslationProvider messages={defaultStrings}>
-  //       {children}
-  //     </TranslationProvider>
-  //   </ThemeProvider>
-  // )
+  return (
+    <I18nProvider i18n={i18n} forceRenderOnLocaleChange={false}>
+      {children}
+    </I18nProvider>
+  )
 }
 
 const customRender = (ui, options = {}) =>

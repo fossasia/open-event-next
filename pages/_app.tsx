@@ -1,4 +1,4 @@
-import React from 'react'
+import { useEffect } from 'react'
 import { AppProps } from 'next/app'
 import { StylesProvider, ThemeProvider } from '@material-ui/core/styles'
 import '../styles/globals.css'
@@ -7,6 +7,9 @@ import { CssBaseline } from '@material-ui/core'
 import { init } from '../utils/sentry'
 import Router from 'next/router'
 import NProgress from 'nprogress'
+import { I18nProvider } from '@lingui/react'
+import { i18n } from '@lingui/core'
+import { activate } from '../utils/i18n'
 
 init()
 
@@ -21,18 +24,23 @@ function MyApp({
   pageProps,
   err,
 }: AppProps & { err: any }): JSX.Element {
-  React.useEffect(() => {
+  useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles)
     }
+    // Activate translation
+    activate('en')
   }, [])
+
   return (
     <ThemeProvider theme={theme}>
       <StylesProvider injectFirst>
         <CssBaseline />
-        <Component {...pageProps} err={err} />
+        <I18nProvider i18n={i18n}>
+          <Component {...pageProps} err={err} />
+        </I18nProvider>
       </StylesProvider>
     </ThemeProvider>
   )

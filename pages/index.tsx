@@ -10,6 +10,8 @@ import {
   RadioGroup,
 } from '@material-ui/core'
 import styles from '../styles/Home.module.css'
+import { activate } from '../utils/i18n'
+import { Trans } from '@lingui/macro'
 
 export default function Home(): JSX.Element {
   return (
@@ -21,14 +23,19 @@ export default function Home(): JSX.Element {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          <Trans>
+            Welcome to <a href="https://nextjs.org">Next.js!</a>
+          </Trans>
         </h1>
-
+        <p>
+          <Trans>This is line to test translation.</Trans>
+        </p>
+        <button onClick={() => activate('en')}>English</button>
+        <button onClick={() => activate('hi')}>Hindi</button>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
-
         <button
           onClick={() => {
             window.alert('With typescript and Jest')
@@ -68,12 +75,16 @@ export default function Home(): JSX.Element {
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
+            <h3>
+              <Trans>Documentation</Trans> &rarr;
+            </h3>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
+            <h3>
+              <Trans>Learn</Trans> &rarr;
+            </h3>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
 
@@ -81,7 +92,9 @@ export default function Home(): JSX.Element {
             href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
           >
-            <h3>Examples &rarr;</h3>
+            <h3>
+              <Trans>Examples</Trans> &rarr;
+            </h3>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a>
 
@@ -89,7 +102,9 @@ export default function Home(): JSX.Element {
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
           >
-            <h3>Deploy &rarr;</h3>
+            <h3>
+              <Trans>Deploy</Trans> &rarr;
+            </h3>
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>
