@@ -11,26 +11,6 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#: pages/index.tsx:72
-msgid "Deploy"
-msgstr "Deploy"
-
-#: pages/index.tsx:57
-msgid "Documentation"
-msgstr "Documentation"
-
-#: pages/index.tsx:67
-msgid "Examples"
-msgstr "Examples"
-
-#: pages/index.tsx:62
-msgid "Learn"
-msgstr "Learn"
-
-#: pages/index.tsx:15
-msgid "Welcome to"
-msgstr "Welcome to"
-
-#: pages/index.tsx:24
-msgid "name"
-msgstr "name"
+#: pages/index.tsx:18
+msgid "This is line to test translation."
+msgstr "This is line to test translation."

@@ -23,9 +23,9 @@ export default function Home(): JSX.Element {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          {t`Welcome to `}
-          <a href="https://nextjs.org"> Next.js!</a>
+          Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
+        <p>{t`This is line to test translation.`}</p>
         <button onClick={() => activate('en')}>English</button>
         <button onClick={() => activate('hi')}>Hindi</button>
         <p className={styles.description}>
@@ -71,12 +71,12 @@ export default function Home(): JSX.Element {
 
         <div className={styles.grid}>
           <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>{t`Documentation`} &rarr;</h3>
+            <h3>Documentation &rarr;</h3>
             <p>Find in-depth information about Next.js features and API.</p>
           </a>
 
           <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>{t`Learn`} &rarr;</h3>
+            <h3>Learn &rarr;</h3>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
           </a>
 
@@ -84,7 +84,7 @@ export default function Home(): JSX.Element {
             href="https://github.com/vercel/next.js/tree/master/examples"
             className={styles.card}
           >
-            <h3>{t`Examples`} &rarr;</h3>
+            <h3>Examples &rarr;</h3>
             <p>Discover and deploy boilerplate example Next.js projects.</p>
           </a>
 
@@ -92,7 +92,7 @@ export default function Home(): JSX.Element {
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             className={styles.card}
           >
-            <h3>{t`Deploy`} &rarr;</h3>
+            <h3>Deploy &rarr;</h3>
             <p>
               Instantly deploy your Next.js site to a public URL with Vercel.
             </p>

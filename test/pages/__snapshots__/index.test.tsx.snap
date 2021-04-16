@@ -11,13 +11,16 @@ exports[`Home page matches snapshot 1`] = `
       <h1
         class="title"
       >
-        Welcome to
+        Welcome to 
         <a
           href="https://nextjs.org"
         >
-           Next.js!
+          Next.js!
         </a>
       </h1>
+      <p>
+        This is line to test translation.
+      </p>
       <button>
         English
       </button>
