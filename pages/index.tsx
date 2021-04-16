@@ -32,7 +32,6 @@ export default function Home(): JSX.Element {
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
         </p>
-        <h1>{t`name`}</h1>
         <button
           onClick={() => {
             window.alert('With typescript and Jest')
