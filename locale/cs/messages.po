@@ -1,0 +1,32 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2021-04-16 16:10+0530\n"
+"Mime-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: cs\n"
+
+#: pages/index.tsx:72
+msgid "Deploy"
+msgstr ""
+
+#: pages/index.tsx:57
+msgid "Documentation"
+msgstr ""
+
+#: pages/index.tsx:67
+msgid "Examples"
+msgstr ""
+
+#: pages/index.tsx:62
+msgid "Learn"
+msgstr ""
+
+#: pages/index.tsx:15
+msgid "Welcome to"
+msgstr ""
+
+#: pages/index.tsx:24
+msgid "name"
+msgstr ""
