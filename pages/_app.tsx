@@ -19,6 +19,9 @@ Router.events.on('routeChangeStart', () => {
 Router.events.on('routeChangeComplete', () => NProgress.done())
 Router.events.on('routeChangeError', () => NProgress.done())
 
+// Activate for static build
+activate('en')
+
 function MyApp({
   Component,
   pageProps,
@@ -30,8 +33,8 @@ function MyApp({
     if (jssStyles) {
       jssStyles.parentElement.removeChild(jssStyles)
     }
-    // Activate translation
-    activate('en')
+    // Activate translation on client side after locale detection
+    // TODO: To be implemented
   }, [])
 
   return (
