@@ -4,6 +4,7 @@ module.exports = {
       target: 'temporary-public-storage',
     },
     collect: {
+      staticDistDir: 'out',
       url: ['http://localhost/index.html'],
     },
   },
