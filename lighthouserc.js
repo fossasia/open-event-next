@@ -1,7 +1,9 @@
 module.exports = {
   ci: {
     upload: {
-      target: 'temporary-public-storage',
+      target: 'lhci',
+      serverBaseUrl: 'https://lighthouse.fossasia.org',
+      token: '9e44d373-096c-4af5-81cb-ccb4a19738da',
     },
     collect: {
       staticDistDir: 'out',
