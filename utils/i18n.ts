@@ -14,3 +14,10 @@ export async function activate(locale: string): Promise<void> {
   i18n.load(locale, messages)
   i18n.activate(locale)
 }
+
+export async function activateAndSetCookie(locale: string): Promise<void> {
+  const { messages } = await import(`../locale/${locale}/messages.js`)
+  i18n.load(locale, messages)
+  i18n.activate(locale)
+  document.cookie = `current_locale=${locale}`
+}

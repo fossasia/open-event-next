@@ -10,7 +10,7 @@ import {
   RadioGroup,
 } from '@material-ui/core'
 import styles from '../styles/Home.module.css'
-import { activate } from '../utils/i18n'
+import { activateAndSetCookie } from '../utils/i18n'
 import { Trans } from '@lingui/macro'
 
 export default function Home(): JSX.Element {
@@ -30,8 +30,8 @@ export default function Home(): JSX.Element {
         <p>
           <Trans>This is line to test translation.</Trans>
         </p>
-        <button onClick={() => activate('en')}>English</button>
-        <button onClick={() => activate('hi')}>Hindi</button>
+        <button onClick={() => activateAndSetCookie('en')}>English</button>
+        <button onClick={() => activateAndSetCookie('hi')}>Hindi</button>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
