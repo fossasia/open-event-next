@@ -1,5 +1,11 @@
 import { i18n } from '@lingui/core'
 import { en, hi } from 'make-plural/plurals'
+import {
+  detect,
+  fromUrl,
+  fromCookie,
+  fromNavigator,
+} from '@lingui/detect-locale'
 
 i18n.loadLocaleData('en', { plurals: en })
 i18n.loadLocaleData('hi', { plurals: hi })
@@ -16,8 +22,17 @@ export async function activate(locale: string): Promise<void> {
 }
 
 export async function activateAndSetCookie(locale: string): Promise<void> {
-  const { messages } = await import(`../locale/${locale}/messages.js`)
-  i18n.load(locale, messages)
-  i18n.activate(locale)
+  activate(locale)
   document.cookie = `current_locale=${locale}`
+}
+
+export async function detectAndSetLocale(): Promise<void> {
+  const DEFAULT_FALLBACK = () => 'en'
+  const locale = detect(
+    fromUrl('lang'),
+    fromCookie('current_locale'),
+    fromNavigator(),
+    DEFAULT_FALLBACK
+  )
+  activateAndSetCookie(locale)
 }
