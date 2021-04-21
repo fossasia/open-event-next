@@ -28,10 +28,10 @@ jobs:
       - run: npm run lint
       - run: npm run build --if-present
       - run: npm test
-      - name: run Lighthouse CI
-        run: |
-          npm install -g @lhci/cli@0.7.x
-          npx next export
-          lhci autorun
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+      - run: npx next export
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v2
+        with:
+          name: out
+          path: out/
+          retention-days: 1
