@@ -9,7 +9,7 @@ import Router from 'next/router'
 import NProgress from 'nprogress'
 import { I18nProvider } from '@lingui/react'
 import { i18n } from '@lingui/core'
-import { activate } from '../utils/i18n'
+import { activate, detectAndSetLocale } from '../utils/i18n'
 
 init()
 
@@ -35,6 +35,7 @@ function MyApp({
     }
     // Activate translation on client side after locale detection
     // TODO: To be implemented
+    detectAndSetLocale()
   }, [])
 
   return (

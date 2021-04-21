@@ -27,6 +27,7 @@
     ]
   },
   "dependencies": {
+    "@lingui/detect-locale": "^3.8.10",
     "@lingui/react": "^3.8.9",
     "@material-ui/core": "^4.11.3",
     "@material-ui/styles": "^4.11.3",
