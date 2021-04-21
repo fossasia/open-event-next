@@ -22,7 +22,7 @@ export async function activate(locale: string): Promise<void> {
 }
 
 export async function activateAndSetCookie(locale: string): Promise<void> {
-  activate(locale)
+  await activate(locale)
   document.cookie = `current_locale=${locale}`
 }
 
@@ -34,5 +34,5 @@ export async function detectAndSetLocale(): Promise<void> {
     fromNavigator(),
     DEFAULT_FALLBACK
   )
-  activateAndSetCookie(locale)
+  await activateAndSetCookie(locale)
 }

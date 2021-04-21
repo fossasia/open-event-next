@@ -2,7 +2,7 @@ name: Lighthouse
 
 on:
   workflow_run:
-    workflows: ["CI"]
+    workflows: ['CI']
     types:
       - completed
 
@@ -40,7 +40,6 @@ jobs:
             var fs = require('fs');
             fs.writeFileSync('${{github.workspace}}/out.zip', Buffer.from(download.data));
       - run: mkdir -p out && unzip out.zip -d out
-
       - name: run Lighthouse CI
         run: |
           npm install -g @lhci/cli@0.7.x
