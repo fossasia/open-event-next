@@ -1,11 +1,6 @@
 import { i18n } from '@lingui/core'
 import { en, hi } from 'make-plural/plurals'
-import {
-  detect,
-  fromUrl,
-  fromCookie,
-  fromNavigator,
-} from '@lingui/detect-locale'
+import { detect, fromUrl, fromCookie } from '@lingui/detect-locale'
 
 i18n.loadLocaleData('en', { plurals: en })
 i18n.loadLocaleData('hi', { plurals: hi })
@@ -31,7 +26,6 @@ export async function detectAndSetLocale(): Promise<void> {
   const locale = detect(
     fromUrl('lang'),
     fromCookie('current_locale'),
-    fromNavigator(),
     DEFAULT_FALLBACK
   )
   await activateAndSetCookie(locale)
