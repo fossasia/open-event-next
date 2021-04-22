@@ -1,9 +1,21 @@
 import { i18n } from '@lingui/core'
 import { en, hi } from 'make-plural/plurals'
-import { detect, fromUrl, fromCookie } from '@lingui/detect-locale'
+import {
+  detect,
+  fromUrl,
+  fromCookie,
+  fromNavigator,
+} from '@lingui/detect-locale'
 
 i18n.loadLocaleData('en', { plurals: en })
 i18n.loadLocaleData('hi', { plurals: hi })
+
+// Supported locales
+export const supportedLocales = ['en', 'hi']
+
+export function isValidLocale(locale: string): boolean {
+  return supportedLocales.includes(locale)
+}
 
 /**
  * Load messages for requested locale and activate it.
@@ -23,10 +35,15 @@ export async function activateAndSetCookie(locale: string): Promise<void> {
 
 export async function detectAndSetLocale(): Promise<void> {
   const DEFAULT_FALLBACK = () => 'en'
-  const locale = detect(
+  const detectedLocale = detect(
     fromUrl('lang'),
     fromCookie('current_locale'),
+    fromNavigator(),
     DEFAULT_FALLBACK
-  )
+  ).split('-')[0]
+
+  const locale = isValidLocale(detectedLocale)
+    ? detectedLocale
+    : DEFAULT_FALLBACK()
   await activateAndSetCookie(locale)
 }
