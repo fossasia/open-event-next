@@ -35,12 +35,16 @@ export async function activateAndSetCookie(locale: string): Promise<void> {
 
 export async function detectAndSetLocale(): Promise<void> {
   const DEFAULT_FALLBACK = () => 'en'
-  const detectedLocale = detect(
+  let detectedLocale = detect(
     fromUrl('lang'),
     fromCookie('current_locale'),
     fromNavigator(),
     DEFAULT_FALLBACK
-  ).split('-')[0]
+  )
+
+  if (!isValidLocale(detectedLocale)) {
+    detectedLocale = detectedLocale.split('-')[0]
+  }
 
   const locale = isValidLocale(detectedLocale)
     ? detectedLocale
