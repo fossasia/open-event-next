@@ -54,7 +54,7 @@ export default function Home(): JSX.Element {
               .tz(defaultTimezone)
               .format('MMM, DD, YYYY hh:mm A')}
           </p>
-          <select name="timezone" id="cars" onBlur={handleTimeZone}>
+          <select name="timezone" id="cars" onClick={handleTimeZone}>
             <option value="Asia/Calcutta">Asia/Calcutta</option>
             <option value="Asia/Singapore">Asia/Singapore</option>
           </select>
