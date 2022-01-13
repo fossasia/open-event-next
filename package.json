@@ -63,7 +63,7 @@
     "jest-watch-typeahead": "^0.6.4",
     "lint-staged": "^10.0.10",
     "prettier": "^2.0.2",
-    "typescript": "^4.2.4"
+    "typescript": "^4.5.4"
   },
   "lingui": {
     "catalogs": [
