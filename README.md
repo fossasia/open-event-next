@@ -5,7 +5,17 @@
  Checkout the deployed App : [Open-Event-Next](http://open-event-next-git-master-eventyay.vercel.app/).
 ## Getting Started!
 
-First, run the development server:
+## Steps
+* `git clone <repository-url>` this repository
+* `cd open-event-next`
+
+## Install dependencies
+
+```
+npm install
+```
+
+## Run the development server:
 
 ```bash
 npm run dev
