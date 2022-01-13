@@ -9,7 +9,7 @@
 * `git clone <repository-url>` this repository
 * `cd open-event-next`
 
-## install dependencies
+## Install dependencies
 
 ```
 npm install
