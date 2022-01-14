@@ -33,7 +33,7 @@
     "@material-ui/styles": "^4.11.3",
     "@sentry/browser": "^6.3.0",
     "@sentry/integrations": "^6.16.1",
-    "@sentry/node": "^6.2.5",
+    "@sentry/node": "^6.16.1",
     "@sentry/webpack-plugin": "^1.18.3",
     "babel-plugin-macros": "^3.1.0",
     "next": "11.1.3",
