@@ -62,7 +62,7 @@
     "jest": "^27.4.7",
     "jest-watch-typeahead": "^0.6.4",
     "lint-staged": "^12.1.7",
-    "prettier": "^2.0.2",
+    "prettier": "^2.5.1",
     "typescript": "^4.5.4"
   },
   "lingui": {
