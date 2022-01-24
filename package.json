@@ -44,7 +44,7 @@
     "zustand": "^3.6.9"
   },
   "devDependencies": {
-    "@lingui/cli": "^3.13.1",
+    "@lingui/cli": "^3.13.2",
     "@lingui/loader": "^3.13.1",
     "@lingui/macro": "^3.13.1",
     "@testing-library/react": "^12.1.2",
