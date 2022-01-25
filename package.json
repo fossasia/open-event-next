@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "@lingui/cli": "^3.13.2",
-    "@lingui/loader": "^3.13.1",
+    "@lingui/loader": "^3.13.2",
     "@lingui/macro": "^3.13.2",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.4.0",
