@@ -3,8 +3,8 @@ image:
 
 tasks:
   - name: setup
-    init: yarn
-    command: yarn dev
+    init: yarn && yarn build
+    command: yarn start
 
 ports:
   - port: 3000
