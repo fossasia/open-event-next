@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: '16'
           cache: 'yarn'
-      - run: yarn ci
+      - run: yarn install --immutable --immutable-cache --check-cache
       - run: yarn lint
       - run: yarn build --if-present
       - run: yarn test
