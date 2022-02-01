@@ -14,14 +14,12 @@ Checkout the deployed App : [Open-Event-Next](http://open-event-next-git-master-
 ## Install dependencies
 
 ```
-npm install
+yarn
 ```
 
 ## Run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
