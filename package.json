@@ -9,7 +9,7 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext js,jsx,ts,tsx",
     "test": "jest",
-    "test-all": "npm run lint && npm run type-check && npm run test",
+    "test-all": "yarn lint && yarn type-check && yarn test",
     "prepare": "husky install",
     "extract": "NODE_ENV=development lingui extract",
     "compile": "lingui compile"
@@ -17,7 +17,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "pre-push": "npm run type-check"
+      "pre-push": "yarn type-check"
     }
   },
   "lint-staged": {
@@ -51,8 +51,8 @@
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.13",
     "@types/react": "^17.0.38",
-    "@typescript-eslint/eslint-plugin": "^5.10.1",
-    "@typescript-eslint/parser": "^5.10.1",
+    "@typescript-eslint/eslint-plugin": "^5.10.2",
+    "@typescript-eslint/parser": "^5.10.2",
     "babel-jest": "^27.4.6",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
