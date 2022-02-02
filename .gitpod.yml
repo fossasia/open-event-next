@@ -1,0 +1,11 @@
+image:
+  file: .gitpod.dockerfile
+
+tasks:
+  - name: setup
+    init: yarn && yarn build
+    command: yarn start
+
+ports:
+  - port: 3000
+    onOpen: open-browser
