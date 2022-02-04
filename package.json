@@ -70,10 +70,6 @@
   "optionalDependencies": {
     "fsevents": "^2.3.2"
   },
-  "engines": {
-    "node": ">= 16.x",
-    "yarn": ">= 1.2.0"
-  },
   "lingui": {
     "catalogs": [
       {
