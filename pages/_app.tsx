@@ -1,14 +1,15 @@
 import { useEffect } from 'react'
+import Head from 'next/head'
 import { AppProps } from 'next/app'
-import { StylesProvider, ThemeProvider } from '@material-ui/core/styles'
+import { ThemeProvider } from '@mui/material/styles'
 import '../styles/globals.css'
 import theme from '../src/theme'
-import { CssBaseline } from '@material-ui/core'
+import { CssBaseline } from '@mui/material'
 import { init } from '../utils/sentry'
 import Router from 'next/router'
 import NProgress from 'nprogress'
-import { I18nProvider } from '@lingui/react'
-import { i18n } from '@lingui/core'
+import { CacheProvider, EmotionCache } from '@emotion/react'
+import createEmotionCache from '../src/createEmotionCache'
 import { activate, detectAndSetLocale } from '../utils/i18n'
 
 init()
@@ -22,32 +23,29 @@ Router.events.on('routeChangeError', () => NProgress.done())
 // Activate for static build
 activate('en')
 
-function MyApp({
-  Component,
-  pageProps,
-  err,
-}: AppProps & { err: any }): JSX.Element {
+const clientSideEmotionCache = createEmotionCache()
+
+interface MyAppProps extends AppProps {
+  emotionCache?: EmotionCache
+}
+
+export default function MyApp(props: MyAppProps) {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
+
   useEffect(() => {
-    // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector('#jss-server-side')
-    if (jssStyles) {
-      jssStyles.parentElement.removeChild(jssStyles)
-    }
-    // Activate translation on client side after locale detection
-    // TODO: To be implemented
     detectAndSetLocale()
   }, [])
 
   return (
-    <ThemeProvider theme={theme}>
-      <StylesProvider injectFirst>
+    <CacheProvider value={emotionCache}>
+      <Head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Head>
+      <ThemeProvider theme={theme}>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <I18nProvider i18n={i18n}>
-          <Component {...pageProps} err={err} />
-        </I18nProvider>
-      </StylesProvider>
-    </ThemeProvider>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </CacheProvider>
   )
 }
-
-export default MyApp
