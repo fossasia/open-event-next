@@ -22,7 +22,6 @@ export default function Home(): JSX.Element {
   const handleTimeZone = (e: any) => {
     setTimezone(e.target.value)
   }
-
   return (
     <div className={styles.container}>
       <Head>
