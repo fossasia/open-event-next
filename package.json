@@ -41,7 +41,7 @@
     "nprogress": "^0.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "zustand": "^3.6.9"
+    "zustand": "^3.7.0"
   },
   "devDependencies": {
     "@lingui/cli": "^3.13.2",
