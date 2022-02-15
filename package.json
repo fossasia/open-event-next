@@ -31,7 +31,7 @@
     "@lingui/react": "^3.13.2",
     "@material-ui/core": "^4.12.3",
     "@material-ui/styles": "^4.11.3",
-    "@sentry/browser": "^6.17.7",
+    "@sentry/browser": "^6.17.8",
     "@sentry/integrations": "^6.17.7",
     "@sentry/node": "^6.17.7",
     "@sentry/webpack-plugin": "^1.18.4",
