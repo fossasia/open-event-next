@@ -1,32 +1,7 @@
-import { Box, Divider, ListItem, Stack } from '@mui/material'
+import { Box, Divider, Stack } from '@mui/material'
 import React from 'react'
-import FooterFields from '../footerFields'
+import FooterFields from '../templates/footerFields'
 
-const info = ['Use eventyay', 'How it works', 'Pricing', 'Blog']
-const feats = [
-  'Plan Events',
-  'Online Registration',
-  'Sell Event Tickets',
-  'Event Management Software',
-]
-const explore = [
-  'Find Events',
-  'Browse Events',
-  'Attendee App',
-  'Organizer App',
-]
-const socialLinks = [
-  'Connect With Us',
-  'Facebook',
-  'Twitter',
-  'Github',
-  'Youtube',
-  'Google Groups',
-  'Gitter',
-  'Telegram',
-  'Weblate',
-]
-const footerLinks = [info, feats, explore, socialLinks]
 const lastRow = [
   'Maintained by Areeb Jamal & Team',
   `© ${new Date().getFullYear()} eventyay`,
@@ -36,27 +11,25 @@ const lastRow = [
   'Privacy',
 ]
 
-export const Footer = () => {
+export const Footer = (): JSX.Element => {
   return (
-    <Box>
-      <Stack
-        alignContent="center"
-        justifyContent="center"
-        divider={<Divider orientation="vertical" flexItem />}
-        spacing={1}
-        direction={{ xs: 'column', md: 'row' }}
-      >
-        {footerLinks.map((linkArr) => {
-          return <FooterFields arr={linkArr} />
-        })}
-      </Stack>
+    <Box
+      component="footer"
+      pt={2}
+      sx={{ bgcolor: 'common.white', color: 'black' }}
+    >
+      <FooterFields />
       <Divider orientation="horizontal" flexItem />
       <Stack
-        direction="row"
+        direction={{ md: 'column', lg: 'row' }}
+        p={2}
         divider={<Divider orientation="vertical" flexItem />}
+        spacing={1}
+        justifyContent="center"
+        alignContent="center"
       >
         {lastRow.map((val) => {
-          return <ListItem key={val}>{val}</ListItem>
+          return <div key={val}>{val}</div>
         })}
       </Stack>
     </Box>

@@ -44,7 +44,7 @@
     "nprogress": "^0.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "zustand": "^3.6.9"
+    "zustand": "^3.7.0"
   },
   "devDependencies": {
     "@lingui/cli": "^3.13.2",
@@ -52,11 +52,11 @@
     "@lingui/macro": "^3.13.2",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.4.0",
-    "@types/node": "^17.0.16",
+    "@types/node": "^17.0.17",
     "@types/react": "^17.0.39",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
-    "babel-jest": "^27.5.0",
+    "babel-jest": "^27.5.1",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jsx-a11y": "^6.5.1",
@@ -64,7 +64,7 @@
     "eslint-plugin-react-hooks": "^4.3.0",
     "husky": "^7.0.4",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^27.5.0",
+    "jest": "^27.5.1",
     "jest-watch-typeahead": "^1.0.0",
     "lint-staged": "^12.3.3",
     "prettier": "^2.5.1",

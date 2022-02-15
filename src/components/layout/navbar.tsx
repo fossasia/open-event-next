@@ -12,7 +12,7 @@ import MenuItem from '@mui/material/MenuItem'
 
 const pages = ['Pricing', 'Login', 'Create Event']
 
-export const Navbar = () => {
+export const Navbar = (): JSX.Element => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -24,7 +24,7 @@ export const Navbar = () => {
   }
 
   return (
-    <AppBar position="static" sx={{ bgcolor: 'black' }}>
+    <AppBar position="static" sx={{ bgcolor: 'common.white', color: 'black' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box
@@ -40,7 +40,7 @@ export const Navbar = () => {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-              sx={{ display: { xs: 'flex', md: 'none' } }}
+              sx={{ display: { xs: 'flex', sm: 'none' } }}
             >
               <MenuIcon />
             </IconButton>
@@ -81,7 +81,7 @@ export const Navbar = () => {
           <Box
             sx={{
               flexGrow: 1,
-              display: { xs: 'none', md: 'flex' },
+              display: { xs: 'none', sm: 'flex' },
               justifyContent: 'flex-end',
             }}
           >
@@ -89,7 +89,7 @@ export const Navbar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'black', display: 'block' }}
               >
                 {page}
               </Button>
