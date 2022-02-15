@@ -6,7 +6,7 @@ import Document, {
   NextScript,
   DocumentContext,
 } from 'next/document'
-import ServerStyleSheets from '@mui/styles/ServerStyleSheets';
+import ServerStyleSheets from '@mui/styles/ServerStyleSheets'
 export default class MyDocument extends Document {
   render(): JSX.Element {
     return (
