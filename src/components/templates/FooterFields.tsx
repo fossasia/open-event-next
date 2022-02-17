@@ -31,24 +31,31 @@ const footerLinks = [info, feats, explore, socialLinks]
 const FooterFields = (): JSX.Element => {
   return (
     <Stack
-      divider={<Divider orientation="vertical" flexItem />}
+      divider={
+        <Divider orientation="vertical" sx={{ bgcolor: '#323334' }} flexItem />
+      }
       alignContent="center"
       justifyContent="center"
       spacing={2}
       direction={{ xs: 'column', sm: 'row' }}
     >
-      {footerLinks.map((arr) => {
+      {footerLinks.map((arr, index) => {
         return (
-          <Stack direction="column" key={Math.floor(Math.random() * 12)}>
+          <Stack direction="column" key={index}>
             <Link
-              sx={{ textDecoration: 'none', color: 'common.white' }}
+              sx={{ textDecoration: 'none' }}
               href="/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              {arr.map((val) => {
+              {arr.map((val, index) => {
                 return (
-                  <Typography key={val} p={1} sx={{ color: 'black' }}>
+                  <Typography
+                    variant="body2"
+                    key={index}
+                    p={1}
+                    color="common.white"
+                  >
                     {val}
                   </Typography>
                 )

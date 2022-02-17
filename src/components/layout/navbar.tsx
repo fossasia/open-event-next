@@ -24,7 +24,11 @@ export const Navbar = (): JSX.Element => {
   }
 
   return (
-    <AppBar position="static" sx={{ bgcolor: 'common.white', color: 'black' }}>
+    <AppBar
+      component="nav"
+      position="static"
+      sx={{ bgcolor: 'common.white', color: 'black' }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Box

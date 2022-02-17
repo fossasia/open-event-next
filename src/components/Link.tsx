@@ -85,11 +85,9 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 
   if (isExternal) {
     if (noLinkStyle) {
-      // eslint-disable @typescript-eslint/no-unused-vars
       return <Anchor className={className} href={href} ref={ref} {...other} />
     }
 
-    // eslint-disable @typescript-eslint/no-unused-vars
     return <MuiLink className={className} href={href} ref={ref} {...other} />
   }
 

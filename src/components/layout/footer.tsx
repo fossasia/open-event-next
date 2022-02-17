@@ -1,6 +1,6 @@
-import { Box, Divider, Stack } from '@mui/material'
+import { Box, Divider, Stack, Typography } from '@mui/material'
 import React from 'react'
-import FooterFields from '../templates/footerFields'
+import FooterFields from '../templates/FooterFields'
 
 const lastRow = [
   'Maintained by Areeb Jamal & Team',
@@ -13,25 +13,42 @@ const lastRow = [
 
 export const Footer = (): JSX.Element => {
   return (
-    <Box
-      component="footer"
-      pt={2}
-      sx={{ bgcolor: 'common.white', color: 'black' }}
-    >
-      <FooterFields />
-      <Divider orientation="horizontal" flexItem />
-      <Stack
-        direction={{ md: 'column', lg: 'row' }}
-        p={2}
-        divider={<Divider orientation="vertical" flexItem />}
-        spacing={1}
-        justifyContent="center"
-        alignContent="center"
+    <Box pt={6}>
+      <Divider sx={{ bgcolor: '#323334' }} orientation="horizontal" flexItem />
+      <Box
+        component="footer"
+        pt={2}
+        sx={{ bgcolor: '#1b1c1d', color: 'common.white' }}
       >
-        {lastRow.map((val) => {
-          return <div key={val}>{val}</div>
-        })}
-      </Stack>
+        <FooterFields />
+        <Divider
+          orientation="horizontal"
+          flexItem
+          sx={{ bgcolor: '#323334' }}
+        />
+        <Stack
+          direction={{ md: 'column', lg: 'row' }}
+          p={6}
+          divider={
+            <Divider
+              sx={{ bgcolor: '#323334' }}
+              orientation="vertical"
+              flexItem
+            />
+          }
+          spacing={1}
+          justifyContent="center"
+          alignContent="stretch"
+        >
+          {lastRow.map((val, index) => {
+            return (
+              <div key={index}>
+                <Typography variant="body2">{val}</Typography>
+              </div>
+            )
+          })}
+        </Stack>
+      </Box>
     </Box>
   )
 }
