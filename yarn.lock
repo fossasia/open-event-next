@@ -916,10 +916,10 @@
     "@sentry/types" "6.17.9"
     tslib "^1.9.3"
 
-"@sentry/webpack-plugin@^1.18.6":
-  version "1.18.6"
-  resolved "https://registry.yarnpkg.com/@sentry/webpack-plugin/-/webpack-plugin-1.18.6.tgz#3809309f0885b32acc421a8a2bf2c8a26e13e7c5"
-  integrity sha512-CRnn5UyQUjQO4hj3i7QxSDiqw92/DrC02si5fRobeAjtNMoIup2z3KzaLK61JKzMWiUZiKRtOe2QBBZuy5X6xw==
+"@sentry/webpack-plugin@^1.18.7":
+  version "1.18.7"
+  resolved "https://registry.yarnpkg.com/@sentry/webpack-plugin/-/webpack-plugin-1.18.7.tgz#f48dbebb4989f3a357280f2c92a8d4b5b963f6ec"
+  integrity sha512-pOJLzC2unQdtrQarcicZ3aPs6hnQUjMvVmRN7s+/m7PEITvvf24hgIPdbLnn6PVQARvFA8mbbst0+eHMi44veA==
   dependencies:
     "@sentry/cli" "^1.72.0"
 
