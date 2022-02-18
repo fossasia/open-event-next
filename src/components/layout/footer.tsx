@@ -38,7 +38,7 @@ export const Footer = (): JSX.Element => {
           }
           spacing={1}
           justifyContent="center"
-          alignContent="stretch"
+          alignContent="center"
         >
           {lastRow.map((val, index) => {
             return (

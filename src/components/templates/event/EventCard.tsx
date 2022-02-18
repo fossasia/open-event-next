@@ -5,6 +5,8 @@ import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import { Divider } from '@mui/material'
+import IconButton from '@mui/material/IconButton'
+import ShareIcon from '@mui/icons-material/Share'
 
 export default function EventCard({
   name,
@@ -12,7 +14,6 @@ export default function EventCard({
   startsAt,
   endsAt,
   tz,
-  key,
 }): JSX.Element {
   const options: Intl.DateTimeFormatOptions = {
     dateStyle: 'full',
@@ -23,12 +24,7 @@ export default function EventCard({
   startsAt = new Intl.DateTimeFormat('en-US', options).format(
     new Date(startsAt)
   )
-  endsAt = new Intl.DateTimeFormat('en-US', {
-    timeZone: tz,
-    timeZoneName: 'short',
-    hour: 'numeric',
-    minute: 'numeric',
-  }).format(new Date(endsAt))
+  endsAt = new Intl.DateTimeFormat('en-US', options).format(new Date(endsAt))
 
   return (
     <Card>
@@ -38,11 +34,15 @@ export default function EventCard({
           {name}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          {startsAt} to {endsAt}
+          {startsAt} to {endsAt} ({tz})
         </Typography>
       </CardContent>
       <Divider light />
-      <CardActions></CardActions>
+      <CardActions>
+        <IconButton aria-label="share">
+          <ShareIcon />
+        </IconButton>
+      </CardActions>
     </Card>
   )
 }
