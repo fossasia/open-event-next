@@ -27,7 +27,7 @@ export const Navbar = (): JSX.Element => {
     <AppBar
       component="nav"
       position="static"
-      sx={{ bgcolor: 'common.white', color: 'black' }}
+      sx={{ bgcolor: 'common.white', color: 'black', height: '60px' }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -52,7 +52,7 @@ export const Navbar = (): JSX.Element => {
               variant="h6"
               noWrap
               component="div"
-              sx={{ m: 2, display: 'flex', alignSelf: 'center' }}
+              sx={{ display: 'flex', alignSelf: 'center' }}
             >
               eventyay
             </Typography>
@@ -74,8 +74,8 @@ export const Navbar = (): JSX.Element => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+              {pages.map((page, index) => (
+                <MenuItem key={index} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
@@ -87,13 +87,21 @@ export const Navbar = (): JSX.Element => {
               flexGrow: 1,
               display: { xs: 'none', sm: 'flex' },
               justifyContent: 'flex-end',
+              alignContent: 'space-between',
             }}
           >
-            {pages.map((page) => (
+            {pages.map((page, index) => (
               <Button
-                key={page}
+                key={index}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block' }}
+                sx={{
+                  my: 1,
+                  display: 'block',
+                  fontSize: '1rem',
+                  fontWeight: '400',
+                  color: page === 'Create Event' ? 'primary.main' : 'black',
+                  textTransform: 'unset',
+                }}
               >
                 {page}
               </Button>

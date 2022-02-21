@@ -35,27 +35,23 @@ const FooterFields = (): JSX.Element => {
         <Divider orientation="vertical" sx={{ bgcolor: '#323334' }} flexItem />
       }
       alignContent="center"
-      justifyContent="center"
-      spacing={2}
+      justifyContent="space-around"
+      spacing={1}
       direction={{ xs: 'column', sm: 'row' }}
     >
       {footerLinks.map((arr, index) => {
         return (
-          <Stack direction="column" key={index}>
+          <Stack direction="column" key={index} justifyContent="flex-start">
             <Link
               sx={{ textDecoration: 'none' }}
               href="/"
               target="_blank"
               rel="noopener noreferrer"
+              color="#bbbbbb"
             >
               {arr.map((val, index) => {
                 return (
-                  <Typography
-                    variant="body2"
-                    key={index}
-                    p={1}
-                    color="common.white"
-                  >
+                  <Typography variant="body2" key={index} p={1}>
                     {val}
                   </Typography>
                 )

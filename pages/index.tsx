@@ -6,18 +6,16 @@
 import {
   Button,
   Container,
-  Grid,
   Typography,
   Box,
   useMediaQuery,
   useTheme,
-  CircularProgress,
 } from '@mui/material'
-import useSWR from 'swr'
 import React from 'react'
-import EventCard from '../src/components/templates/event/EventCard'
+import FrontPage from '../src/components/templates/FrontPage'
+import fetcher from '../src/utils/fetcher'
 
-export default function Index(): JSX.Element {
+export default function Index({ events, upcomingEvents }): JSX.Element {
   // const localTimezone = useTimezone((state) => state.localTimezone)
   // const defaultTimezone = useTimezone((state) => state.defaultTimezone)
   // const setTimezone = useTimezone((state) => state.setTimezone)
@@ -28,20 +26,8 @@ export default function Index(): JSX.Element {
   const theme = useTheme()
   const showCoverImg = useMediaQuery(theme.breakpoints.up('md'))
 
-  const url = `https://api.eventyay.com/v1/events?cache=true
-  &filter=[{"and":[{"name":"state","op":"eq","val":"published"},{"name":"privacy","op":"eq","val":"public"},{"name":"is-featured","op":"eq","val":true}]},{"or":[{"name":"ends-at","op":"ge","val":"2022-02-17T06:47:30.094Z"}]}]
-  &page[size]=6
-  &public=true
-  &sort=starts-at`
-  const fetcher = async (url: string) =>
-    await fetch(url).then((res) => res.json())
-  const { data, error } = useSWR(url, fetcher)
-
-  if (error) console.error(error)
-  if (!data) return <CircularProgress />
-
   return (
-    <>
+    <Box pb={6}>
       {showCoverImg && (
         <Box className="coverImg" pb={2}>
           <Typography
@@ -58,33 +44,36 @@ export default function Index(): JSX.Element {
         </Box>
       )}
       <Container maxWidth="lg">
-        <Typography
-          variant="h5"
-          p={2}
-          fontWeight="bold"
-          color="primary.main"
-          component="div"
-        >
-          Featured Events
-        </Typography>
-        <Grid container spacing={2}>
-          {data.data.map((event, index) => {
-            const attrs = event.attributes
-
-            return (
-              <Grid key={index} container item xs={12} sm={6} md={4} p={1}>
-                <EventCard
-                  name={attrs.name}
-                  img={attrs['original-image-url']}
-                  startsAt={attrs['starts-at']}
-                  endsAt={attrs['ends-at']}
-                  tz={attrs['timezone']}
-                />
-              </Grid>
-            )
-          })}
-        </Grid>
+        <FrontPage data={events.data} name="Featured Events" />
+        <FrontPage data={upcomingEvents.data} name="Upcoming Events" />
       </Container>
-    </>
+    </Box>
   )
+}
+
+export async function getStaticProps() {
+  const date = new Date().toISOString()
+  const eventUrl = `https://api.eventyay.com/v1/events?cache=true
+  &filter=[{"and":[{"name":"state","op":"eq","val":"published"},{"name":"privacy","op":"eq","val":"public"},{"name":"is-featured","op":"eq","val":true}]},{"or":[{"name":"ends-at","op":"ge","val":"${date}"}]}]
+  &page[size]=6
+  &public=true
+  &sort=starts-at`
+  const upcomingEventUrl = `https://api.eventyay.com/v1/events/upcoming?cache=true&include=event-topic,event-sub-topic,event-type,speakers-call&page[size]=3&public=true&upcoming=true`
+
+  const [events, eventsErr] = await fetcher(eventUrl)
+
+  if (eventsErr) {
+    console.error(eventsErr)
+  }
+
+  const [upcomingEvents, upcomingEventsErr] = await fetcher(upcomingEventUrl)
+
+  if (upcomingEventsErr) {
+    console.error(upcomingEventsErr)
+  }
+
+  return {
+    props: { events, upcomingEvents },
+    revalidate: 60 * 60 * 1000,
+  }
 }

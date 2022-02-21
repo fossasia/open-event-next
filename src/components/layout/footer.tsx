@@ -1,4 +1,4 @@
-import { Box, Divider, Stack, Typography } from '@mui/material'
+import { Box, Container, Divider, Stack, Typography } from '@mui/material'
 import React from 'react'
 import FooterFields from '../templates/FooterFields'
 
@@ -13,13 +13,8 @@ const lastRow = [
 
 export const Footer = (): JSX.Element => {
   return (
-    <Box pt={6}>
-      <Divider sx={{ bgcolor: '#323334' }} orientation="horizontal" flexItem />
-      <Box
-        component="footer"
-        pt={2}
-        sx={{ bgcolor: '#1b1c1d', color: 'common.white' }}
-      >
+    <Box sx={{ bgcolor: '#1b1c1d' }} component="footer" p={4}>
+      <Container maxWidth="md">
         <FooterFields />
         <Divider
           orientation="horizontal"
@@ -28,7 +23,9 @@ export const Footer = (): JSX.Element => {
         />
         <Stack
           direction={{ md: 'column', lg: 'row' }}
-          p={6}
+          pt={2}
+          mr={{ lg: 8 }}
+          color="#bbbbbb"
           divider={
             <Divider
               sx={{ bgcolor: '#323334' }}
@@ -36,19 +33,18 @@ export const Footer = (): JSX.Element => {
               flexItem
             />
           }
-          spacing={1}
           justifyContent="center"
-          alignContent="center"
+          spacing={1}
         >
           {lastRow.map((val, index) => {
             return (
-              <div key={index}>
-                <Typography variant="body2">{val}</Typography>
-              </div>
+              <Typography key={index} variant="body2">
+                {val}
+              </Typography>
             )
           })}
         </Stack>
-      </Box>
+      </Container>
     </Box>
   )
 }

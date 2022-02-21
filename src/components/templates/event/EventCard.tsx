@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography'
 import { Divider } from '@mui/material'
 import IconButton from '@mui/material/IconButton'
 import ShareIcon from '@mui/icons-material/Share'
+import WifiIcon from '@mui/icons-material/Wifi'
 
 export default function EventCard({
   name,
@@ -14,6 +15,7 @@ export default function EventCard({
   startsAt,
   endsAt,
   tz,
+  online,
 }): JSX.Element {
   const options: Intl.DateTimeFormatOptions = {
     dateStyle: 'full',
@@ -36,6 +38,14 @@ export default function EventCard({
         <Typography variant="body1" color="text.secondary">
           {startsAt} to {endsAt} ({tz})
         </Typography>
+        {online && (
+          <Typography variant="body1" color="text.secondary">
+            <IconButton aria-label="online event">
+              <WifiIcon />
+            </IconButton>
+            Online Event
+          </Typography>
+        )}
       </CardContent>
       <Divider light />
       <CardActions>
