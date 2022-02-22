@@ -99,3 +99,9 @@ a {
   color: white;
   text-align: center;
 }
+
+.MuiCard-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

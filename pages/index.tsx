@@ -15,7 +15,7 @@ import React from 'react'
 import FrontPage from '../src/components/templates/FrontPage'
 import fetcher from '../src/utils/fetcher'
 
-export default function Index({ events, upcomingEvents }): JSX.Element {
+export default function Index({ events, upcomingEvents, groups }): JSX.Element {
   // const localTimezone = useTimezone((state) => state.localTimezone)
   // const defaultTimezone = useTimezone((state) => state.defaultTimezone)
   // const setTimezone = useTimezone((state) => state.setTimezone)
@@ -46,6 +46,7 @@ export default function Index({ events, upcomingEvents }): JSX.Element {
       <Container maxWidth="lg">
         <FrontPage data={events.data} name="Featured Events" />
         <FrontPage data={upcomingEvents.data} name="Upcoming Events" />
+        <FrontPage data={groups.data} name="Popular Groups" />
       </Container>
     </Box>
   )
@@ -59,21 +60,25 @@ export async function getStaticProps() {
   &public=true
   &sort=starts-at`
   const upcomingEventUrl = `https://api.eventyay.com/v1/events/upcoming?cache=true&include=event-topic,event-sub-topic,event-type,speakers-call&page[size]=3&public=true&upcoming=true`
+  const groupsUrl = `https://api.eventyay.com/v1/groups?cache=true&filter=[{"name":"is-promoted","op":"eq","val":true}]&include=user,follower&page[size]=3&public=true`
 
   const [events, eventsErr] = await fetcher(eventUrl)
-
   if (eventsErr) {
     console.error(eventsErr)
   }
 
   const [upcomingEvents, upcomingEventsErr] = await fetcher(upcomingEventUrl)
-
   if (upcomingEventsErr) {
     console.error(upcomingEventsErr)
   }
 
+  const [groups, groupsErr] = await fetcher(groupsUrl)
+  if (groupsErr) {
+    console.error(groupsErr)
+  }
+
   return {
-    props: { events, upcomingEvents },
+    props: { events, upcomingEvents, groups },
     revalidate: 60 * 60 * 1000,
   }
 }
