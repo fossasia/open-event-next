@@ -1,5 +1,6 @@
 import { Box, Container, Divider, Stack, Typography } from '@mui/material'
 import React from 'react'
+import Link from '../Link'
 import FooterFields from '../templates/FooterFields'
 
 const lastRow = [
@@ -38,9 +39,21 @@ export const Footer = (): JSX.Element => {
         >
           {lastRow.map((val, index) => {
             return (
-              <Typography key={index} variant="body2">
-                {val}
-              </Typography>
+              <Link
+                key={index}
+                sx={{
+                  textDecoration: 'none',
+                  ':hover': {
+                    color: 'common.white',
+                  },
+                }}
+                href="/"
+                target="_blank"
+                rel="noopener noreferrer"
+                color="#bbbbbb"
+              >
+                <Typography variant="body2">{val}</Typography>
+              </Link>
             )
           })}
         </Stack>

@@ -1,5 +1,4 @@
 // import { activateAndSetCookie } from '../utils/i18n'
-// import { Trans } from '@lingui/macro'
 // import dayjs from 'dayjs'
 // import { useTimezone } from '../store/useTimezone'
 
@@ -12,6 +11,7 @@ import {
   useTheme,
 } from '@mui/material'
 import React from 'react'
+import { Trans } from '@lingui/macro'
 import FrontPage from '../src/components/templates/FrontPage'
 import fetcher from '../src/utils/fetcher'
 
@@ -38,7 +38,9 @@ export default function Index({ events, upcomingEvents, groups }): JSX.Element {
             pb={2}
             sx={{ fontWeight: 'light' }}
           >
-            The open source event solution for virtual and in-person events.
+            <Trans>
+              The open source event solution for virtual and in-person events.
+            </Trans>
           </Typography>
           <Button variant="contained">Create Event</Button>
         </Box>
@@ -59,7 +61,7 @@ export async function getStaticProps() {
   &page[size]=6
   &public=true
   &sort=starts-at`
-  const upcomingEventUrl = `https://api.eventyay.com/v1/events/upcoming?cache=true&include=event-topic,event-sub-topic,event-type,speakers-call&page[size]=3&public=true&upcoming=true`
+  const upcomingEventUrl = `https://api.eventyay.com/v1/events/upcoming?cache=true&page[size]=3&public=true&upcoming=true`
   const groupsUrl = `https://api.eventyay.com/v1/groups?cache=true&filter=[{"name":"is-promoted","op":"eq","val":true}]&include=user,follower&page[size]=3&public=true`
 
   const [events, eventsErr] = await fetcher(eventUrl)

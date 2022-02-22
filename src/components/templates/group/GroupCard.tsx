@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Divider } from '@mui/material'
+import { Button, Divider, IconButton } from '@mui/material'
 import Card from '@mui/material/Card'
 import CardActions from '@mui/material/CardActions'
 import CardContent from '@mui/material/CardContent'
@@ -27,7 +27,7 @@ const GroupCard = ({ name, img, about, followers }): JSX.Element => {
           disabled
           sx={{ width: '100%' }}
         >
-          Follow Group {followers}
+          Follow Group ({followers})
         </Button>
       </CardActions>
     </Card>

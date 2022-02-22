@@ -9,6 +9,7 @@ export default function FrontPage({ name, data }): JSX.Element {
       <Typography
         variant="h5"
         p={2}
+        pl={0}
         fontWeight="bold"
         color="primary.main"
         component="div"

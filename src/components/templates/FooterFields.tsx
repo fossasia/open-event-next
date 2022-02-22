@@ -42,21 +42,27 @@ const FooterFields = (): JSX.Element => {
       {footerLinks.map((arr, index) => {
         return (
           <Stack direction="column" key={index} justifyContent="flex-start">
-            <Link
-              sx={{ textDecoration: 'none' }}
-              href="/"
-              target="_blank"
-              rel="noopener noreferrer"
-              color="#bbbbbb"
-            >
-              {arr.map((val, index) => {
-                return (
-                  <Typography variant="body2" key={index} p={1}>
+            {arr.map((val, index) => {
+              return (
+                <Link
+                  key={index}
+                  sx={{
+                    textDecoration: 'none',
+                    ':hover': {
+                      color: 'common.white',
+                    },
+                  }}
+                  href="/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  color="#bbbbbb"
+                >
+                  <Typography variant="body2" p={1}>
                     {val}
                   </Typography>
-                )
-              })}
-            </Link>
+                </Link>
+              )
+            })}
           </Stack>
         )
       })}
