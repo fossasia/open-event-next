@@ -1,15 +1,26 @@
 import { useEffect } from 'react'
 import { AppProps } from 'next/app'
-import { StylesProvider, ThemeProvider } from '@material-ui/core/styles'
+import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles'
+import StylesProvider from '@mui/styles/StylesProvider'
 import '../styles/globals.css'
 import theme from '../src/theme'
-import { CssBaseline } from '@material-ui/core'
+import { CssBaseline } from '@mui/material'
 import { init } from '../utils/sentry'
 import Router from 'next/router'
 import NProgress from 'nprogress'
 import { I18nProvider } from '@lingui/react'
 import { i18n } from '@lingui/core'
 import { activate, detectAndSetLocale } from '../utils/i18n'
+import { CacheProvider, EmotionCache } from '@emotion/react'
+import createEmotionCache from '../src/createEmotionCache'
+import Head from 'next/head'
+
+const clientSideEmotionCache = createEmotionCache()
+
+interface MyAppProps extends AppProps {
+  emotionCache?: EmotionCache
+  err?: any
+}
 
 init()
 
@@ -22,11 +33,14 @@ Router.events.on('routeChangeError', () => NProgress.done())
 // Activate for static build
 activate('en')
 
-function MyApp({
-  Component,
-  pageProps,
-  err,
-}: AppProps & { err: any }): JSX.Element {
+function MyApp(props: MyAppProps) {
+  const {
+    Component,
+    emotionCache = clientSideEmotionCache,
+    pageProps,
+    err,
+  } = props
+
   useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
@@ -39,14 +53,21 @@ function MyApp({
   }, [])
 
   return (
-    <ThemeProvider theme={theme}>
-      <StylesProvider injectFirst>
-        <CssBaseline />
-        <I18nProvider i18n={i18n}>
-          <Component {...pageProps} err={err} />
-        </I18nProvider>
-      </StylesProvider>
-    </ThemeProvider>
+    <CacheProvider value={emotionCache}>
+      <Head>
+        <meta name="viewport" content="initial-scale=1, width=device-width" />
+      </Head>
+      <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={theme}>
+          <StylesProvider injectFirst>
+            <CssBaseline />
+            <I18nProvider i18n={i18n}>
+              <Component {...pageProps} err={err} />
+            </I18nProvider>
+          </StylesProvider>
+        </ThemeProvider>
+      </StyledEngineProvider>
+    </CacheProvider>
   )
 }
 
