@@ -31,6 +31,7 @@
     "@emotion/styled": "^11.8.1",
     "@lingui/detect-locale": "^3.13.2",
     "@lingui/react": "^3.13.2",
+    "@mui/icons-material": "^5.4.2",
     "@mui/material": "^5.4.3",
     "@mui/styles": "^5.4.2",
     "@sentry/browser": "^6.17.9",
