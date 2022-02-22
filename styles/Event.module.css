@@ -1,0 +1,34 @@
+.banner_wrapper {
+  width: 100%;
+  height: 63vh;
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.banner_image {
+  width: 100%;
+  height: 100%;
+  position: relative !important;
+  object-fit: cover;
+}
+
+.banner_text_wrapper {
+  position: absolute;
+  left: 0;
+  top: 60px;
+  height: 63vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.logo_wrapper {
+  width: 200px;
+}
+
+.logo_image {
+  width: 100%;
+}
