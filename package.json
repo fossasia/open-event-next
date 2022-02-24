@@ -9,7 +9,7 @@
     "format": "prettier --write .",
     "lint": "eslint . --ext js,jsx,ts,tsx",
     "test": "jest",
-    "test-all": "yarn lint && yarn type-check && yarn test",
+    "test-all": "yarn lint && yarn type-check && yarn test --passWithNoTests",
     "prepare": "husky install",
     "extract": "NODE_ENV=development lingui extract",
     "compile": "lingui compile"
