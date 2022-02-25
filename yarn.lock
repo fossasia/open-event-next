@@ -979,7 +979,7 @@
     "@sentry/utils" "6.17.9"
     tslib "^1.9.3"
 
-"@sentry/cli@^1.72.0":
+"@sentry/cli@^1.73.0":
   version "1.73.0"
   resolved "https://registry.yarnpkg.com/@sentry/cli/-/cli-1.73.0.tgz#0d0bce913e0060ae192741c6693c57e50078c886"
   integrity sha512-n4YINqmoncGUkLEpd4WuW+oD+aoUyQPhRbSBSYkbCFxPPmopn1VExCB2Vvzwj7vjXYRRGkix6keBMS0LLs3A3Q==
@@ -1069,12 +1069,12 @@
     "@sentry/types" "6.17.9"
     tslib "^1.9.3"
 
-"@sentry/webpack-plugin@^1.18.4":
-  version "1.18.7"
-  resolved "https://registry.yarnpkg.com/@sentry/webpack-plugin/-/webpack-plugin-1.18.7.tgz#f48dbebb4989f3a357280f2c92a8d4b5b963f6ec"
-  integrity sha512-pOJLzC2unQdtrQarcicZ3aPs6hnQUjMvVmRN7s+/m7PEITvvf24hgIPdbLnn6PVQARvFA8mbbst0+eHMi44veA==
+"@sentry/webpack-plugin@^1.18.8":
+  version "1.18.8"
+  resolved "https://registry.yarnpkg.com/@sentry/webpack-plugin/-/webpack-plugin-1.18.8.tgz#247a73a0aa9e28099a736bbe89ca0d35cbac7636"
+  integrity sha512-PtKr0NL62b5L3kPFGjwSNbIUwwcW5E5G6bQxAYZGpkgL1MFPnS4ND0SAsySuX0byQJRFFium5A19LpzyvQZSlQ==
   dependencies:
-    "@sentry/cli" "^1.72.0"
+    "@sentry/cli" "^1.73.0"
 
 "@sinonjs/commons@^1.7.0":
   version "1.8.3"
