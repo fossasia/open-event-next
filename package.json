@@ -33,7 +33,7 @@
     "@lingui/react": "^3.13.2",
     "@mui/icons-material": "^5.4.1",
     "@mui/material": "^5.4.1",
-    "@mui/styles": "^5.4.1",
+    "@mui/styles": "^5.4.2",
     "@sentry/browser": "^6.17.5",
     "@sentry/integrations": "^6.17.5",
     "@sentry/node": "^6.17.5",
