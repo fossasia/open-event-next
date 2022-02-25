@@ -14,6 +14,7 @@ import { activate, detectAndSetLocale } from '../utils/i18n'
 import { CacheProvider, EmotionCache } from '@emotion/react'
 import createEmotionCache from '../src/createEmotionCache'
 import Head from 'next/head'
+import Layout from '../src/components/layout'
 
 const clientSideEmotionCache = createEmotionCache()
 
@@ -62,7 +63,9 @@ function MyApp(props: MyAppProps) {
           <StylesProvider injectFirst>
             <CssBaseline />
             <I18nProvider i18n={i18n}>
-              <Component {...pageProps} err={err} />
+              <Layout>
+                <Component {...pageProps} err={err} />
+              </Layout>
             </I18nProvider>
           </StylesProvider>
         </ThemeProvider>
