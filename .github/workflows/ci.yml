@@ -22,7 +22,7 @@ jobs:
       - run: yarn install --immutable --immutable-cache --check-cache
       - run: yarn lint
       - run: yarn build
-      - run: yarn test
+      - run: yarn test --passWithNoTests
       - run: npx next export
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v2
