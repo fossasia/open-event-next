@@ -35,7 +35,7 @@
     "@mui/material": "^5.4.1",
     "@mui/styles": "^5.4.2",
     "@sentry/browser": "^6.17.5",
-    "@sentry/integrations": "^6.17.5",
+    "@sentry/integrations": "^6.18.0",
     "@sentry/node": "^6.17.5",
     "@sentry/webpack-plugin": "^1.18.8",
     "babel-plugin-macros": "^3.1.0",
