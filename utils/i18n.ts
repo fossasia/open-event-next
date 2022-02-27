@@ -42,12 +42,15 @@ export async function detectAndSetLocale(): Promise<void> {
     DEFAULT_FALLBACK
   )
 
-  if (!isValidLocale(detectedLocale)) {
-    detectedLocale = detectedLocale.split('-')[0]
-  }
+  // because typeof null === object
+  if (typeof detectedLocale !== 'object') {
+    if (!isValidLocale(detectedLocale)) {
+      detectedLocale = detectedLocale?.split('-')[0]
+    }
 
-  const locale = isValidLocale(detectedLocale)
-    ? detectedLocale
-    : DEFAULT_FALLBACK()
-  await activateAndSetCookie(locale)
+    const locale = isValidLocale(detectedLocale)
+      ? detectedLocale
+      : DEFAULT_FALLBACK()
+    await activateAndSetCookie(locale)
+  }
 }
