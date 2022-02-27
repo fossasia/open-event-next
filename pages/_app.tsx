@@ -46,7 +46,7 @@ function MyApp(props: MyAppProps) {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side')
     if (jssStyles) {
-      jssStyles.parentElement.removeChild(jssStyles)
+      jssStyles?.parentElement?.removeChild(jssStyles)
     }
     // Activate translation on client side after locale detection
     // TODO: To be implemented

@@ -1,6 +1,11 @@
 import _ from 'lodash'
 
-export default function toCamelCase(obj) {
+/**
+ *
+ * @param obj: Data from server
+ * @returns data from server with camel case keys
+ */
+export default function toCamelCase(obj: any): any {
   if (Array.isArray(obj)) {
     return obj.map((v) => toCamelCase(v))
   } else if (obj != null && obj.constructor === Object) {
