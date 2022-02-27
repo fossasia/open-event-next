@@ -9,34 +9,40 @@ import IconButton from '@mui/material/IconButton'
 import ShareIcon from '@mui/icons-material/Share'
 import WifiIcon from '@mui/icons-material/Wifi'
 
-export default function EventCard({
-  name,
-  img,
-  startsAt,
-  endsAt,
-  tz,
-  online,
-}): JSX.Element {
+interface EventProps {
+  props: EventAttrs
+}
+
+export default function EventCard(props: EventProps): JSX.Element {
+  const { name, startsAt, endsAt, thumbnailImageUrl, timezone, online } =
+    props.props
   const options: Intl.DateTimeFormatOptions = {
     dateStyle: 'full',
     timeStyle: 'short',
-    timeZone: tz,
+    timeZone: timezone,
   }
 
-  startsAt = new Intl.DateTimeFormat('en-US', options).format(
+  const startTime = new Intl.DateTimeFormat('en-US', options).format(
     new Date(startsAt)
   )
-  endsAt = new Intl.DateTimeFormat('en-US', options).format(new Date(endsAt))
+  const endTime = new Intl.DateTimeFormat('en-US', options).format(
+    new Date(endsAt)
+  )
 
   return (
     <Card>
-      <CardMedia component="img" alt={name} height="200" src={img} />
+      <CardMedia
+        component="img"
+        alt={name}
+        height="200"
+        src={thumbnailImageUrl}
+      />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {name}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          {startsAt} to {endsAt} ({tz})
+          {startTime} to {endTime} ({timezone})
         </Typography>
         {online && (
           <Typography variant="body1" color="text.secondary">
