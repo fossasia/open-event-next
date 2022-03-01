@@ -36,7 +36,7 @@
     "@mui/icons-material": "^5.4.2",
     "@mui/material": "^5.4.3",
     "@mui/styles": "^5.4.2",
-    "@sentry/browser": "^6.18.0",
+    "@sentry/browser": "^6.18.1",
     "@sentry/integrations": "^6.18.0",
     "@sentry/node": "^6.18.0",
     "@sentry/webpack-plugin": "^1.18.8",
@@ -46,7 +46,7 @@
     "nprogress": "^0.2.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "zustand": "^3.7.0"
+    "zustand": "^3.7.1"
   },
   "devDependencies": {
     "@lingui/cli": "^3.13.2",
@@ -60,7 +60,7 @@
     "@types/nprogress": "^0.2.0",
     "@types/react": "^17.0.39",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
-    "@typescript-eslint/parser": "^5.12.1",
+    "@typescript-eslint/parser": "^5.13.0",
     "babel-jest": "^27.5.1",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.4.0",
@@ -74,7 +74,7 @@
     "lint-staged": "^12.3.4",
     "lodash-es": "^4.17.21",
     "prettier": "^2.5.1",
-    "typescript": "^4.5.5"
+    "typescript": "^4.6.2"
   },
   "optionalDependencies": {
     "fsevents": "^2.3.2"

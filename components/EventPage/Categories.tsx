@@ -5,18 +5,13 @@ import Divider from '@mui/material/Divider'
 
 const names = ['Info', 'Tickets', 'Schedule', 'Speakers', 'Getting Here']
 
-const CustomContainer = styled('div')(() => ({
-  border: '1.5px solid #c5c5c5',
-  borderRadius: '4px',
-}))
-
 export default function Categories() {
   return (
-    <CustomContainer>
+    <Box sx={{ border: '1.5px solid #c5c5c5', borderRadius: '4px' }}>
       {names.map((name) => (
         <CustomLink key={name} name={name} />
       ))}
-    </CustomContainer>
+    </Box>
   )
 }
 

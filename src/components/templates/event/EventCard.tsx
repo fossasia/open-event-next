@@ -8,6 +8,7 @@ import { Divider } from '@mui/material'
 import IconButton from '@mui/material/IconButton'
 import ShareIcon from '@mui/icons-material/Share'
 import WifiIcon from '@mui/icons-material/Wifi'
+import { dayjs } from '../../../../store/date'
 
 interface EventProps {
   props: EventAttrs
@@ -16,18 +17,7 @@ interface EventProps {
 export default function EventCard(props: EventProps): JSX.Element {
   const { name, startsAt, endsAt, thumbnailImageUrl, timezone, online } =
     props.props
-  const options: Intl.DateTimeFormatOptions = {
-    dateStyle: 'full',
-    timeStyle: 'short',
-    timeZone: timezone,
-  }
-
-  const startTime = new Intl.DateTimeFormat('en-US', options).format(
-    new Date(startsAt)
-  )
-  const endTime = new Intl.DateTimeFormat('en-US', options).format(
-    new Date(endsAt)
-  )
+  const format = 'dddd, D MMMM, YYYY hh:mm A'
 
   return (
     <Card>
@@ -42,7 +32,10 @@ export default function EventCard(props: EventProps): JSX.Element {
           {name}
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          {startTime} to {endTime} ({timezone})
+          {dayjs(startsAt).tz(timezone).format(format)} to{' '}
+          {dayjs(endsAt)
+            .tz(timezone)
+            .format(format + ' (zzz)')}{' '}
         </Typography>
         {online && (
           <Typography variant="body1" color="text.secondary">

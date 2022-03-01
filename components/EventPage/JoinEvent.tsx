@@ -12,19 +12,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn'
 import Tooltip, { tooltipClasses, TooltipProps } from '@mui/material/Tooltip'
 import React from 'react'
 
-const ColorButton = styled(Button)(({ theme }) => ({
-  color: theme.palette.getContrastText(grey[300]),
-  backgroundColor: grey[300],
-  '&:hover': {
-    backgroundColor: grey[400],
-  },
-}))
-
-const LinkButton = styled(Button)(() => ({
-  width: 'fit-content',
-  padding: '10px 0',
-}))
-
 const CustomTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
 ))(({ theme }) => ({
@@ -68,15 +55,22 @@ const JoinEvent = () => {
         </Box>
       </Box>
 
-      <ColorButton
+      <Button
         variant="contained"
         fullWidth
         size="large"
         startIcon={<EventAvailableIcon />}
         color="info"
+        sx={{
+          backgroundColor: grey[300],
+          color: '#000',
+          '&:hover': {
+            backgroundColor: grey[300],
+          },
+        }}
       >
         Add to Calender
-      </ColorButton>
+      </Button>
 
       <Stack direction="row" spacing={2} margin="20px 0">
         <CustomLink href="https://google.com" target="_blank">
@@ -96,12 +90,12 @@ const JoinEvent = () => {
             </React.Fragment>
           }
         >
-          <LinkButton
+          <Button
             variant="contained"
-            sx={{ paddingLeft: '10px', paddingRight: '10px' }}
+            sx={{ width: 'fit-content', padding: '10px' }}
           >
             Website
-          </LinkButton>
+          </Button>
         </CustomTooltip>
       </Stack>
     </Box>
