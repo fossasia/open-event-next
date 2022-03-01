@@ -25,7 +25,7 @@ const LinkButton = styled(Button)(() => ({
   padding: '10px 0',
 }))
 
-const HtmlTooltip = styled(({ className, ...props }: TooltipProps) => (
+const CustomTooltip = styled(({ className, ...props }: TooltipProps) => (
   <Tooltip {...props} arrow classes={{ popper: className }} />
 ))(({ theme }) => ({
   [`& .${tooltipClasses.tooltip}`]: {
@@ -55,7 +55,6 @@ const JoinEvent = () => {
         variant="contained"
         fullWidth
         size="large"
-        sx={{ textTransform: 'none', fontWeight: '600' }}
         startIcon={<CalendarTodayIcon />}
       >
         Join Live Event
@@ -73,7 +72,6 @@ const JoinEvent = () => {
         variant="contained"
         fullWidth
         size="large"
-        sx={{ textTransform: 'none', fontWeight: '600' }}
         startIcon={<EventAvailableIcon />}
         color="info"
       >
@@ -88,19 +86,8 @@ const JoinEvent = () => {
         <CustomLink href="https://google.com" target="_blank">
           <LinkedInIcon />
         </CustomLink>
-        {/* <LinkButton variant="contained">
-          <LinkedInIcon />
-        </LinkButton> */}
-        {/* <LightTooltip title="Website">
-          <LinkButton
-            variant="contained"
-            sx={{ paddingLeft: "10px", paddingRight: "10px" }}
-          >
-            Website
-          </LinkButton>
-        </LightTooltip> */}
 
-        <HtmlTooltip
+        <CustomTooltip
           title={
             <React.Fragment>
               <Typography color="inherit" sx={{ padding: '4px 10px' }}>
@@ -115,7 +102,7 @@ const JoinEvent = () => {
           >
             Website
           </LinkButton>
-        </HtmlTooltip>
+        </CustomTooltip>
       </Stack>
     </Box>
   )

@@ -48,7 +48,7 @@ export default function Index(props: Props): JSX.Element {
               The open source event solution for virtual and in-person events.
             </Trans>
           </Typography>
-          <Button variant="contained">Create Event</Button>
+          <Button variant="contained">CREATE EVENT</Button>
         </Box>
       )}
       <Container maxWidth="lg">

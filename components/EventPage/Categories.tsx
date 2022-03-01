@@ -10,7 +10,7 @@ const CustomContainer = styled('div')(() => ({
   borderRadius: '4px',
 }))
 
-export default function LeftTable() {
+export default function Categories() {
   return (
     <CustomContainer>
       {names.map((name) => (

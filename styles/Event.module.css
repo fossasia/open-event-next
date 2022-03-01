@@ -31,4 +31,5 @@
 
 .logo_image {
   width: 100%;
+  transform: translateY(5px);
 }

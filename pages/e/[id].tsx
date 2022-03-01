@@ -1,15 +1,19 @@
 import type { NextPage } from 'next'
 // import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { useState } from 'react'
+import { useTheme } from '@mui/material/styles'
+import { useMediaQuery } from '@mui/material'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
-
 import LocationOnIcon from '@mui/icons-material/LocationOn'
+import Stack from '@mui/material/Stack'
+import Select from '@mui/material/Select'
+import MenuItem from '@mui/material/MenuItem'
 
 import styles from '../../styles/Event.module.css'
-import Stack from '@mui/material/Stack'
-import BasicTable from '../../components/EventPage/Table'
-import LeftTable from '../../components/EventPage/LeftTable'
+import TicketTable from '../../components/EventPage/TicketTable'
+import Categories from '../../components/EventPage/Categories'
 import JoinEvent from '../../components/EventPage/JoinEvent'
 
 const banner = `https://api.eventyay.com/static/media/events/2865/large/WWtYUnptdk/7ff9fe22-1f34-47dc-826e-c95a478f4a40.jpg`
@@ -20,21 +24,29 @@ const Event: NextPage = () => {
   //   const router = useRouter()
   //   const { id } = router.query
 
+  const theme = useTheme()
+  const isSmall = useMediaQuery(theme.breakpoints.down('md'))
+  const [selectedCategory, setSelectedCategory] = useState('Info')
+
   return (
     <Box>
-      <Box style={{ height: '60px' }}></Box>
       <Box>
         <BannerImage />
-        <Box className={styles.banner_text_wrapper}>
+        <Box className={styles.banner_text_wrapper} sx={{ padding: '0 20px' }}>
           <Box display="flex" gap="2rem">
             <Box className={styles.logo_wrapper}>
               <img src={logo} alt="Logo" className={styles.logo_image} />
             </Box>
             <Box>
-              <Typography color="white" variant="h5">
+              <Typography color="white" variant="h5" fontWeight="light">
                 Thursday, 10 March, 2022 5:00 PM (CET)
               </Typography>
-              <Typography color="white" variant="h3" margin="3px 0">
+              <Typography
+                color="white"
+                variant="h3"
+                margin="3px 0"
+                fontWeight="light"
+              >
                 OSBA Members & Products
               </Typography>
               <Stack direction="row" alignItems="center">
@@ -47,7 +59,7 @@ const Event: NextPage = () => {
                   }}
                 />
 
-                <Typography color="white" variant="h5">
+                <Typography color="white" variant="h5" fontWeight="light">
                   Online Event
                 </Typography>
               </Stack>
@@ -56,12 +68,36 @@ const Event: NextPage = () => {
         </Box>
       </Box>
 
-      <Box display="flex" padding="0 0.4rem">
-        <Box style={{ width: '18.75%', padding: '1rem' }}>
-          <LeftTable />
+      <Box
+        display="flex"
+        flexDirection={isSmall ? 'column' : 'row'}
+        padding="0 0.4rem 4rem 0"
+      >
+        <Box style={{ width: isSmall ? '100%' : '18.75%', padding: '1rem' }}>
+          {isSmall ? (
+            <Select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              fullWidth
+            >
+              <MenuItem value={'Info'}>Info</MenuItem>
+              <MenuItem value={'Tickets'}>Tickets</MenuItem>
+              <MenuItem value={'Schedule'}>Schedule</MenuItem>
+              <MenuItem value={'Speakers'}>Speakers</MenuItem>
+              <MenuItem value={'Getting Here'}>Getting Here</MenuItem>
+            </Select>
+          ) : (
+            <Categories />
+          )}
         </Box>
 
-        <Box style={{ width: '62.5%', padding: '1rem' }}>
+        {isSmall && (
+          <Box style={{ width: isSmall ? '100%' : '18.75%', padding: '1rem' }}>
+            <JoinEvent />
+          </Box>
+        )}
+
+        <Box style={{ width: isSmall ? '100%' : '62.5%', padding: '1rem' }}>
           <Typography variant="h5">
             Die OSB Alliance-Mitglieder vernetzen sich!
           </Typography>
@@ -78,12 +114,14 @@ const Event: NextPage = () => {
             zulernen und gleichzeitig zu netzwerken.
           </Typography>
 
-          <BasicTable />
+          <TicketTable />
         </Box>
 
-        <Box style={{ width: '18.75%', padding: '1rem' }}>
-          <JoinEvent />
-        </Box>
+        {!isSmall && (
+          <Box style={{ width: isSmall ? '100%' : '18.75%', padding: '1rem' }}>
+            <JoinEvent />
+          </Box>
+        )}
       </Box>
     </Box>
   )
