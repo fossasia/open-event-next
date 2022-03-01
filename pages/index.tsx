@@ -1,5 +1,4 @@
 // import { activateAndSetCookie } from '../utils/i18n'
-// import dayjs from 'dayjs'
 // import { useTimezone } from '../store/useTimezone'
 
 import {
@@ -13,9 +12,16 @@ import {
 import React from 'react'
 import { Trans } from '@lingui/macro'
 import FrontPage from '../src/components/templates/FrontPage'
-import fetcher from '../src/utils/fetcher'
+import fetcher from '../utils/fetcher'
+import toCamelCase from '../utils/camelCase'
 
-export default function Index({ events, upcomingEvents, groups }): JSX.Element {
+interface Props {
+  events: ServerData[]
+  upcomingEvents: ServerData[]
+  groups: ServerData[]
+}
+
+export default function Index(props: Props): JSX.Element {
   // const localTimezone = useTimezone((state) => state.localTimezone)
   // const defaultTimezone = useTimezone((state) => state.defaultTimezone)
   // const setTimezone = useTimezone((state) => state.setTimezone)
@@ -46,9 +52,9 @@ export default function Index({ events, upcomingEvents, groups }): JSX.Element {
         </Box>
       )}
       <Container maxWidth="lg">
-        <FrontPage data={events.data} name="Featured Events" />
-        <FrontPage data={upcomingEvents.data} name="Upcoming Events" />
-        <FrontPage data={groups.data} name="Popular Groups" />
+        <FrontPage data={props.events} name="Featured Events" />
+        <FrontPage data={props.upcomingEvents} name="Upcoming Events" />
+        <FrontPage data={props.groups} name="Popular Groups" />
       </Container>
     </Box>
   )
@@ -64,20 +70,23 @@ export async function getStaticProps() {
   const upcomingEventUrl = `https://api.eventyay.com/v1/events/upcoming?cache=true&page[size]=3&public=true&upcoming=true`
   const groupsUrl = `https://api.eventyay.com/v1/groups?cache=true&filter=[{"name":"is-promoted","op":"eq","val":true}]&include=user,follower&page[size]=3&public=true`
 
-  const [events, eventsErr] = await fetcher(eventUrl)
-  if (eventsErr) {
-    console.error(eventsErr)
+  const [event, eventErr] = await fetcher(eventUrl)
+  if (eventErr) {
+    console.error(eventErr)
   }
+  const events = toCamelCase(event.data)
 
-  const [upcomingEvents, upcomingEventsErr] = await fetcher(upcomingEventUrl)
-  if (upcomingEventsErr) {
-    console.error(upcomingEventsErr)
+  const [upcomingEvent, upcomingEventErr] = await fetcher(upcomingEventUrl)
+  if (upcomingEventErr) {
+    console.error(upcomingEventErr)
   }
+  const upcomingEvents = toCamelCase(upcomingEvent.data)
 
-  const [groups, groupsErr] = await fetcher(groupsUrl)
-  if (groupsErr) {
-    console.error(groupsErr)
+  const [group, groupErr] = await fetcher(groupsUrl)
+  if (groupErr) {
+    console.error(groupErr)
   }
+  const groups = toCamelCase(group.data)
 
   return {
     props: { events, upcomingEvents, groups },
