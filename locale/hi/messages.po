@@ -13,26 +13,166 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/components/templates/FooterFields.tsx:16
+msgid "Attendee App"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:6
+msgid "Blog"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:15
+msgid "Browse Events"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:20
+msgid "Connect With Us"
+msgstr ""
+
+#: src/components/layout/footer.tsx:11
+msgid "Contact"
+msgstr ""
+
+#: pages/index.tsx:42
+#: src/components/layout/navbar.tsx:14
+msgid "Create Event"
+msgstr ""
+
 #: pages/index.tsx:71
-msgid "Deploy"
-msgstr "तैनाती"
+#~ msgid "Deploy"
+#~ msgstr "तैनाती"
 
 #: pages/index.tsx:56
-msgid "Documentation"
-msgstr "प्रलेखन"
+#~ msgid "Documentation"
+#~ msgstr "प्रलेखन"
+
+#: src/components/templates/FooterFields.tsx:11
+msgid "Event Management Software"
+msgstr ""
 
 #: pages/index.tsx:66
-msgid "Examples"
-msgstr "उदाहरण"
+#~ msgid "Examples"
+#~ msgstr "उदाहरण"
+
+#: src/components/templates/FooterFields.tsx:21
+msgid "Facebook"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:14
+msgid "Find Events"
+msgstr ""
+
+#: src/components/templates/group/GroupCard.tsx:46
+msgid "Follow Group"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:23
+msgid "GitHub"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:26
+msgid "Gitter"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:25
+msgid "Google Groups"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:6
+msgid "How it works"
+msgstr ""
 
 #: pages/index.tsx:61
-msgid "Learn"
-msgstr "सीखना"
+#~ msgid "Learn"
+#~ msgstr "सीखना"
+
+#: src/components/layout/navbar.tsx:14
+msgid "Login"
+msgstr ""
+
+#: src/components/layout/footer.tsx:8
+msgid "Maintained by Areeb Jamal & Team"
+msgstr ""
+
+#: src/components/templates/event/EventCard.tsx:53
+msgid "Online Event"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:9
+msgid "Online Registration"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:17
+msgid "Organizer App"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:8
+msgid "Plan Events"
+msgstr ""
+
+#: src/components/layout/navbar.tsx:14
+#: src/components/templates/FooterFields.tsx:6
+msgid "Pricing"
+msgstr ""
+
+#: src/components/layout/footer.tsx:13
+msgid "Privacy"
+msgstr ""
+
+#: src/components/layout/footer.tsx:12
+msgid "Refund Policy"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:10
+msgid "Sell Event Tickets"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:27
+msgid "Telegram"
+msgstr ""
+
+#: src/components/layout/footer.tsx:10
+msgid "Terms"
+msgstr ""
+
+#: pages/index.tsx:37
+msgid "The open source event solution for virtual and in-person events."
+msgstr ""
 
 #: pages/index.tsx:17
-msgid "This is line to test translation."
-msgstr "यह अनुवाद का परीक्षण करने के लिए लाइन है।"
+#~ msgid "This is line to test translation."
+#~ msgstr "यह अनुवाद का परीक्षण करने के लिए लाइन है।"
+
+#: src/components/templates/FooterFields.tsx:22
+msgid "Twitter"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:6
+msgid "Use eventyay"
+msgstr ""
+
+#: src/components/templates/FooterFields.tsx:28
+msgid "Weblate"
+msgstr ""
 
 #: pages/index.tsx:15
-msgid "Welcome to <0>Next.js!</0>"
+#~ msgid "Welcome to <0>Next.js!</0>"
+#~ msgstr ""
+
+#: src/components/templates/FooterFields.tsx:24
+msgid "YouTube"
+msgstr ""
+
+#: src/components/layout/navbar.tsx:81
+#: src/components/layout/navbar.tsx:109
+#~ msgid "{page}"
+#~ msgstr ""
+
+#: src/components/layout/footer.tsx:58
+#: src/components/templates/FooterFields.tsx:62
+msgid "{val}"
+msgstr ""
+
+#: src/components/layout/footer.tsx:9
+msgid "© {0} eventyay"
 msgstr ""

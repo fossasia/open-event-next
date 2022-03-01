@@ -1,30 +1,31 @@
 import { Divider, Stack, Typography } from '@mui/material'
 import React from 'react'
 import Link from '../Link'
+import { Trans, t } from '@lingui/macro'
 
-const info = ['Use eventyay', 'How it works', 'Pricing', 'Blog']
+const info = [t`Use eventyay`, t`How it works`, t`Pricing`, t`Blog`]
 const feats = [
-  'Plan Events',
-  'Online Registration',
-  'Sell Event Tickets',
-  'Event Management Software',
+  t`Plan Events`,
+  t`Online Registration`,
+  t`Sell Event Tickets`,
+  t`Event Management Software`,
 ]
 const explore = [
-  'Find Events',
-  'Browse Events',
-  'Attendee App',
-  'Organizer App',
+  t`Find Events`,
+  t`Browse Events`,
+  t`Attendee App`,
+  t`Organizer App`,
 ]
 const socialLinks = [
-  'Connect With Us',
-  'Facebook',
-  'Twitter',
-  'Github',
-  'Youtube',
-  'Google Groups',
-  'Gitter',
-  'Telegram',
-  'Weblate',
+  t`Connect With Us`,
+  t`Facebook`,
+  t`Twitter`,
+  t`GitHub`,
+  t`YouTube`,
+  t`Google Groups`,
+  t`Gitter`,
+  t`Telegram`,
+  t`Weblate`,
 ]
 const footerLinks = [info, feats, explore, socialLinks]
 
@@ -41,7 +42,7 @@ const FooterFields = (): JSX.Element => {
     >
       {footerLinks.map((arr, index) => {
         return (
-          <Stack direction="column" key={index} justifyContent="flex-start">
+          <Stack direction="column" key={index}>
             {arr.map((val, index) => {
               return (
                 <Link
@@ -58,7 +59,7 @@ const FooterFields = (): JSX.Element => {
                   color="#bbbbbb"
                 >
                   <Typography variant="body2" p={1}>
-                    {val}
+                    <Trans>{val}</Trans>
                   </Typography>
                 </Link>
               )

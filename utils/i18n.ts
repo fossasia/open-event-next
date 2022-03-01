@@ -11,7 +11,7 @@ i18n.loadLocaleData('en', { plurals: en })
 i18n.loadLocaleData('hi', { plurals: hi })
 
 // Supported locales
-export const supportedLocales = ['en', 'hi']
+export const supportedLocales: string[] = ['en', 'hi']
 
 export function isValidLocale(locale: string): boolean {
   return supportedLocales.includes(locale)

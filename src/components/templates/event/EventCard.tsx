@@ -8,6 +8,7 @@ import { Divider } from '@mui/material'
 import IconButton from '@mui/material/IconButton'
 import ShareIcon from '@mui/icons-material/Share'
 import WifiIcon from '@mui/icons-material/Wifi'
+import { Trans } from '@lingui/macro'
 
 interface EventProps {
   props: EventAttrs
@@ -49,7 +50,7 @@ export default function EventCard(props: EventProps): JSX.Element {
             <IconButton aria-label="online event">
               <WifiIcon />
             </IconButton>
-            Online Event
+            <Trans>Online Event</Trans>
           </Typography>
         )}
       </CardContent>

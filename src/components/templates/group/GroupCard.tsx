@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent'
 import CardMedia from '@mui/material/CardMedia'
 import Typography from '@mui/material/Typography'
 import FollowTheSignsIcon from '@mui/icons-material/FollowTheSigns'
+import { Trans } from '@lingui/macro'
 
 interface GroupProps {
   props: GroupAttrs
@@ -42,7 +43,7 @@ const GroupCard = (props: GroupProps): JSX.Element => {
           disabled
           sx={{ width: '100%' }}
         >
-          Follow Group ({followerCount})
+          <Trans>Follow Group</Trans> ({followerCount})
         </Button>
       </CardActions>
     </Card>
