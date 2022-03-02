@@ -1,18 +1,12 @@
 import { useState } from 'react'
-import Table from '@mui/material/Table'
-import TableBody from '@mui/material/TableBody'
-import TableCell from '@mui/material/TableCell'
-import TableContainer from '@mui/material/TableContainer'
-import TableHead from '@mui/material/TableHead'
-import TableRow from '@mui/material/TableRow'
 import Paper from '@mui/material/Paper'
 import Typography from '@mui/material/Typography'
 import Divider from '@mui/material/Divider'
-import Select, { SelectChangeEvent } from '@mui/material/Select'
-import MenuItem from '@mui/material/MenuItem'
+import { SelectChangeEvent } from '@mui/material/Select'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import InfoIcon from '@mui/icons-material/Info'
+import { TicketPart } from './TicketPart'
 
 export default function TicketTable() {
   const [ticketQuantity, setTicketQuantity] = useState('1')
@@ -46,45 +40,5 @@ export default function TicketTable() {
         </Button>
       </Box>
     </Paper>
-  )
-}
-
-const TicketPart = ({
-  quantity,
-  setQuantity,
-}: {
-  quantity: string
-  setQuantity: (e: SelectChangeEvent) => void
-}) => {
-  return (
-    <TableContainer sx={{ paddingLeft: '1em', paddingRight: '1em' }}>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>Type</TableCell>
-            <TableCell align="center">Price</TableCell>
-            <TableCell align="center">Quantity</TableCell>
-            <TableCell align="right">Subtotal</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          <TableRow sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-            <TableCell>
-              Registrierung
-              <br />
-              Sale ends on Thursday, 10 March, 2022 6:00 PM (CET)
-            </TableCell>
-            <TableCell align="center">Free</TableCell>
-            <TableCell align="center">
-              <Select value={quantity} onChange={setQuantity}>
-                <MenuItem value={'0'}>0</MenuItem>
-                <MenuItem value={'1'}>1</MenuItem>
-              </Select>
-            </TableCell>
-            <TableCell align="right">Free</TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
-    </TableContainer>
   )
 }

@@ -4,36 +4,12 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday'
 import AccessTimeIcon from '@mui/icons-material/AccessTime'
 import EventAvailableIcon from '@mui/icons-material/EventAvailable'
 import Typography from '@mui/material/Typography'
-import { styled } from '@mui/material/styles'
 import Stack from '@mui/material/Stack'
 import { grey } from '@mui/material/colors'
 import TwitterIcon from '@mui/icons-material/Twitter'
 import LinkedInIcon from '@mui/icons-material/LinkedIn'
-import Tooltip, { tooltipClasses, TooltipProps } from '@mui/material/Tooltip'
-import React from 'react'
-
-const CustomTooltip = styled(({ className, ...props }: TooltipProps) => (
-  <Tooltip {...props} arrow classes={{ popper: className }} />
-))(({ theme }) => ({
-  [`& .${tooltipClasses.tooltip}`]: {
-    backgroundColor: '#fff',
-    color: 'rgba(0, 0, 0, 0.87)',
-    maxWidth: 220,
-    fontSize: theme.typography.pxToRem(12),
-    border: '2px solid #dadde9',
-  },
-}))
-
-const CustomLink = styled('a')(({ theme }) => ({
-  padding: '0.1rem 1.2rem',
-  background: theme.palette.primary.main,
-  textDecoration: 'none',
-  color: theme.palette.common.white,
-  borderRadius: '4px',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-}))
+import Tooltip from '@mui/material/Tooltip'
+import { CustomLink } from './CustomLink'
 
 const JoinEvent = () => {
   return (
@@ -81,22 +57,18 @@ const JoinEvent = () => {
           <LinkedInIcon />
         </CustomLink>
 
-        <CustomTooltip
-          title={
-            <React.Fragment>
-              <Typography color="inherit" sx={{ padding: '4px 10px' }}>
+        <CustomLink href="https://google.com" target="_blank">
+          <Tooltip
+            arrow
+            title={
+              <Typography variant="body2" sx={{ padding: '3px 6px' }}>
                 Website
               </Typography>
-            </React.Fragment>
-          }
-        >
-          <Button
-            variant="contained"
-            sx={{ width: 'fit-content', padding: '10px' }}
+            }
           >
-            Website
-          </Button>
-        </CustomTooltip>
+            <Typography>Website</Typography>
+          </Tooltip>
+        </CustomLink>
       </Stack>
     </Box>
   )
