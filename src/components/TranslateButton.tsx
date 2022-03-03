@@ -9,15 +9,18 @@ export default function TranslateButton() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
   const [selectedIndex, setSelectedIndex] = React.useState(0)
+  const [language, setSelectedLanguage] = React.useState('English')
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget)
   }
   const handleMenuItemClick = (
     event: React.MouseEvent<HTMLElement>,
-    index: number
+    index: number,
+    locale: string
   ) => {
     setSelectedIndex(index)
-    activateAndSetCookie(supportedLocales[index])
+    activateAndSetCookie(locale)
+    setSelectedLanguage(supportedLocales[locale])
     setAnchorEl(null)
   }
   const handleClose = () => {
@@ -37,7 +40,7 @@ export default function TranslateButton() {
         startIcon={<LanguageIcon />}
         disableElevation
       >
-        {supportedLocales[selectedIndex]}
+        {language}
       </Button>
       <Menu
         id="basic-menu"
@@ -56,13 +59,13 @@ export default function TranslateButton() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        {supportedLocales.map((locale: string, index: number) => (
+        {Object.keys(supportedLocales).map((locale, index: number) => (
           <MenuItem
             key={locale}
             selected={index === selectedIndex}
-            onClick={(event) => handleMenuItemClick(event, index)}
+            onClick={(event) => handleMenuItemClick(event, index, locale)}
           >
-            {locale}
+            {supportedLocales[locale]}
           </MenuItem>
         ))}
       </Menu>

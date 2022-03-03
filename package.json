@@ -92,7 +92,21 @@
     "format": "po",
     "locales": [
       "en",
-      "hi"
+      "hi",
+      "bn",
+      "de",
+      "es",
+      "fr",
+      "hi",
+      "id",
+      "ja",
+      "pl",
+      "ru",
+      "th",
+      "vi",
+      "zh_Hans",
+      "zh_Hant",
+      "ko"
     ],
     "orderBy": "messageId",
     "rootDir": ".",

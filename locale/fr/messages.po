@@ -1,17 +1,11 @@
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2021-04-16 20:39+0530\n"
-"Mime-Version: 1.0\n"
+"POT-Creation-Date: 2022-03-03 16:19+0530\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: @lingui/cli\n"
-"Language: hi\n"
-"Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Plural-Forms: \n"
+"Language: fr\n"
 
 #: src/components/templates/FooterFields.tsx:16
 msgid "Attendee App"
@@ -38,21 +32,9 @@ msgstr ""
 msgid "Create Event"
 msgstr ""
 
-#: pages/index.tsx:71
-#~ msgid "Deploy"
-#~ msgstr "तैनाती"
-
-#: pages/index.tsx:56
-#~ msgid "Documentation"
-#~ msgstr "प्रलेखन"
-
 #: src/components/templates/FooterFields.tsx:11
 msgid "Event Management Software"
 msgstr ""
-
-#: pages/index.tsx:66
-#~ msgid "Examples"
-#~ msgstr "उदाहरण"
 
 #: src/components/templates/FooterFields.tsx:21
 msgid "Facebook"
@@ -81,10 +63,6 @@ msgstr ""
 #: src/components/templates/FooterFields.tsx:6
 msgid "How it works"
 msgstr ""
-
-#: pages/index.tsx:61
-#~ msgid "Learn"
-#~ msgstr "सीखना"
 
 #: src/components/layout/navbar.tsx:14
 msgid "Login"
@@ -139,10 +117,6 @@ msgstr ""
 msgid "The open source event solution for virtual and in-person events."
 msgstr ""
 
-#: pages/index.tsx:17
-#~ msgid "This is line to test translation."
-#~ msgstr "यह अनुवाद का परीक्षण करने के लिए लाइन है।"
-
 #: src/components/templates/FooterFields.tsx:22
 msgid "Twitter"
 msgstr ""
@@ -155,18 +129,9 @@ msgstr ""
 msgid "Weblate"
 msgstr ""
 
-#: pages/index.tsx:15
-#~ msgid "Welcome to <0>Next.js!</0>"
-#~ msgstr ""
-
 #: src/components/templates/FooterFields.tsx:24
 msgid "YouTube"
 msgstr ""
-
-#: src/components/layout/navbar.tsx:81
-#: src/components/layout/navbar.tsx:109
-#~ msgid "{page}"
-#~ msgstr ""
 
 #: src/components/layout/footer.tsx:59
 #: src/components/templates/FooterFields.tsx:62

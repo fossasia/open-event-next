@@ -29,7 +29,7 @@ msgstr "Browse Events"
 msgid "Connect With Us"
 msgstr "Connect With Us"
 
-#: src/components/layout/footer.tsx:11
+#: src/components/layout/footer.tsx:12
 msgid "Contact"
 msgstr "Contact"
 
@@ -90,11 +90,11 @@ msgstr "How it works"
 msgid "Login"
 msgstr "Login"
 
-#: src/components/layout/footer.tsx:8
+#: src/components/layout/footer.tsx:9
 msgid "Maintained by Areeb Jamal & Team"
 msgstr "Maintained by Areeb Jamal & Team"
 
-#: src/components/templates/event/EventCard.tsx:53
+#: src/components/templates/event/EventCard.tsx:46
 msgid "Online Event"
 msgstr "Online Event"
 
@@ -115,11 +115,11 @@ msgstr "Plan Events"
 msgid "Pricing"
 msgstr "Pricing"
 
-#: src/components/layout/footer.tsx:13
+#: src/components/layout/footer.tsx:14
 msgid "Privacy"
 msgstr "Privacy"
 
-#: src/components/layout/footer.tsx:12
+#: src/components/layout/footer.tsx:13
 msgid "Refund Policy"
 msgstr "Refund Policy"
 
@@ -131,7 +131,7 @@ msgstr "Sell Event Tickets"
 msgid "Telegram"
 msgstr "Telegram"
 
-#: src/components/layout/footer.tsx:10
+#: src/components/layout/footer.tsx:11
 msgid "Terms"
 msgstr "Terms"
 
@@ -168,11 +168,11 @@ msgstr "YouTube"
 #~ msgid "{page}"
 #~ msgstr "{page}"
 
-#: src/components/layout/footer.tsx:58
+#: src/components/layout/footer.tsx:59
 #: src/components/templates/FooterFields.tsx:62
 msgid "{val}"
 msgstr "{val}"
 
-#: src/components/layout/footer.tsx:9
+#: src/components/layout/footer.tsx:10
 msgid "© {0} eventyay"
 msgstr "© {0} eventyay"
