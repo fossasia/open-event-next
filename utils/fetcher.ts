@@ -1,8 +1,15 @@
-export default async function fetcher(url: string) {
+import { instance } from '../src/ky/instance'
+
+export default async function fetcher(
+  url: string,
+  searchParams: string
+): Promise<[data: ServerProp | null, err: Error | null]> {
   try {
-    const data = await fetch(url)
-    const res = await data.json()
-    return [res, null]
+    const data: ServerProp = await instance(url, {
+      searchParams: searchParams,
+    }).json()
+
+    return [data, null]
   } catch (err) {
     return [null, err]
   }

@@ -1,3 +1,7 @@
+interface ServerProp {
+  data: ServerData[]
+}
+
 interface ServerData {
   type: string
   attributes: any
