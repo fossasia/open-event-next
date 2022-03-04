@@ -60,10 +60,6 @@ export function isValidLocale(locale: string): boolean {
   return locale in supportedLocales
 }
 
-export function getLanguage(locale = 'en'): string {
-  return supportedLocales[locale]
-}
-
 /**
  * Load messages for requested locale and activate it.
  * This function isn't part of the LinguiJS library because there're
@@ -71,6 +67,7 @@ export function getLanguage(locale = 'en'): string {
  */
 export async function activate(locale: string): Promise<void> {
   const { messages } = await import(`../locale/${locale}/messages.js`)
+
   i18n.load(locale, messages)
   i18n.activate(locale)
 }

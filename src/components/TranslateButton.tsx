@@ -6,6 +6,7 @@ import LanguageIcon from '@mui/icons-material/Language'
 import { activateAndSetCookie, supportedLocales } from '../../utils/i18n'
 
 export default function TranslateButton() {
+  const ITEM_HEIGHT = 48
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
   const [selectedIndex, setSelectedIndex] = React.useState(0)
@@ -19,8 +20,8 @@ export default function TranslateButton() {
     locale: string
   ) => {
     setSelectedIndex(index)
-    activateAndSetCookie(locale)
     setSelectedLanguage(supportedLocales[locale])
+    activateAndSetCookie(locale)
     setAnchorEl(null)
   }
   const handleClose = () => {
@@ -36,6 +37,7 @@ export default function TranslateButton() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
         variant="contained"
+        size="small"
         sx={{ bgcolor: '#767676' }}
         startIcon={<LanguageIcon />}
         disableElevation
@@ -55,8 +57,14 @@ export default function TranslateButton() {
           vertical: 'bottom',
           horizontal: 'center',
         }}
+        PaperProps={{
+          style: {
+            maxHeight: ITEM_HEIGHT * 4.5,
+            width: '12ch',
+          },
+        }}
         MenuListProps={{
-          'aria-labelledby': 'basic-button',
+          'aria-labelledby': 'long-button',
         }}
       >
         {Object.keys(supportedLocales).map((locale, index: number) => (
