@@ -13,26 +13,166 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
+#: src/components/templates/FooterFields.tsx:16
+msgid "Attendee App"
+msgstr "Attendee App"
+
+#: src/components/templates/FooterFields.tsx:6
+msgid "Blog"
+msgstr "Blog"
+
+#: src/components/templates/FooterFields.tsx:15
+msgid "Browse Events"
+msgstr "Browse Events"
+
+#: src/components/templates/FooterFields.tsx:20
+msgid "Connect With Us"
+msgstr "Connect With Us"
+
+#: src/components/layout/footer.tsx:12
+msgid "Contact"
+msgstr "Contact"
+
+#: pages/index.tsx:42
+#: src/components/layout/navbar.tsx:14
+msgid "Create Event"
+msgstr "Create Event"
+
 #: pages/index.tsx:71
-msgid "Deploy"
-msgstr "Deploy"
+#~ msgid "Deploy"
+#~ msgstr "Deploy"
 
 #: pages/index.tsx:56
-msgid "Documentation"
-msgstr "Documentation"
+#~ msgid "Documentation"
+#~ msgstr "Documentation"
+
+#: src/components/templates/FooterFields.tsx:11
+msgid "Event Management Software"
+msgstr "Event Management Software"
 
 #: pages/index.tsx:66
-msgid "Examples"
-msgstr "Examples"
+#~ msgid "Examples"
+#~ msgstr "Examples"
+
+#: src/components/templates/FooterFields.tsx:21
+msgid "Facebook"
+msgstr "Facebook"
+
+#: src/components/templates/FooterFields.tsx:14
+msgid "Find Events"
+msgstr "Find Events"
+
+#: src/components/templates/group/GroupCard.tsx:46
+msgid "Follow Group"
+msgstr "Follow Group"
+
+#: src/components/templates/FooterFields.tsx:23
+msgid "GitHub"
+msgstr "GitHub"
+
+#: src/components/templates/FooterFields.tsx:26
+msgid "Gitter"
+msgstr "Gitter"
+
+#: src/components/templates/FooterFields.tsx:25
+msgid "Google Groups"
+msgstr "Google Groups"
+
+#: src/components/templates/FooterFields.tsx:6
+msgid "How it works"
+msgstr "How it works"
 
 #: pages/index.tsx:61
-msgid "Learn"
-msgstr "Learn"
+#~ msgid "Learn"
+#~ msgstr "Learn"
+
+#: src/components/layout/navbar.tsx:14
+msgid "Login"
+msgstr "Login"
+
+#: src/components/layout/footer.tsx:9
+msgid "Maintained by Areeb Jamal & Team"
+msgstr "Maintained by Areeb Jamal & Team"
+
+#: src/components/templates/event/EventCard.tsx:46
+msgid "Online Event"
+msgstr "Online Event"
+
+#: src/components/templates/FooterFields.tsx:9
+msgid "Online Registration"
+msgstr "Online Registration"
+
+#: src/components/templates/FooterFields.tsx:17
+msgid "Organizer App"
+msgstr "Organizer App"
+
+#: src/components/templates/FooterFields.tsx:8
+msgid "Plan Events"
+msgstr "Plan Events"
+
+#: src/components/layout/navbar.tsx:14
+#: src/components/templates/FooterFields.tsx:6
+msgid "Pricing"
+msgstr "Pricing"
+
+#: src/components/layout/footer.tsx:14
+msgid "Privacy"
+msgstr "Privacy"
+
+#: src/components/layout/footer.tsx:13
+msgid "Refund Policy"
+msgstr "Refund Policy"
+
+#: src/components/templates/FooterFields.tsx:10
+msgid "Sell Event Tickets"
+msgstr "Sell Event Tickets"
+
+#: src/components/templates/FooterFields.tsx:27
+msgid "Telegram"
+msgstr "Telegram"
+
+#: src/components/layout/footer.tsx:11
+msgid "Terms"
+msgstr "Terms"
+
+#: pages/index.tsx:37
+msgid "The open source event solution for virtual and in-person events."
+msgstr "The open source event solution for virtual and in-person events."
 
 #: pages/index.tsx:17
-msgid "This is line to test translation."
-msgstr "This is line to test translation."
+#~ msgid "This is line to test translation."
+#~ msgstr "This is line to test translation."
+
+#: src/components/templates/FooterFields.tsx:22
+msgid "Twitter"
+msgstr "Twitter"
+
+#: src/components/templates/FooterFields.tsx:6
+msgid "Use eventyay"
+msgstr "Use eventyay"
+
+#: src/components/templates/FooterFields.tsx:28
+msgid "Weblate"
+msgstr "Weblate"
 
 #: pages/index.tsx:15
-msgid "Welcome to <0>Next.js!</0>"
-msgstr "Welcome to <0>Next.js!</0>"
+#~ msgid "Welcome to <0>Next.js!</0>"
+#~ msgstr "Welcome to <0>Next.js!</0>"
+
+#: src/components/templates/FooterFields.tsx:24
+msgid "YouTube"
+msgstr "YouTube"
+
+#: src/components/layout/navbar.tsx:81
+#: src/components/layout/navbar.tsx:109
+#~ msgid "{page}"
+#~ msgstr "{page}"
+
+#: src/components/layout/footer.tsx:59
+#: src/components/templates/FooterFields.tsx:62
+msgid "{val}"
+msgstr "{val}"
+
+#: src/components/layout/footer.tsx:10
+msgid "© {0} eventyay"
+msgstr "© {0} eventyay"

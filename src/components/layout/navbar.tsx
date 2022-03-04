@@ -9,8 +9,9 @@ import MenuIcon from '@mui/icons-material/Menu'
 import Container from '@mui/material/Container'
 import Button from '@mui/material/Button'
 import MenuItem from '@mui/material/MenuItem'
+import { t } from '@lingui/macro'
 
-const pages = ['Pricing', 'Login', 'Create Event']
+const pages = [t`Pricing`, t`Login`, t`Create Event`]
 
 export const Navbar = (): JSX.Element => {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null)

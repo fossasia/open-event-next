@@ -2,14 +2,16 @@ import { Box, Container, Divider, Stack, Typography } from '@mui/material'
 import React from 'react'
 import Link from '../Link'
 import FooterFields from '../templates/FooterFields'
+import { Trans, t } from '@lingui/macro'
+import TranslateButton from '../TranslateButton'
 
 const lastRow = [
-  'Maintained by Areeb Jamal & Team',
-  `© ${new Date().getFullYear()} eventyay`,
-  'Terms',
-  'Contact',
-  'Refund Policy',
-  'Privacy',
+  t`Maintained by Areeb Jamal & Team`,
+  t`© ${new Date().getFullYear()} eventyay`,
+  t`Terms`,
+  t`Contact`,
+  t`Refund Policy`,
+  t`Privacy`,
 ]
 
 export const Footer = (): JSX.Element => {
@@ -20,12 +22,12 @@ export const Footer = (): JSX.Element => {
         <Divider
           orientation="horizontal"
           flexItem
-          sx={{ bgcolor: '#323334' }}
+          sx={{ bgcolor: '#323334', marginTop: '10px' }}
         />
         <Stack
-          direction={{ md: 'column', lg: 'row' }}
+          direction={{ xs: 'column', lg: 'row' }}
           pt={2}
-          mr={{ lg: 8 }}
+          mt={1}
           color="#bbbbbb"
           divider={
             <Divider
@@ -34,7 +36,8 @@ export const Footer = (): JSX.Element => {
               flexItem
             />
           }
-          justifyContent="center"
+          justifyContent="space-between"
+          alignContent="center"
           spacing={1}
         >
           {lastRow.map((val, index) => {
@@ -52,10 +55,13 @@ export const Footer = (): JSX.Element => {
                 rel="noopener noreferrer"
                 color="#bbbbbb"
               >
-                <Typography variant="body2">{val}</Typography>
+                <Typography component="div" variant="body2">
+                  <Trans>{val}</Trans>
+                </Typography>
               </Link>
             )
           })}
+          <TranslateButton />
         </Stack>
       </Container>
     </Box>

@@ -1,5 +1,20 @@
 import { i18n } from '@lingui/core'
-import { en, hi } from 'make-plural/plurals'
+import {
+  en,
+  hi,
+  zh,
+  ko,
+  vi,
+  th,
+  ru,
+  pl,
+  ja,
+  id,
+  fr,
+  es,
+  de,
+  bn,
+} from 'make-plural/plurals'
 import {
   detect,
   fromUrl,
@@ -9,12 +24,40 @@ import {
 
 i18n.loadLocaleData('en', { plurals: en })
 i18n.loadLocaleData('hi', { plurals: hi })
+i18n.loadLocaleData('zh', { plurals: zh })
+i18n.loadLocaleData('ko', { plurals: ko })
+i18n.loadLocaleData('vi', { plurals: vi })
+i18n.loadLocaleData('th', { plurals: th })
+i18n.loadLocaleData('ru', { plurals: ru })
+i18n.loadLocaleData('pl', { plurals: pl })
+i18n.loadLocaleData('ja', { plurals: ja })
+i18n.loadLocaleData('id', { plurals: id })
+i18n.loadLocaleData('fr', { plurals: fr })
+i18n.loadLocaleData('es', { plurals: es })
+i18n.loadLocaleData('de', { plurals: de })
+i18n.loadLocaleData('bn', { plurals: bn })
 
 // Supported locales
-export const supportedLocales = ['en', 'hi']
+export const supportedLocales: { [key: string]: string } = {
+  bn: 'বাংলা',
+  de: 'Deutsch',
+  en: 'English',
+  es: 'Español',
+  fr: 'Français',
+  hi: 'हिंदी',
+  id: 'Bahasa Indonesia',
+  ja: '日本語',
+  pl: 'Polski',
+  ru: 'Русский',
+  th: 'ไทย',
+  vi: 'Tiếng Việt',
+  zh_Hans: '中文（简体)',
+  zh_Hant: '中文（繁體)',
+  ko: '한국어',
+}
 
 export function isValidLocale(locale: string): boolean {
-  return supportedLocales.includes(locale)
+  return locale in supportedLocales
 }
 
 /**
@@ -24,6 +67,7 @@ export function isValidLocale(locale: string): boolean {
  */
 export async function activate(locale: string): Promise<void> {
   const { messages } = await import(`../locale/${locale}/messages.js`)
+
   i18n.load(locale, messages)
   i18n.activate(locale)
 }
