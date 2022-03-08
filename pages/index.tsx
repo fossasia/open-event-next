@@ -1,6 +1,3 @@
-// import { activateAndSetCookie } from '../utils/i18n'
-// import { useTimezone } from '../store/useTimezone'
-
 import {
   Button,
   Container,
@@ -22,13 +19,6 @@ interface Props {
 }
 
 export default function Index(props: Props): JSX.Element {
-  // const localTimezone = useTimezone((state) => state.localTimezone)
-  // const defaultTimezone = useTimezone((state) => state.defaultTimezone)
-  // const setTimezone = useTimezone((state) => state.setTimezone)
-  // const handleTimeZone = (e: any) => {
-  //   setTimezone(e.target.value)
-  // }
-
   const theme = useTheme()
   const showCoverImg = useMediaQuery(theme.breakpoints.up('md'))
 
@@ -48,7 +38,9 @@ export default function Index(props: Props): JSX.Element {
               The open source event solution for virtual and in-person events.
             </Trans>
           </Typography>
-          <Button variant="contained">CREATE EVENT</Button>
+          <Button variant="contained">
+            <Trans>CREATE EVENT</Trans>
+          </Button>
         </Box>
       )}
       <Container maxWidth="lg">
