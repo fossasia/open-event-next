@@ -34,7 +34,7 @@
     "@mui/icons-material": "^5.5.0",
     "@mui/material": "^5.4.4",
     "@mui/styles": "^5.5.0",
-    "@sentry/browser": "^6.18.1",
+    "@sentry/browser": "^6.18.2",
     "@sentry/integrations": "^6.18.1",
     "@sentry/node": "^6.18.1",
     "@sentry/webpack-plugin": "^1.18.8",
