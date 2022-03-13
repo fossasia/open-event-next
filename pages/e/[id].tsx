@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 // import { useRouter } from 'next/router'
-import Image from 'next/image'
 import { useState } from 'react'
 import { useTheme } from '@mui/material/styles'
 import { useMediaQuery } from '@mui/material'
@@ -11,7 +10,7 @@ import Stack from '@mui/material/Stack'
 import Select from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
 
-import styles from '../../styles/Event.module.css'
+import styles from '../../styles/Event.module.scss'
 import TicketTable from '../../components/EventPage/TicketTable'
 import Categories from '../../components/EventPage/Categories'
 import JoinEvent from '../../components/EventPage/JoinEvent'
@@ -130,12 +129,7 @@ const Event: NextPage = () => {
 const BannerImage = () => {
   return (
     <Box className={styles.banner_wrapper}>
-      <Image
-        src={banner}
-        layout="fill"
-        priority
-        className={styles.banner_image}
-      />
+      <img src={banner} className={styles.banner_image} alt="" />
     </Box>
   )
 }
