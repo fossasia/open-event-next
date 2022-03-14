@@ -15,8 +15,8 @@ describe('Home page', () => {
         type: 'event',
         attributes: {
           name: 'Event One',
-          startsAt: new Date('March 12, 2022 1:45:00'),
-          endsAt: new Date('March 15, 2022, 1:44:00'),
+          startsAt: new Date('2022-06-08T12:00:00+00:00'),
+          endsAt: new Date('2022-06-10T12:00:00+00:00'),
           thumbnailImageUrl:
             'https://api.eventyay.com/static/media/events/2764/thumbnail/TXAvdWNJQV/86acb2e9-7034-40fd-96fc-7453d1b58059.jpg',
           timezone: 'Europe/Berlin',
@@ -27,8 +27,8 @@ describe('Home page', () => {
         type: 'event',
         attributes: {
           name: 'Event Two',
-          startsAt: new Date('February 12, 2022 2:00:00'),
-          endsAt: new Date('February 17, 2022, 1:59:00'),
+          startsAt: new Date('2022-06-03T12:00:00+00:00'),
+          endsAt: new Date('2022-06-06T12:00:00+00:00'),
           thumbnailImageUrl:
             'https://api.eventyay.com/static/media/events/2764/thumbnail/TXAvdWNJQV/86acb2e9-7034-40fd-96fc-7453d1b58059.jpg',
           timezone: 'Singapore',

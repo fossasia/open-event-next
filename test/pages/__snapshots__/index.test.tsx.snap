@@ -39,7 +39,7 @@ exports[`Home page matches snapshot 1`] = `
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
               >
-                Friday, 11 March, 2022 09:15 PM to Monday, 14 March, 2022 09:14 PM (Central European Standard Time) 
+                Wednesday, 8 June, 2022 02:00 PM to Friday, 10 June, 2022 02:00 PM (Central European Summer Time) 
               </p>
             </div>
             <hr
@@ -95,7 +95,7 @@ exports[`Home page matches snapshot 1`] = `
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
               >
-                Saturday, 12 February, 2022 04:30 AM to Thursday, 17 February, 2022 04:29 AM (Singapore Standard Time) 
+                Friday, 3 June, 2022 08:00 PM to Monday, 6 June, 2022 08:00 PM (Singapore Standard Time) 
               </p>
             </div>
             <hr
@@ -160,7 +160,7 @@ exports[`Home page matches snapshot 1`] = `
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
               >
-                Friday, 11 March, 2022 09:15 PM to Monday, 14 March, 2022 09:14 PM (Central European Standard Time) 
+                Wednesday, 8 June, 2022 02:00 PM to Friday, 10 June, 2022 02:00 PM (Central European Summer Time) 
               </p>
             </div>
             <hr
@@ -216,7 +216,7 @@ exports[`Home page matches snapshot 1`] = `
               <p
                 class="MuiTypography-root MuiTypography-body1 css-1pnmrwp-MuiTypography-root"
               >
-                Saturday, 12 February, 2022 04:30 AM to Thursday, 17 February, 2022 04:29 AM (Singapore Standard Time) 
+                Friday, 3 June, 2022 08:00 PM to Monday, 6 June, 2022 08:00 PM (Singapore Standard Time) 
               </p>
             </div>
             <hr
