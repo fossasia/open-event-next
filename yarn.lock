@@ -780,10 +780,10 @@
     prop-types "^15.7.2"
     react-is "^17.0.2"
 
-"@mui/icons-material@^5.5.0":
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.5.0.tgz#23d5f13c62c19a75b184374a6ea6ed0f8019531d"
-  integrity sha512-rMs5flT3INyd/m1A/x8DDlNTfHmCartX8stCuSDDMmaMV123oSwg8werJ/Hg4j1FWuVk5rE5HRY45gBf12BCGw==
+"@mui/icons-material@^5.5.1":
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/@mui/icons-material/-/icons-material-5.5.1.tgz#848a57972617411370775980cbc6990588d4aafb"
+  integrity sha512-40f68p5+Yhq3dCn3QYHqQt5RETPyR3AkDw+fma8PtcjqvZ+d+jF84kFmT6NqwA3he7TlwluEtkyAmPzUE4uPdA==
   dependencies:
     "@babel/runtime" "^7.17.2"
 
