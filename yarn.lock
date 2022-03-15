@@ -823,15 +823,15 @@
     "@emotion/cache" "^11.7.1"
     prop-types "^15.7.2"
 
-"@mui/styles@^5.5.0":
-  version "5.5.0"
-  resolved "https://registry.yarnpkg.com/@mui/styles/-/styles-5.5.0.tgz#10a9e013181d40b96dc5ee6b3a981f1876d3c623"
-  integrity sha512-elRM9/1t8jJJc2X/T/Yau40sQ3+IxM8sdxA9CbHas/EU4DJ2LjkdmmmnSv2lXG32SWUIPU1Pjr6Jy3KPt2NoUw==
+"@mui/styles@^5.5.1":
+  version "5.5.1"
+  resolved "https://registry.yarnpkg.com/@mui/styles/-/styles-5.5.1.tgz#cfd2b6dbdb4b2cb0e989568bb9cc45f5d7346d2a"
+  integrity sha512-mxwfjwTwPE+r7/U4Nn/QKPzJ2cIqmRuK3xu44Us613D5jqPeB/ftOsAy0OpCYAwpkUxmQIrRQiilQ8zE+f4rBQ==
   dependencies:
     "@babel/runtime" "^7.17.2"
     "@emotion/hash" "^0.8.0"
     "@mui/private-theming" "^5.4.4"
-    "@mui/types" "^7.1.2"
+    "@mui/types" "^7.1.3"
     "@mui/utils" "^5.4.4"
     clsx "^1.1.1"
     csstype "^3.0.11"
@@ -860,7 +860,7 @@
     csstype "^3.0.11"
     prop-types "^15.7.2"
 
-"@mui/types@^7.1.2", "@mui/types@^7.1.3":
+"@mui/types@^7.1.3":
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/@mui/types/-/types-7.1.3.tgz#d7636f3046110bcccc63e6acfd100e2ad9ca712a"
   integrity sha512-DDF0UhMBo4Uezlk+6QxrlDbchF79XG6Zs0zIewlR4c0Dt6GKVFfUtzPtHCH1tTbcSlq/L2bGEdiaoHBJ9Y1gSA==
