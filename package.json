@@ -36,7 +36,7 @@
     "@mui/styles": "^5.5.1",
     "@sentry/browser": "^6.19.1",
     "@sentry/integrations": "^6.18.1",
-    "@sentry/node": "^6.18.1",
+    "@sentry/node": "^6.19.2",
     "@sentry/webpack-plugin": "^1.18.8",
     "babel-plugin-macros": "^3.1.0",
     "dayjs": "^1.11.0",
