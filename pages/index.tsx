@@ -11,7 +11,6 @@ import { Trans } from '@lingui/macro'
 import FrontPage from '../src/components/templates/FrontPage'
 import fetcher from '../utils/fetcher'
 import toCamelCase from '../utils/camelCase'
-import { PrivacyTipTwoTone } from '@mui/icons-material'
 
 interface Props {
   events: ServerData[]
@@ -55,10 +54,7 @@ export default function Index(props: Props): JSX.Element {
 
 export async function getStaticProps() {
   const [event, eventErr] = await fetcher({
-    url: `events?filter=[{"and":[{"name":"state","op":"eq","val":"published"},{"name":"privacy","op":"eq","val":"public"},{"name":"is-featured","op":"eq","val":true}]},{"or":[{"name":"ends-at","op":"ge","val":"${new Date()}"}]}]
-    &page[size]=6
-  &public=true
-  &sort=ends-at`,
+    url: `events?filter=[{"and":[{"name":"state","op":"eq","val":"published"},{"name":"privacy","op":"eq","val":"public"},{"name":"is-featured","op":"eq","val":true}]},{"or":[{"name":"ends-at","op":"ge","val":"${new Date()}"}]}]&page[size]=6&public=true&sort=ends-at`,
   })
   if (eventErr) {
     console.error(eventErr)
