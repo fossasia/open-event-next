@@ -1,12 +1,17 @@
 import { instance } from '../src/ky/instance'
 
-export default async function fetcher(
-  url: string,
-  searchParams: string
-): Promise<[data: ServerProp | null, err: any]> {
+interface Props {
+  url: string
+  method?: string
+}
+
+export default async function fetcher({
+  url,
+  method = 'GET',
+}: Props): Promise<[data: ServerProp | null, err: any]> {
   try {
     const data: ServerProp = await instance(url, {
-      searchParams: searchParams,
+      method: method,
     }).json()
 
     return [data, null]

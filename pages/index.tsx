@@ -11,6 +11,7 @@ import { Trans } from '@lingui/macro'
 import FrontPage from '../src/components/templates/FrontPage'
 import fetcher from '../utils/fetcher'
 import toCamelCase from '../utils/camelCase'
+import { PrivacyTipTwoTone } from '@mui/icons-material'
 
 interface Props {
   events: ServerData[]
@@ -53,33 +54,36 @@ export default function Index(props: Props): JSX.Element {
 }
 
 export async function getStaticProps() {
-  const date = new Date().toISOString()
-
-  const [event, eventErr] = await fetcher(
-    'events',
-    `&filter=[{"and":[{"name":"state","op":"eq","val":"published"},{"name":"privacy","op":"eq","val":"public"},{"name":"is-featured","op":"eq","val":true}]},{"or":[{"name":"ends-at","op":"ge","val":"${date}"}]}]
-  &page[size]=6
+  const [event, eventErr] = await fetcher({
+    url: `events?filter=[{"and":[{"name":"state","op":"eq","val":"published"},{"name":"privacy","op":"eq","val":"public"},{"name":"is-featured","op":"eq","val":true}]},{"or":[{"name":"ends-at","op":"ge","val":"${new Date()}"}]}]
+    &page[size]=6
   &public=true
-  &sort=starts-at`
-  )
+  &sort=ends-at`,
+  })
   if (eventErr) {
     console.error(eventErr)
   }
   const events = toCamelCase(event?.data)
 
-  const [upcomingEvent, upcomingEventErr] = await fetcher(
-    'events/upcoming',
-    'page[size]=3&public=true&upcoming=true'
-  )
+  const [upcomingEvent, upcomingEventErr] = await fetcher({
+    url: 'events/upcoming?page[size]=3&public=true&upcoming=true',
+  })
   if (upcomingEventErr) {
     console.error(upcomingEventErr)
   }
   const upcomingEvents = toCamelCase(upcomingEvent?.data)
 
-  const [group, groupErr] = await fetcher(
-    'groups',
-    'filter=[{"name":"is-promoted","op":"eq","val":true}]&include=user,follower&page[size]=3&public=true'
-  )
+  const grpFilter = JSON.stringify([
+    {
+      name: 'is-promoted',
+      op: 'eq',
+      val: 'true',
+    },
+  ])
+
+  const [group, groupErr] = await fetcher({
+    url: `groups?filter=${grpFilter}&include=user,follower&page[size]=3&public=true`,
+  })
   if (groupErr) {
     console.error(groupErr)
   }
