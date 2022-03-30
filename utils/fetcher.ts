@@ -12,7 +12,7 @@ export default async function fetcher({
   try {
     const data: ServerProp = await instance(url, {
       method: method,
-    }).json()
+    }).then((res) => res.json())
 
     return [data, null]
   } catch (err) {
