@@ -54,12 +54,14 @@ export default function Index(props: Props): JSX.Element {
 
 export async function getStaticProps() {
   const date = new Date().toISOString()
-  const [event, eventErr] = await fetcher({
-    url: `events?filter=[{"and":[{"name":"state","op":"eq","val":"published"},{"name":"privacy","op":"eq","val":"public"},{"name":"is-featured","op":"eq","val":true}]},{"or":[{"name":"ends-at","op":"ge","val":"${date}"}]}]&page[size]=6&public=true&sort=starts-at`,
-  })
-  if (eventErr) {
-    console.error(eventErr)
-  }
+  const event = await fetch(
+    `https://api.eventyay.com/v1/events?filter=[{"and":[{"name":"state","op":"eq","val":"published"},{"name":"privacy","op":"eq","val":"public"},{"name":"is-featured","op":"eq","val":true}]},{"or":[{"name":"ends-at","op":"ge","val":"${date}"}]}]&page[size]=6&public=true&sort=starts-at`
+  )
+    .then((res) => {
+      return res.json()
+    })
+    .catch((err) => console.error(err))
+
   const events = toCamelCase(event?.data)
 
   const [upcomingEvent, upcomingEventErr] = await fetcher({
