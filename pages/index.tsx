@@ -54,31 +54,39 @@ export default function Index(props: Props): JSX.Element {
 
 export async function getStaticProps() {
   const date = new Date().toISOString()
-  const eventUrl = `https://api.eventyay.com/v1/events?cache=true
-  &filter=[{"and":[{"name":"state","op":"eq","val":"published"},{"name":"privacy","op":"eq","val":"public"},{"name":"is-featured","op":"eq","val":true}]},{"or":[{"name":"ends-at","op":"ge","val":"${date}"}]}]
-  &page[size]=6
-  &public=true
-  &sort=starts-at`
-  const upcomingEventUrl = `https://api.eventyay.com/v1/events/upcoming?cache=true&page[size]=3&public=true&upcoming=true`
-  const groupsUrl = `https://api.eventyay.com/v1/groups?cache=true&filter=[{"name":"is-promoted","op":"eq","val":true}]&include=user,follower&page[size]=3&public=true`
+  const event = await fetch(
+    `https://api.eventyay.com/v1/events?filter=[{"and":[{"name":"state","op":"eq","val":"published"},{"name":"privacy","op":"eq","val":"public"},{"name":"is-featured","op":"eq","val":true}]},{"or":[{"name":"ends-at","op":"ge","val":"${date}"}]}]&page[size]=6&public=true&sort=starts-at`
+  )
+    .then((res) => {
+      return res.json()
+    })
+    .catch((err) => console.error(err))
 
-  const [event, eventErr] = await fetcher(eventUrl)
-  if (eventErr) {
-    console.error(eventErr)
-  }
-  const events = toCamelCase(event.data)
+  const events = toCamelCase(event?.data)
 
-  const [upcomingEvent, upcomingEventErr] = await fetcher(upcomingEventUrl)
+  const [upcomingEvent, upcomingEventErr] = await fetcher({
+    url: 'events/upcoming?page[size]=3&public=true&upcoming=true',
+  })
   if (upcomingEventErr) {
     console.error(upcomingEventErr)
   }
-  const upcomingEvents = toCamelCase(upcomingEvent.data)
+  const upcomingEvents = toCamelCase(upcomingEvent?.data)
 
-  const [group, groupErr] = await fetcher(groupsUrl)
+  const grpFilter = JSON.stringify([
+    {
+      name: 'is-promoted',
+      op: 'eq',
+      val: 'true',
+    },
+  ])
+
+  const [group, groupErr] = await fetcher({
+    url: `groups?filter=${grpFilter}&include=user,follower&page[size]=3&public=true`,
+  })
   if (groupErr) {
     console.error(groupErr)
   }
-  const groups = toCamelCase(group.data)
+  const groups = toCamelCase(group?.data)
 
   return {
     props: { events, upcomingEvents, groups },
