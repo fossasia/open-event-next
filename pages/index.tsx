@@ -39,7 +39,7 @@ export default function Index(props: Props): JSX.Element {
             </Trans>
           </Typography>
           <Button variant="contained">
-            <Trans>Create Event</Trans>
+            <Trans>CREATE EVENT</Trans>
           </Button>
         </Box>
       )}

@@ -33,8 +33,8 @@ yarn-error.log*
 # vercel
 .vercel
 
+# vscode settings
+.vscode/
+
 # build logs
 tsconfig.tsbuildinfo
-
-# editor settings
-.vscode/
