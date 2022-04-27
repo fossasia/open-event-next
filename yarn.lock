@@ -778,10 +778,10 @@
     make-plural "^6.2.2"
     messageformat-parser "^4.1.3"
 
-"@lingui/detect-locale@^3.13.2":
-  version "3.13.2"
-  resolved "https://registry.yarnpkg.com/@lingui/detect-locale/-/detect-locale-3.13.2.tgz#ba8411170225932d114fd5c1a60b91101accc942"
-  integrity sha512-1fouly1ecq1wCKUGtYgFn0Hdsjuz4bBYxh/oIjrqEeb4+bKdjaHbCT2ypsX7rRxs88yOfOWGUYuuzG0EoJXiSw==
+"@lingui/detect-locale@^3.13.3":
+  version "3.13.3"
+  resolved "https://registry.yarnpkg.com/@lingui/detect-locale/-/detect-locale-3.13.3.tgz#5afe43b590066dd3d7801542c5945ae35af62ac3"
+  integrity sha512-GhJKjnpGh5N0Y96XJNjeGOEiVyO7b0Kwddv8cY5ORA0yS0+gCETAdlECeP0YrJBrzIVUeddpQTyaexAUDmeY+A==
 
 "@lingui/loader@^3.13.3":
   version "3.13.3"
