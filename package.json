@@ -54,7 +54,7 @@
     "@lingui/loader": "^3.13.3",
     "@lingui/macro": "^3.13.2",
     "@testing-library/react": "^12.1.4",
-    "@types/jest": "^27.4.1",
+    "@types/jest": "^27.5.0",
     "@types/lodash": "^4.14.182",
     "@types/lodash-es": "^4.17.6",
     "@types/node": "^17.0.30",
