@@ -1,2 +1,148 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2022-08-15 13:24+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/open-event/"
+"open-event-next/hr/>\n"
+"Language: hr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14-dev\n"
+
+#: src/components/layout/footer.tsx:11
+msgid "Terms"
+msgstr "Uvjeti"
+
+#: pages/index.tsx:42
+#: src/components/layout/navbar.tsx:14
+msgid "Create Event"
+msgstr "Stvori događaj"
+
+#: src/components/templates/FooterFields.tsx:25
+msgid "Google Groups"
+msgstr "Google grupe"
+
+#: src/components/templates/FooterFields.tsx:16
+msgid "Attendee App"
+msgstr "Program za sudionike"
+
+#: src/components/templates/FooterFields.tsx:6
+msgid "Blog"
+msgstr "Blog"
+
+#: src/components/templates/FooterFields.tsx:15
+msgid "Browse Events"
+msgstr "Pretraži događaje"
+
+#: src/components/templates/FooterFields.tsx:20
+msgid "Connect With Us"
+msgstr "Poveži se s nama"
+
+#: src/components/layout/footer.tsx:12
+msgid "Contact"
+msgstr "Kontakt"
+
+#: src/components/templates/FooterFields.tsx:11
+msgid "Event Management Software"
+msgstr "Softver za upravljanje događajima"
+
+#: src/components/templates/FooterFields.tsx:21
+msgid "Facebook"
+msgstr "Facebook"
+
+#: src/components/templates/FooterFields.tsx:14
+msgid "Find Events"
+msgstr "Pronađi događaje"
+
+#: src/components/templates/group/GroupCard.tsx:46
+msgid "Follow Group"
+msgstr "Prati grupe"
+
+#: src/components/templates/FooterFields.tsx:23
+msgid "GitHub"
+msgstr "GitHub"
+
+#: src/components/templates/FooterFields.tsx:26
+msgid "Gitter"
+msgstr "Gitter"
+
+#: src/components/layout/navbar.tsx:14
+msgid "Login"
+msgstr "Prijava"
+
+#: src/components/layout/footer.tsx:9
+msgid "Maintained by Areeb Jamal & Team"
+msgstr "Održava Areeb Jamal i tim"
+
+#: src/components/templates/event/EventCard.tsx:46
+msgid "Online Event"
+msgstr "Online događaj"
+
+#: src/components/templates/FooterFields.tsx:9
+msgid "Online Registration"
+msgstr "Online registracija"
+
+#: src/components/templates/FooterFields.tsx:17
+msgid "Organizer App"
+msgstr "Program za organizatore"
+
+#: src/components/templates/FooterFields.tsx:8
+msgid "Plan Events"
+msgstr "Planiraj događaj"
+
+#: src/components/layout/navbar.tsx:14
+#: src/components/templates/FooterFields.tsx:6
+msgid "Pricing"
+msgstr "Cijene"
+
+#: src/components/layout/footer.tsx:14
+msgid "Privacy"
+msgstr "Privatnost"
+
+#: src/components/layout/footer.tsx:13
+msgid "Refund Policy"
+msgstr "Politika povrata novca"
+
+#: src/components/templates/FooterFields.tsx:10
+msgid "Sell Event Tickets"
+msgstr "Prodaj ulaznice za događaj"
+
+#: src/components/templates/FooterFields.tsx:27
+msgid "Telegram"
+msgstr "Telegram"
+
+#: pages/index.tsx:37
+msgid "The open source event solution for virtual and in-person events."
+msgstr "Rješenje otvorenog koda za virtualne i osobne događaje."
+
+#: src/components/templates/FooterFields.tsx:22
+msgid "Twitter"
+msgstr "Twitter"
+
+#: src/components/templates/FooterFields.tsx:6
+msgid "Use eventyay"
+msgstr "Koristi eventyay"
+
+#: src/components/templates/FooterFields.tsx:28
+msgid "Weblate"
+msgstr "Weblate"
+
+#: src/components/templates/FooterFields.tsx:24
+msgid "YouTube"
+msgstr "YouTube"
+
+#: src/components/layout/footer.tsx:59
+#: src/components/templates/FooterFields.tsx:62
+msgid "{val}"
+msgstr "{val}"
+
+#: src/components/templates/FooterFields.tsx:6
+msgid "How it works"
+msgstr "Kako radi"
+
+#: src/components/layout/footer.tsx:10
+msgid "© {0} eventyay"
+msgstr "© {0} eventyay"
