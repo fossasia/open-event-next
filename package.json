@@ -41,7 +41,7 @@
     "@sentry/node": "^6.18.1",
     "@sentry/webpack-plugin": "^1.18.9",
     "babel-plugin-macros": "^3.1.0",
-    "dayjs": "^1.11.1",
+    "dayjs": "^1.11.7",
     "next": "12.1.5",
     "nprogress": "^0.2.0",
     "react": "17.0.2",
