@@ -968,10 +968,10 @@
     make-plural "^6.2.2"
     messageformat-parser "^4.1.3"
 
-"@lingui/detect-locale@^3.13.3":
-  version "3.13.3"
-  resolved "https://registry.yarnpkg.com/@lingui/detect-locale/-/detect-locale-3.13.3.tgz#5afe43b590066dd3d7801542c5945ae35af62ac3"
-  integrity sha512-GhJKjnpGh5N0Y96XJNjeGOEiVyO7b0Kwddv8cY5ORA0yS0+gCETAdlECeP0YrJBrzIVUeddpQTyaexAUDmeY+A==
+"@lingui/detect-locale@^4.3.0":
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/@lingui/detect-locale/-/detect-locale-4.3.0.tgz#bf8009ee31ac6fe667ca2994f51569ce1c4037f6"
+  integrity sha512-BNTdfabfvETdmhOljJ9jL+wHczrz6KJdEdpm+zqPMbvMA06UqBA7bTk8igW79Z3hN4F+WV7Mro0bDrm8sol0qA==
 
 "@lingui/loader@^3.13.3":
   version "3.13.3"
