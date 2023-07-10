@@ -60,7 +60,7 @@
     "@types/node": "^18.14.6",
     "@types/nprogress": "^0.2.0",
     "@types/react": "^17.0.43",
-    "@typescript-eslint/eslint-plugin": "^5.54.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.21.0",
     "babel-jest": "^29.4.3",
     "eslint": "^8.14.0",
