@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2023-09-26 16:19+0000\n"
+"PO-Revision-Date: 2023-10-02 23:02+0000\n"
 "Last-Translator: Kristoffer Grundström <swedishsailfishosuser@tutanota.com>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/open-event/"
 "open-event-next/sv/>\n"
@@ -129,3 +129,20 @@ msgstr "Skapa evenemang"
 #: src/components/layout/footer.tsx:12
 msgid "Contact"
 msgstr "Kontakta"
+
+#: pages/index.tsx:37
+msgid "The open source event solution for virtual and in-person events."
+msgstr ""
+"Evenemangslösning med öppen källkod för virtuella och personliga evenemang."
+
+#: src/components/templates/FooterFields.tsx:16
+msgid "Attendee App"
+msgstr "App för deltagare"
+
+#: src/components/templates/FooterFields.tsx:20
+msgid "Connect With Us"
+msgstr "Kontakta oss"
+
+#: src/components/templates/FooterFields.tsx:17
+msgid "Organizer App"
+msgstr "App för organisatören"
