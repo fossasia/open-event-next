@@ -1,143 +1,148 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2022-03-03 16:19+0530\n"
+"PO-Revision-Date: 2024-03-14 06:01+0000\n"
+"Last-Translator: Quyên Trần <quyenjimin256@gmail.com>\n"
+"Language-Team: Vietnamese <https://hosted.weblate.org/projects/open-event/"
+"open-event-next/vi/>\n"
+"Language: vi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: @lingui/cli\n"
-"Language: vi\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.5-dev\n"
 
 #: src/components/templates/FooterFields.tsx:16
 msgid "Attendee App"
-msgstr ""
+msgstr "Ứng dụng Attendee"
 
 #: src/components/templates/FooterFields.tsx:6
 msgid "Blog"
-msgstr ""
+msgstr "Nhật ký"
 
 #: src/components/templates/FooterFields.tsx:15
 msgid "Browse Events"
-msgstr ""
+msgstr "Sự kiện duyệt"
 
 #: src/components/templates/FooterFields.tsx:20
 msgid "Connect With Us"
-msgstr ""
+msgstr "Kết nối với chúng tôi"
 
 #: src/components/layout/footer.tsx:12
 msgid "Contact"
-msgstr ""
+msgstr "Liên hệ"
 
 #: pages/index.tsx:42
 #: src/components/layout/navbar.tsx:14
 msgid "Create Event"
-msgstr ""
+msgstr "Sự kiện Sáng tạo"
 
 #: src/components/templates/FooterFields.tsx:11
 msgid "Event Management Software"
-msgstr ""
+msgstr "Phần mềm quản lý sự kiện"
 
 #: src/components/templates/FooterFields.tsx:21
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: src/components/templates/FooterFields.tsx:14
 msgid "Find Events"
-msgstr ""
+msgstr "Sự kiện tìm kiếm"
 
 #: src/components/templates/group/GroupCard.tsx:46
 msgid "Follow Group"
-msgstr ""
+msgstr "Theo dõi nhóm"
 
 #: src/components/templates/FooterFields.tsx:23
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: src/components/templates/FooterFields.tsx:26
 msgid "Gitter"
-msgstr ""
+msgstr "Gitter"
 
 #: src/components/templates/FooterFields.tsx:25
 msgid "Google Groups"
-msgstr ""
+msgstr "Đội ngũ Google"
 
 #: src/components/templates/FooterFields.tsx:6
 msgid "How it works"
-msgstr ""
+msgstr "Hoạt động thế nào"
 
 #: src/components/layout/navbar.tsx:14
 msgid "Login"
-msgstr ""
+msgstr "Đăng nhập"
 
 #: src/components/layout/footer.tsx:9
 msgid "Maintained by Areeb Jamal & Team"
-msgstr ""
+msgstr "Duy trì bởi Areeb Jamal & Đồng đội"
 
 #: src/components/templates/event/EventCard.tsx:46
 msgid "Online Event"
-msgstr ""
+msgstr "Sự kiện trực tuyến"
 
 #: src/components/templates/FooterFields.tsx:9
 msgid "Online Registration"
-msgstr ""
+msgstr "Đăng kí trực tuyến"
 
 #: src/components/templates/FooterFields.tsx:17
 msgid "Organizer App"
-msgstr ""
+msgstr "Ứng dụng tổ chức"
 
 #: src/components/templates/FooterFields.tsx:8
 msgid "Plan Events"
-msgstr ""
+msgstr "Lịch trình sự kiện"
 
 #: src/components/layout/navbar.tsx:14
 #: src/components/templates/FooterFields.tsx:6
 msgid "Pricing"
-msgstr ""
+msgstr "Định giá"
 
 #: src/components/layout/footer.tsx:14
 msgid "Privacy"
-msgstr ""
+msgstr "Bảo mật"
 
 #: src/components/layout/footer.tsx:13
 msgid "Refund Policy"
-msgstr ""
+msgstr "Chính sách hoàn trả"
 
 #: src/components/templates/FooterFields.tsx:10
 msgid "Sell Event Tickets"
-msgstr ""
+msgstr "Bán vé sự kiện"
 
 #: src/components/templates/FooterFields.tsx:27
 msgid "Telegram"
-msgstr ""
+msgstr "Telegram"
 
 #: src/components/layout/footer.tsx:11
 msgid "Terms"
-msgstr ""
+msgstr "Thuật ngữ"
 
 #: pages/index.tsx:37
 msgid "The open source event solution for virtual and in-person events."
-msgstr ""
+msgstr "Giải pháp sự kiện nguồn mở cho các sự kiện ảo và trực tiếp."
 
 #: src/components/templates/FooterFields.tsx:22
 msgid "Twitter"
-msgstr ""
+msgstr "Twitter"
 
 #: src/components/templates/FooterFields.tsx:6
 msgid "Use eventyay"
-msgstr ""
+msgstr "Sử dụng eventyay"
 
 #: src/components/templates/FooterFields.tsx:28
 msgid "Weblate"
-msgstr ""
+msgstr "Weblate"
 
 #: src/components/templates/FooterFields.tsx:24
 msgid "YouTube"
-msgstr ""
+msgstr "Youtube"
 
 #: src/components/layout/footer.tsx:59
 #: src/components/templates/FooterFields.tsx:62
 msgid "{val}"
-msgstr ""
+msgstr "{val}"
 
 #: src/components/layout/footer.tsx:10
 msgid "© {0} eventyay"
-msgstr ""
+msgstr "© {0} eventyay"
