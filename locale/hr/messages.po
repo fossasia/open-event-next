@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "PO-Revision-Date: 2022-08-15 13:24+0000\n"
 "Last-Translator: Milo Ivir <mail@milotype.de>\n"
-"Language-Team: Croatian <https://hosted.weblate.org/projects/open-event/"
-"open-event-next/hr/>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/open-event/open-"
+"event-next/hr/>\n"
 "Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,8 +16,7 @@ msgstr ""
 msgid "Terms"
 msgstr "Uvjeti"
 
-#: pages/index.tsx:42
-#: src/components/layout/navbar.tsx:14
+#: pages/index.tsx:42 src/components/layout/navbar.tsx:14
 msgid "Create Event"
 msgstr "Stvori događaj"
 

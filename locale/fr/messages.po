@@ -1,72 +1,77 @@
 msgid ""
 msgstr ""
 "POT-Creation-Date: 2022-03-03 16:19+0530\n"
+"PO-Revision-Date: 2023-07-04 12:49+0000\n"
+"Last-Translator: François Cartegnie <fcartegnie@free.fr>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/open-event/"
+"open-event-next/fr/>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: @lingui/cli\n"
-"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: src/components/templates/FooterFields.tsx:16
 msgid "Attendee App"
-msgstr ""
+msgstr "Application pour les participants"
 
 #: src/components/templates/FooterFields.tsx:6
 msgid "Blog"
-msgstr ""
+msgstr "Blog"
 
 #: src/components/templates/FooterFields.tsx:15
 msgid "Browse Events"
-msgstr ""
+msgstr "Parcourir les événements"
 
 #: src/components/templates/FooterFields.tsx:20
 msgid "Connect With Us"
-msgstr ""
+msgstr "Rejoignez-nous"
 
 #: src/components/layout/footer.tsx:12
 msgid "Contact"
-msgstr ""
+msgstr "Contact"
 
 #: pages/index.tsx:42
 #: src/components/layout/navbar.tsx:14
 msgid "Create Event"
-msgstr ""
+msgstr "Créer un événement"
 
 #: src/components/templates/FooterFields.tsx:11
 msgid "Event Management Software"
-msgstr ""
+msgstr "Logiciel de gestion d'évènements"
 
 #: src/components/templates/FooterFields.tsx:21
 msgid "Facebook"
-msgstr ""
+msgstr "Facebook"
 
 #: src/components/templates/FooterFields.tsx:14
 msgid "Find Events"
-msgstr ""
+msgstr "Trouver des évènements"
 
 #: src/components/templates/group/GroupCard.tsx:46
 msgid "Follow Group"
-msgstr ""
+msgstr "Suivre le groupe"
 
 #: src/components/templates/FooterFields.tsx:23
 msgid "GitHub"
-msgstr ""
+msgstr "GitHub"
 
 #: src/components/templates/FooterFields.tsx:26
 msgid "Gitter"
-msgstr ""
+msgstr "Gitter"
 
 #: src/components/templates/FooterFields.tsx:25
 msgid "Google Groups"
-msgstr ""
+msgstr "Groupes Google"
 
 #: src/components/templates/FooterFields.tsx:6
 msgid "How it works"
-msgstr ""
+msgstr "Comment ça marche"
 
 #: src/components/layout/navbar.tsx:14
 msgid "Login"
-msgstr ""
+msgstr "Connexion"
 
 #: src/components/layout/footer.tsx:9
 msgid "Maintained by Areeb Jamal & Team"
